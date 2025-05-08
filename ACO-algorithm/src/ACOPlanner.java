@@ -9,44 +9,31 @@ import java.util.List;
 public class ACOPlanner {
     public static void main(String[] args) throws FileNotFoundException {
         PrintStream out = new PrintStream("salida_simulacion.txt");
-        System.setOut(out);  // Redirige todo el output a un archivo
+        System.setOut(out);
         System.out.println("📦 Inicializando estado global...");
 
-        // CARGA DE ARCHIVOS DE DATOS
         List<Pedido> pedidos = cargarPedidos("pedidos.txt");
-        if (pedidos.isEmpty()) {
-            System.out.println("❌ No se cargaron pedidos válidos. Terminando ejecución.");
-            return;
-        }
-        System.out.println("Pedidos cargados: " + pedidos.size());
         List<Bloqueo> bloqueos = cargarBloqueos("bloqueos.txt");
-        if (bloqueos.isEmpty()) {
-            System.out.println("❌ No se cargaron bloqueos válidos. Terminando ejecución.");
+        Map<String, Map<String, String>> averiasPorTurno = cargarAverias("averias.txt");
+
+        if (pedidos.isEmpty() || bloqueos.isEmpty()) {
+            System.out.println("❌ Error cargando archivos.");
             return;
         }
-        System.out.println("Bloqueos cargados: " + bloqueos.size());
 
-        System.out.println("Inicialización completa.");
-        System.out.println("--- Iniciando Simulación por 57600 minutos ---");
-
-        AntColonyOptimizer aco = new AntColonyOptimizer(pedidos, bloqueos);
-        aco.simular();
+        AntColonyOptimizerACO aco = new AntColonyOptimizerACO(pedidos, bloqueos, averiasPorTurno);
+        aco.simularYAsignar();
     }
 
     static class Pedido {
-        int id;
-        int tiempoCreacion;
-        int x, y;
+        int id, x, y, tiempoCreacion, tiempoLimite;
         double volumen;
-        int tiempoLimite;
-        boolean atendido  = false;
+        boolean atendido = false;
+        boolean descartado = false;
 
         public Pedido(int id, int tiempoCreacion, int x, int y, double volumen, int tiempoLimite) {
-            this.id = id;
-            this.tiempoCreacion = tiempoCreacion;
-            this.x = x;
-            this.y = y;
-            this.volumen = volumen;
+            this.id = id; this.tiempoCreacion = tiempoCreacion;
+            this.x = x; this.y = y; this.volumen = volumen;
             this.tiempoLimite = tiempoLimite;
         }
     }
@@ -100,139 +87,203 @@ public class ACOPlanner {
             this.libreEn = 0;
         }
     }
-    static class AntColonyOptimizer {
+    static class AntColonyOptimizerACO {
         List<Pedido> pedidos;
         List<Bloqueo> bloqueos;
+        Map<String, Map<String, String>> averiasPorTurno;
         List<Camion> flota;
-        Map<String, Map<String, String>> averiasPorTurno = new HashMap<>(); // turno -> camionID -> tipo
-        Set<String> camionesInhabilitados = new HashSet<>(); // IDs de camiones afectados actualmente
-        Set<String> camionesYaProcesadosTurno = new HashSet<>(); // IDs de camiones ya tratados en el turno actual
-        Set<String> camionesQueRecibieronPedidosEnT = new HashSet<>(); // IDs de camiones que sí fueron usados este minuto
-        int tMax = 57600;
         double[][] feromonas;
-        final int N = 100; // máximo de ubicaciones
+        final int N;
         final int ITERACIONES = 50;
         final int HORMIGAS = 10;
         final double ALPHA = 1, BETA = 2, RHO = 0.1, Q = 1000;
-        int depositoX = 12, depositoY = 8;
+        final int depositoX = 12, depositoY = 8;
+        Set<String> camionesInhabilitados = new HashSet<>();
+        Set<String> averiasAplicadas = new HashSet<>();
         GridVisualizerGUI visualizador;
-
-        public AntColonyOptimizer(List<Pedido> pedidos, List<Bloqueo> bloqueos) {
+        
+        public AntColonyOptimizerACO(List<Pedido> pedidos, List<Bloqueo> bloqueos, Map<String, Map<String, String>> averiasPorTurno) {
             this.pedidos = pedidos;
             this.bloqueos = bloqueos;
+            this.averiasPorTurno = averiasPorTurno;
             this.flota = inicializarFlota();
-            this.visualizador = new GridVisualizerGUI(70, 50);
+            this.N = pedidos.size();
             this.feromonas = new double[N][N];
             for (double[] row : feromonas) Arrays.fill(row, 1.0);
-            cargarAverias("averias.txt");
+            this.visualizador = new GridVisualizerGUI(70, 50);
         }
 
-        public void simular() {
+        public void simularYAsignar() {
+            List<Integer> mejorRuta = null;
+            double mejorLongitud = Double.MAX_VALUE;
+
+            for (int iter = 0; iter < ITERACIONES; iter++) {
+                List<List<Integer>> rutasHormigas = new ArrayList<>();
+                for (int k = 0; k < HORMIGAS; k++) {
+                    rutasHormigas.add(construirRuta());
+                }
+                evaporarFeromonas();
+                for (List<Integer> ruta : rutasHormigas) {
+                    double longitud = calcularLongitud(ruta);
+                    if (longitud < mejorLongitud) {
+                        mejorLongitud = longitud;
+                        mejorRuta = ruta;
+                    }
+                    for (int i = 0; i < ruta.size() - 1; i++) {
+                        int a = ruta.get(i);
+                        int b = ruta.get(i + 1);
+                        feromonas[a][b] += Q / longitud;
+                    }
+                }
+            }
+
+            if (mejorRuta == null) {
+                System.out.println("❌ No se encontró ruta óptima.");
+                return;
+            }
+
+            String turnoAnterior = "";
             Map<Integer, List<Pedido>> pedidosPorTiempo = new HashMap<>();
             for (Pedido p : pedidos) {
                 pedidosPorTiempo.computeIfAbsent(p.tiempoCreacion, k -> new ArrayList<>()).add(p);
             }
-            String turnoAnterior = "";
-            for (int t = 0; t <= tMax; t++) {
-                camionesQueRecibieronPedidosEnT.clear();
+
+            for (int t = 0; t <= 57600; t++) {
                 if (t % 60 == 0)
-                    System.out.printf("\n--- Tiempo %dd %02dh %02dm ---%n", t / 1440, (t / 60) % 24, t % 60);
-
-                for (Camion c : flota) {
-                    if (c.libreEn <= t) c.reset();
-                }
-
+                    System.out.printf("\n--- Tiempo %02dd %02dh %02dm ---%n", t / 1440, (t / 60) % 24, t % 60);
+                if (t % 60 == 0) visualizador.render(t, pedidos, flota, bloqueos, depositoX, depositoY);
                 List<Pedido> nuevos = pedidosPorTiempo.getOrDefault(t, new ArrayList<>());
                 for (Pedido p : nuevos) {
                     System.out.printf("🆕 Pedido #%d en (%d,%d), vol %.1fm³, límite t+%d%n", p.id, p.x, p.y, p.volumen, p.tiempoLimite);
                 }
+
                 String turnoActual = turnoDeMinuto(t);
                 if (!turnoActual.equals(turnoAnterior)) {
-                    camionesYaProcesadosTurno.clear();
                     turnoAnterior = turnoActual;
+                    averiasAplicadas.clear();
+                    camionesInhabilitados.clear();
                 }
+
                 Map<String, String> averiasTurno = averiasPorTurno.getOrDefault(turnoActual, new HashMap<>());
                 for (Map.Entry<String, String> entry : averiasTurno.entrySet()) {
-                    String camionId = entry.getKey();
-                    String tipo = entry.getValue();
-                    Camion c = flota.stream().filter(cam -> cam.id.equals(camionId)).findFirst().orElse(null);
-                    if (c != null && c.libreEn <= t && !camionesInhabilitados.contains(c.id) && !camionesYaProcesadosTurno.contains(c.id)) {
-                        int penalizacion = tipo.equals("T1") ? 30 : tipo.equals("T2") ? 60 : 90;
+                    String key = turnoActual + "_" + entry.getKey();
+                    if (averiasAplicadas.contains(key)) continue;
+                    Camion c = flota.stream().filter(cam -> cam.id.equals(entry.getKey())).findFirst().orElse(null);
+                    if (c != null && c.libreEn <= t) {
+                        int penalizacion = entry.getValue().equals("T1") ? 30 : entry.getValue().equals("T2") ? 60 : 90;
                         c.libreEn = t + penalizacion;
                         camionesInhabilitados.add(c.id);
-                        camionesYaProcesadosTurno.add(c.id);
-                        System.out.printf("⛔ Camión %s inhabilitado por avería tipo %s hasta t+%d%n", c.id, tipo, c.libreEn);
+                        averiasAplicadas.add(key);
+                        System.out.printf("⛔ Camión %s inhabilitado por avería tipo %s hasta t+%d%n", c.id, entry.getValue(), c.libreEn);
                     }
                 }
-                camionesQueRecibieronPedidosEnT.clear(); // Asegúrate de esto al inicio de cada minuto
-                final int tiempoActual = t;
-                camionesInhabilitados.removeIf(id -> {
-                    boolean liberado = flota.stream().anyMatch(c -> c.id.equals(id) && c.libreEn <= tiempoActual);
-                    if (liberado) {
-                        System.out.printf("✅ Camión %s vuelve a estar disponible tras avería%n", id);
-                    }
-                    return liberado;
-                });
 
-                asignarPedidos(t);
-                // Logs: camiones libres que no fueron asignados
-                if (!pedidosPorTiempo.getOrDefault(t, new ArrayList<>()).isEmpty()) {
+                for (Camion c : flota) {
+                    if (camionesInhabilitados.contains(c.id) && c.libreEn <= t) {
+                        camionesInhabilitados.remove(c.id);
+                        System.out.printf("✅ Camión %s vuelve a estar disponible tras avería%n", c.id);
+                    }
+                }
+
+                for (int i : mejorRuta) {
+                    Pedido p = pedidos.get(i);
+                    if (p.atendido || p.descartado || p.tiempoCreacion > t) continue;
+
+                    Camion mejorCamion = null;
+                    double mejorCosto = Double.MAX_VALUE;
+
                     for (Camion c : flota) {
-                        if (c.libreEn <= t && !camionesInhabilitados.contains(c.id) && !camionesQueRecibieronPedidosEnT.contains(c.id)) {
-                            System.out.printf("ℹ️ Camión %s está disponible pero no se le asignaron pedidos en t+%d%n", c.id, t);
+                        if (c.disponible < p.volumen || c.libreEn > t || camionesInhabilitados.contains(c.id)) continue;
+                        if (hayBloqueo(t, c.x, c.y, p.x, p.y)) continue;
+                        double d = distancia(c.x, c.y, p.x, p.y);
+                        if (d < mejorCosto) {
+                            mejorCamion = c;
+                            mejorCosto = d;
                         }
                     }
+
+                    if (mejorCamion != null) {
+                        double consumo = calcularConsumo(mejorCosto, p.volumen, mejorCamion.tara);
+                        mejorCamion.combustibleGastado += consumo;
+                        mejorCamion.disponible -= p.volumen;
+                        int ida = (int)(mejorCosto / 0.5);
+                        mejorCamion.libreEn = t + ida * 2;
+                        p.atendido = true;
+                        System.out.printf("✅ %s entrega Pedido #%d: (%d,%d), vol %.1f → t+%d, regreso t+%d, consumo %.2f gal, disp. %.1f m³%n",
+                                mejorCamion.id, p.id, p.x, p.y, p.volumen, t + ida, mejorCamion.libreEn, consumo, mejorCamion.disponible);
+                    } else if (!p.atendido && !p.descartado && t > p.tiempoLimite) {
+                        System.out.printf("❌ Pedido #%d no fue entregado a tiempo (límite t+%d), se descartó.%n", p.id, p.tiempoLimite);
+                        p.descartado = true;
+                    }
                 }
-                if (t % 60 == 0) visualizador.render(t, pedidos, flota, bloqueos, depositoX, depositoY);
             }
-            // resumen final de consumo
+
+            int totalPedidos = pedidos.size();
+            int pedidosAtendidos = (int) pedidos.stream().filter(p -> p.atendido).count();
+            int pedidosNoAtendidos = (int) pedidos.stream().filter(p -> p.descartado).count();
+            double porcentajeAtendidos = (100.0 * pedidosAtendidos) / totalPedidos;
+
+            System.out.println("\n📊 Análisis Final:");
+            System.out.printf("Pedidos Atendidos: %d/%d (%.2f%%)%n", pedidosAtendidos, totalPedidos, porcentajeAtendidos);
+            System.out.printf("Pedidos No Atendidos: %d%n", pedidosNoAtendidos);
+
             System.out.println("\n📊 Resumen de Consumo por Camión:");
             double totalConsumo = 0.0;
             for (Camion c : flota) {
-                System.out.printf("🚚 %s consumió %.2f galones%n", c.id, c.combustibleGastado);
+                System.out.printf("🚚 %s consumió %.2f galones\n", c.id, c.combustibleGastado);
                 totalConsumo += c.combustibleGastado;
             }
-            System.out.printf("🔧 Consumo total acumulado por toda la flota: %.2f galones%n", totalConsumo);
+            System.out.printf("🔧 Consumo total acumulado: %.2f galones\n", totalConsumo);
         }
 
-        private void asignarPedidos(int t) {
-            for (Pedido p : pedidos) {
-                if (p.tiempoCreacion > t || p.atendido) continue;
+        private List<Integer> construirRuta() {
+            List<Integer> ruta = new ArrayList<>();
+            boolean[] visitados = new boolean[N];
+            int actual = new Random().nextInt(N);
+            ruta.add(actual);
+            visitados[actual] = true;
+            while (ruta.size() < N) {
+                int siguiente = seleccionarSiguiente(actual, visitados);
+                if (siguiente == -1) break;
+                ruta.add(siguiente);
+                visitados[siguiente] = true;
+                actual = siguiente;
+            }
+            return ruta;
+        }
 
-                Camion mejor = null;
-                double mejorCosto = Double.MAX_VALUE;
-
-                for (Camion c : flota) {
-                    if (c.libreEn > t || camionesInhabilitados.contains(c.id)) continue;
-                    if (c.disponible < p.volumen) continue;
-                    if (hayBloqueo(t, c.x, c.y, p.x, p.y)) continue;
-                    double d1 = distancia(depositoX, depositoY, p.x, p.y);
-                    double tiempoIda = d1 / 0.5;
-                    double tiempoTotal = tiempoIda * 2;
-
-                    if (t + (int) tiempoTotal > p.tiempoLimite) continue;
-
-                    if (d1 < mejorCosto) {
-                        mejor = c;
-                        mejorCosto = d1;
-                    }
-                }
-
-                if (mejor != null) {
-                    double d1 = distancia(depositoX, depositoY, p.x, p.y);
-                    double tiempoIda = d1 / 0.5;
-                    double tiempoTotal = tiempoIda * 2;
-                    int fin = t + (int) tiempoTotal;
-                    mejor.libreEn = fin;
-                    mejor.disponible -= p.volumen;
-                    double consumo = calcularConsumo(d1, p.volumen, mejor.tara);
-                    mejor.combustibleGastado += consumo;
-                    camionesQueRecibieronPedidosEnT.add(mejor.id);
-                    p.atendido = true;
-                    System.out.printf("✅ %s entrega Pedido #%d: (%d,%d), vol %.1f → t+%d, regreso t+%d, consumo %.2f gal, disp. %.1f m³%n",
-                            mejor.id, p.id, p.x, p.y, p.volumen, t + (int) tiempoIda, fin, consumo, mejor.disponible);
+        private int seleccionarSiguiente(int actual, boolean[] visitados) {
+            double suma = 0.0;
+            double[] probabilidades = new double[N];
+            for (int j = 0; j < N; j++) {
+                if (!visitados[j]) {
+                    double tau = feromonas[actual][j];
+                    double eta = 1.0 / (distancia(pedidos.get(actual), pedidos.get(j)) + 1);
+                    probabilidades[j] = Math.pow(tau, ALPHA) * Math.pow(eta, BETA);
+                    suma += probabilidades[j];
                 }
             }
+            if (suma == 0) return -1;
+            double r = Math.random() * suma, acumulado = 0;
+            for (int j = 0; j < N; j++) {
+                if (!visitados[j]) {
+                    acumulado += probabilidades[j];
+                    if (acumulado >= r) return j;
+                }
+            }
+            return -1;
+        }
+
+        private void evaporarFeromonas() {
+            for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) feromonas[i][j] *= (1 - RHO);
+        }
+
+        private double calcularLongitud(List<Integer> ruta) {
+            double total = 0.0;
+            for (int i = 0; i < ruta.size() - 1; i++) {
+                total += distancia(pedidos.get(ruta.get(i)), pedidos.get(ruta.get(i + 1)));
+            }
+            return total;
         }
 
         private double calcularConsumo(double distancia, double volumen, double tara) {
@@ -245,6 +296,10 @@ public class ACOPlanner {
                 if (b.afecta(t, x1, y1, x2, y2)) return true;
             }
             return false;
+        }
+
+        private int distancia(Pedido a, Pedido b) {
+            return Math.abs(b.x - a.x) + Math.abs(b.y - a.y);
         }
 
         private int distancia(int x1, int y1, int x2, int y2) {
@@ -278,24 +333,6 @@ public class ACOPlanner {
             return flota;
         }
 
-        private void cargarAverias(String filename) {
-            try {
-                List<String> lineas = Files.readAllLines(Paths.get(filename));
-                for (String linea : lineas) {
-                    String[] partes = linea.split("_");
-                    if (partes.length == 3) {
-                        String turno = partes[0];
-                        String camionId = partes[1];
-                        String tipo = partes[2];
-                        averiasPorTurno
-                                .computeIfAbsent(turno, k -> new HashMap<>())
-                                .put(camionId, tipo);
-                    }
-                }
-            } catch (IOException e) {
-                System.out.println("⚠️ No se pudo leer averias.txt: " + e.getMessage());
-            }
-        }
         private String turnoDeMinuto(int t) {
             int minutoDia = t % 1440;
             if (minutoDia < 480) return "T1";
@@ -353,7 +390,21 @@ public class ACOPlanner {
         }
         return lista;
     }
-
+    public static Map<String, Map<String, String>> cargarAverias(String archivo) {
+        Map<String, Map<String, String>> averias = new HashMap<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split("_");
+                if (partes.length == 3) {
+                    averias.computeIfAbsent(partes[0], k -> new HashMap<>()).put(partes[1], partes[2]);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("⚠️ No se pudo leer averias.txt: " + e.getMessage());
+        }
+        return averias;
+    }
     public static int convertirATiempoMinutos(String texto) {
         int d = 0, h = 0, m = 0;
         try {
@@ -382,13 +433,12 @@ public class ACOPlanner {
         JPanel panel;
 
         public GridVisualizerGUI(int ancho, int alto) {
-            this.ancho = ancho;
-            this.alto = alto;
+            this.ancho = ancho; this.alto = alto;
+            grid = new char[alto][ancho];
             setTitle("Simulación GLP");
             setSize(ancho * 10 + 50, alto * 10 + 50);
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setLocationRelativeTo(null);
-            grid = new char[alto][ancho];
             panel = new JPanel() {
                 protected void paintComponent(Graphics g) {
                     super.paintComponent(g);
@@ -414,28 +464,20 @@ public class ACOPlanner {
 
         public void render(int t, List<Pedido> pedidos, List<Camion> camiones, List<Bloqueo> bloqueos, int depositoX, int depositoY) {
             for (char[] row : grid) Arrays.fill(row, '.');
-
-            for (Bloqueo b : bloqueos) {
-                if (t >= b.inicio && t <= b.fin) {
+            for (Pedido p : pedidos)
+                if (p.x >= 0 && p.x < ancho && p.y >= 0 && p.y < alto)
+                    grid[p.y][p.x] = p.atendido ? 'E' : 'P';
+            for (Camion c : camiones)
+                if (c.x >= 0 && c.x < ancho && c.y >= 0 && c.y < alto)
+                    grid[c.y][c.x] = 'C';
+            for (Bloqueo b : bloqueos)
+                if (t >= b.inicio && t <= b.fin)
                     for (String arista : b.aristasBloqueadas) {
-                        String[] extremos = arista.split("[-,]");
-                        int x = Integer.parseInt(extremos[0]);
-                        int y = Integer.parseInt(extremos[1]);
+                        String[] puntos = arista.split("[-,]");
+                        int x = Integer.parseInt(puntos[0]);
+                        int y = Integer.parseInt(puntos[1]);
                         if (x >= 0 && x < ancho && y >= 0 && y < alto) grid[y][x] = 'B';
                     }
-                }
-            }
-
-            for (Pedido p : pedidos) {
-                if (p.x >= 0 && p.x < ancho && p.y >= 0 && p.y < alto) {
-                    grid[p.y][p.x] = p.atendido ? 'E' : 'P';
-                }
-            }
-
-            if (depositoX >= 0 && depositoX < ancho && depositoY >= 0 && depositoY < alto) {
-                grid[depositoY][depositoX] = 'C';
-            }
-
             panel.repaint();
         }
     }
