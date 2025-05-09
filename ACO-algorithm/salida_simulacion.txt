@@ -1,0 +1,2554 @@
+📦 Inicializando estado global...
+
+--- Tiempo 00d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+30
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+30
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 00d 01h 00m ---
+
+--- Tiempo 00d 02h 00m ---
+
+--- Tiempo 00d 03h 00m ---
+
+--- Tiempo 00d 04h 00m ---
+
+--- Tiempo 00d 05h 00m ---
+
+--- Tiempo 00d 06h 00m ---
+
+--- Tiempo 00d 07h 00m ---
+
+--- Tiempo 00d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+540
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+540
+
+--- Tiempo 00d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 00d 10h 00m ---
+
+--- Tiempo 00d 11h 00m ---
+
+--- Tiempo 00d 12h 00m ---
+
+--- Tiempo 00d 13h 00m ---
+
+--- Tiempo 00d 14h 00m ---
+
+--- Tiempo 00d 15h 00m ---
+
+--- Tiempo 00d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+1050
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+1050
+
+--- Tiempo 00d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 00d 18h 00m ---
+
+--- Tiempo 00d 19h 00m ---
+
+--- Tiempo 00d 20h 00m ---
+
+--- Tiempo 00d 21h 00m ---
+
+--- Tiempo 00d 22h 00m ---
+
+--- Tiempo 00d 23h 00m ---
+
+--- Tiempo 01d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+1470
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+1470
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 01d 01h 00m ---
+🆕 Pedido #0 en (16,13), vol 3,0m³, límite t+1704
+🆕 Pedido #1 en (5,18), vol 9,0m³, límite t+2508
+✅ TA01 entrega Pedido #1: (5,18), vol 9,0 → t+1534, regreso t+1568, consumo 10,20 gal, disp. 16,0 m³
+✅ TA02 entrega Pedido #0: (16,13), vol 3,0 → t+1518, regreso t+1536, consumo 4,05 gal, disp. 22,0 m³
+
+--- Tiempo 01d 02h 00m ---
+🆕 Pedido #2 en (63,13), vol 2,0m³, límite t+2052
+🆕 Pedido #3 en (4,6), vol 2,0m³, límite t+2495
+🆕 Pedido #4 en (54,16), vol 9,0m³, límite t+1859
+✅ TA02 entrega Pedido #3: (4,6), vol 2,0 → t+1580, regreso t+1600, consumo 4,25 gal, disp. 20,0 m³
+✅ TB01 entrega Pedido #4: (54,16), vol 9,0 → t+1660, regreso t+1760, consumo 23,75 gal, disp. 6,0 m³
+✅ TB02 entrega Pedido #2: (63,13), vol 2,0 → t+1672, regreso t+1784, consumo 16,80 gal, disp. 13,0 m³
+
+--- Tiempo 01d 03h 00m ---
+🆕 Pedido #5 en (29,47), vol 9,0m³, límite t+1943
+🆕 Pedido #6 en (14,43), vol 5,0m³, límite t+1907
+✅ TA01 entrega Pedido #6: (14,43), vol 5,0 → t+1694, regreso t+1768, consumo 18,50 gal, disp. 11,0 m³
+✅ TA02 entrega Pedido #5: (29,47), vol 9,0 → t+1732, regreso t+1844, consumo 33,60 gal, disp. 11,0 m³
+
+--- Tiempo 01d 04h 00m ---
+🆕 Pedido #7 en (10,32), vol 14,0m³, límite t+1930
+🆕 Pedido #8 en (69,46), vol 2,0m³, límite t+1894
+🆕 Pedido #9 en (34,5), vol 3,0m³, límite t+2398
+✅ TB03 entrega Pedido #9: (34,5), vol 3,0 → t+1730, regreso t+1780, consumo 8,13 gal, disp. 12,0 m³
+✅ TB04 entrega Pedido #7: (10,32), vol 14,0 → t+1732, regreso t+1784, consumo 15,60 gal, disp. 1,0 m³
+✅ TC01 entrega Pedido #8: (69,46), vol 2,0 → t+1870, regreso t+2060, consumo 23,75 gal, disp. 8,0 m³
+
+--- Tiempo 01d 05h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #11 en (27,49), vol 11,0m³, límite t+2325
+
+--- Tiempo 01d 06h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #11 en (27,49), vol 11,0m³, límite t+2325
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #13 en (22,28), vol 2,0m³, límite t+2013
+🆕 Pedido #14 en (31,27), vol 1,0m³, límite t+2876
+✅ TA01 entrega Pedido #11: (27,49), vol 11,0 → t+1912, regreso t+2024, consumo 36,40 gal, disp. 0,0 m³
+✅ TB01 entrega Pedido #13: (22,28), vol 2,0 → t+1860, regreso t+1920, consumo 9,00 gal, disp. 4,0 m³
+✅ TB02 entrega Pedido #14: (31,27), vol 1,0 → t+1876, regreso t+1952, consumo 10,45 gal, disp. 12,0 m³
+
+--- Tiempo 01d 07h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
+🆕 Pedido #16 en (34,4), vol 11,0m³, límite t+2564
+✅ TA02 entrega Pedido #16: (34,4), vol 11,0 → t+1912, regreso t+1964, consumo 16,90 gal, disp. 0,0 m³
+
+--- Tiempo 01d 08h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
+🆕 Pedido #17 en (46,37), vol 3,0m³, límite t+4388
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #19 en (60,33), vol 3,0m³, límite t+2635
+✅ TB01 entrega Pedido #19: (60,33), vol 3,0 → t+2066, regreso t+2212, consumo 23,73 gal, disp. 1,0 m³
+✅ TB03 entrega Pedido #17: (46,37), vol 3,0 → t+2046, regreso t+2172, consumo 20,48 gal, disp. 9,0 m³
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+2024
+
+--- Tiempo 01d 09h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #20 en (62,34), vol 2,0m³, límite t+3019
+🆕 Pedido #21 en (44,3), vol 6,0m³, límite t+2203
+✅ TB02 entrega Pedido #21: (44,3), vol 6,0 → t+2054, regreso t+2128, consumo 14,80 gal, disp. 6,0 m³
+✅ TC02 entrega Pedido #20: (62,34), vol 2,0 → t+2132, regreso t+2284, consumo 19,00 gal, disp. 8,0 m³
+✅ Camión TA02 vuelve a estar disponible tras avería
+
+--- Tiempo 01d 10h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #22 en (3,7), vol 3,0m³, límite t+3006
+🆕 Pedido #23 en (56,48), vol 1,0m³, límite t+3330
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+✅ TB04 entrega Pedido #23: (56,48), vol 1,0 → t+2208, regreso t+2376, consumo 23,10 gal, disp. 0,0 m³
+✅ TC03 entrega Pedido #22: (3,7), vol 3,0 → t+2060, regreso t+2080, consumo 2,75 gal, disp. 7,0 m³
+
+--- Tiempo 01d 11h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #25 en (7,41), vol 7,0m³, límite t+3137
+🆕 Pedido #26 en (9,26), vol 8,0m³, límite t+3461
+✅ TC01 entrega Pedido #25: (7,41), vol 7,0 → t+2176, regreso t+2252, consumo 14,25 gal, disp. 1,0 m³
+✅ TC04 entrega Pedido #26: (9,26), vol 8,0 → t+2142, regreso t+2184, consumo 8,40 gal, disp. 2,0 m³
+
+--- Tiempo 01d 12h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+2232
+
+--- Tiempo 01d 13h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 01d 14h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 15h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 16h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+2490
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+2490
+
+--- Tiempo 01d 17h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 01d 18h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 19h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 20h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 21h 00m ---
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 22h 00m ---
+🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 01d 23h 00m ---
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 02d 00h 00m ---
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+2910
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+2910
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 02d 01h 00m ---
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 02d 02h 00m ---
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 02d 03h 00m ---
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+
+--- Tiempo 02d 04h 00m ---
+
+--- Tiempo 02d 05h 00m ---
+
+--- Tiempo 02d 06h 00m ---
+
+--- Tiempo 02d 07h 00m ---
+
+--- Tiempo 02d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+3420
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+3420
+
+--- Tiempo 02d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 02d 10h 00m ---
+
+--- Tiempo 02d 11h 00m ---
+
+--- Tiempo 02d 12h 00m ---
+
+--- Tiempo 02d 13h 00m ---
+
+--- Tiempo 02d 14h 00m ---
+
+--- Tiempo 02d 15h 00m ---
+
+--- Tiempo 02d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+3930
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+3930
+
+--- Tiempo 02d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 02d 18h 00m ---
+
+--- Tiempo 02d 19h 00m ---
+
+--- Tiempo 02d 20h 00m ---
+
+--- Tiempo 02d 21h 00m ---
+
+--- Tiempo 02d 22h 00m ---
+
+--- Tiempo 02d 23h 00m ---
+
+--- Tiempo 03d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+4350
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+4350
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 03d 01h 00m ---
+
+--- Tiempo 03d 02h 00m ---
+
+--- Tiempo 03d 03h 00m ---
+
+--- Tiempo 03d 04h 00m ---
+
+--- Tiempo 03d 05h 00m ---
+
+--- Tiempo 03d 06h 00m ---
+
+--- Tiempo 03d 07h 00m ---
+
+--- Tiempo 03d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+4860
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+4860
+
+--- Tiempo 03d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 03d 10h 00m ---
+
+--- Tiempo 03d 11h 00m ---
+
+--- Tiempo 03d 12h 00m ---
+
+--- Tiempo 03d 13h 00m ---
+
+--- Tiempo 03d 14h 00m ---
+
+--- Tiempo 03d 15h 00m ---
+
+--- Tiempo 03d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+5370
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+5370
+
+--- Tiempo 03d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 03d 18h 00m ---
+
+--- Tiempo 03d 19h 00m ---
+
+--- Tiempo 03d 20h 00m ---
+
+--- Tiempo 03d 21h 00m ---
+
+--- Tiempo 03d 22h 00m ---
+
+--- Tiempo 03d 23h 00m ---
+
+--- Tiempo 04d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+5790
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+5790
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 04d 01h 00m ---
+
+--- Tiempo 04d 02h 00m ---
+
+--- Tiempo 04d 03h 00m ---
+
+--- Tiempo 04d 04h 00m ---
+
+--- Tiempo 04d 05h 00m ---
+
+--- Tiempo 04d 06h 00m ---
+
+--- Tiempo 04d 07h 00m ---
+
+--- Tiempo 04d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+6300
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+6300
+
+--- Tiempo 04d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 04d 10h 00m ---
+
+--- Tiempo 04d 11h 00m ---
+
+--- Tiempo 04d 12h 00m ---
+
+--- Tiempo 04d 13h 00m ---
+
+--- Tiempo 04d 14h 00m ---
+
+--- Tiempo 04d 15h 00m ---
+
+--- Tiempo 04d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+6810
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+6810
+
+--- Tiempo 04d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 04d 18h 00m ---
+
+--- Tiempo 04d 19h 00m ---
+
+--- Tiempo 04d 20h 00m ---
+
+--- Tiempo 04d 21h 00m ---
+
+--- Tiempo 04d 22h 00m ---
+
+--- Tiempo 04d 23h 00m ---
+
+--- Tiempo 05d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+7230
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+7230
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 05d 01h 00m ---
+
+--- Tiempo 05d 02h 00m ---
+
+--- Tiempo 05d 03h 00m ---
+
+--- Tiempo 05d 04h 00m ---
+
+--- Tiempo 05d 05h 00m ---
+
+--- Tiempo 05d 06h 00m ---
+
+--- Tiempo 05d 07h 00m ---
+
+--- Tiempo 05d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+7740
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+7740
+
+--- Tiempo 05d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 05d 10h 00m ---
+
+--- Tiempo 05d 11h 00m ---
+
+--- Tiempo 05d 12h 00m ---
+
+--- Tiempo 05d 13h 00m ---
+
+--- Tiempo 05d 14h 00m ---
+
+--- Tiempo 05d 15h 00m ---
+
+--- Tiempo 05d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+8250
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+8250
+
+--- Tiempo 05d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 05d 18h 00m ---
+
+--- Tiempo 05d 19h 00m ---
+
+--- Tiempo 05d 20h 00m ---
+
+--- Tiempo 05d 21h 00m ---
+
+--- Tiempo 05d 22h 00m ---
+
+--- Tiempo 05d 23h 00m ---
+
+--- Tiempo 06d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+8670
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+8670
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 06d 01h 00m ---
+
+--- Tiempo 06d 02h 00m ---
+
+--- Tiempo 06d 03h 00m ---
+
+--- Tiempo 06d 04h 00m ---
+
+--- Tiempo 06d 05h 00m ---
+
+--- Tiempo 06d 06h 00m ---
+
+--- Tiempo 06d 07h 00m ---
+
+--- Tiempo 06d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+9180
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+9180
+
+--- Tiempo 06d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 06d 10h 00m ---
+
+--- Tiempo 06d 11h 00m ---
+
+--- Tiempo 06d 12h 00m ---
+
+--- Tiempo 06d 13h 00m ---
+
+--- Tiempo 06d 14h 00m ---
+
+--- Tiempo 06d 15h 00m ---
+
+--- Tiempo 06d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+9690
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+9690
+
+--- Tiempo 06d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 06d 18h 00m ---
+
+--- Tiempo 06d 19h 00m ---
+
+--- Tiempo 06d 20h 00m ---
+
+--- Tiempo 06d 21h 00m ---
+
+--- Tiempo 06d 22h 00m ---
+
+--- Tiempo 06d 23h 00m ---
+
+--- Tiempo 07d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+10110
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+10110
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 07d 01h 00m ---
+
+--- Tiempo 07d 02h 00m ---
+
+--- Tiempo 07d 03h 00m ---
+
+--- Tiempo 07d 04h 00m ---
+
+--- Tiempo 07d 05h 00m ---
+
+--- Tiempo 07d 06h 00m ---
+
+--- Tiempo 07d 07h 00m ---
+
+--- Tiempo 07d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+10620
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+10620
+
+--- Tiempo 07d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 07d 10h 00m ---
+
+--- Tiempo 07d 11h 00m ---
+
+--- Tiempo 07d 12h 00m ---
+
+--- Tiempo 07d 13h 00m ---
+
+--- Tiempo 07d 14h 00m ---
+
+--- Tiempo 07d 15h 00m ---
+
+--- Tiempo 07d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+11130
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+11130
+
+--- Tiempo 07d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 07d 18h 00m ---
+
+--- Tiempo 07d 19h 00m ---
+
+--- Tiempo 07d 20h 00m ---
+
+--- Tiempo 07d 21h 00m ---
+
+--- Tiempo 07d 22h 00m ---
+
+--- Tiempo 07d 23h 00m ---
+
+--- Tiempo 08d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+11550
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+11550
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 08d 01h 00m ---
+
+--- Tiempo 08d 02h 00m ---
+
+--- Tiempo 08d 03h 00m ---
+
+--- Tiempo 08d 04h 00m ---
+
+--- Tiempo 08d 05h 00m ---
+
+--- Tiempo 08d 06h 00m ---
+
+--- Tiempo 08d 07h 00m ---
+
+--- Tiempo 08d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+12060
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+12060
+
+--- Tiempo 08d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 08d 10h 00m ---
+
+--- Tiempo 08d 11h 00m ---
+
+--- Tiempo 08d 12h 00m ---
+
+--- Tiempo 08d 13h 00m ---
+
+--- Tiempo 08d 14h 00m ---
+
+--- Tiempo 08d 15h 00m ---
+
+--- Tiempo 08d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+12570
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+12570
+
+--- Tiempo 08d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 08d 18h 00m ---
+
+--- Tiempo 08d 19h 00m ---
+
+--- Tiempo 08d 20h 00m ---
+
+--- Tiempo 08d 21h 00m ---
+
+--- Tiempo 08d 22h 00m ---
+
+--- Tiempo 08d 23h 00m ---
+
+--- Tiempo 09d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+12990
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+12990
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 09d 01h 00m ---
+
+--- Tiempo 09d 02h 00m ---
+
+--- Tiempo 09d 03h 00m ---
+
+--- Tiempo 09d 04h 00m ---
+
+--- Tiempo 09d 05h 00m ---
+
+--- Tiempo 09d 06h 00m ---
+
+--- Tiempo 09d 07h 00m ---
+
+--- Tiempo 09d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+13500
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+13500
+
+--- Tiempo 09d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 09d 10h 00m ---
+
+--- Tiempo 09d 11h 00m ---
+
+--- Tiempo 09d 12h 00m ---
+
+--- Tiempo 09d 13h 00m ---
+
+--- Tiempo 09d 14h 00m ---
+
+--- Tiempo 09d 15h 00m ---
+
+--- Tiempo 09d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+14010
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+14010
+
+--- Tiempo 09d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 09d 18h 00m ---
+
+--- Tiempo 09d 19h 00m ---
+
+--- Tiempo 09d 20h 00m ---
+
+--- Tiempo 09d 21h 00m ---
+
+--- Tiempo 09d 22h 00m ---
+
+--- Tiempo 09d 23h 00m ---
+
+--- Tiempo 10d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+14430
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+14430
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 10d 01h 00m ---
+
+--- Tiempo 10d 02h 00m ---
+
+--- Tiempo 10d 03h 00m ---
+
+--- Tiempo 10d 04h 00m ---
+
+--- Tiempo 10d 05h 00m ---
+
+--- Tiempo 10d 06h 00m ---
+
+--- Tiempo 10d 07h 00m ---
+
+--- Tiempo 10d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+14940
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+14940
+
+--- Tiempo 10d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 10d 10h 00m ---
+
+--- Tiempo 10d 11h 00m ---
+
+--- Tiempo 10d 12h 00m ---
+
+--- Tiempo 10d 13h 00m ---
+
+--- Tiempo 10d 14h 00m ---
+
+--- Tiempo 10d 15h 00m ---
+
+--- Tiempo 10d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+15450
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+15450
+
+--- Tiempo 10d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 10d 18h 00m ---
+
+--- Tiempo 10d 19h 00m ---
+
+--- Tiempo 10d 20h 00m ---
+
+--- Tiempo 10d 21h 00m ---
+
+--- Tiempo 10d 22h 00m ---
+
+--- Tiempo 10d 23h 00m ---
+
+--- Tiempo 11d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+15870
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+15870
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 11d 01h 00m ---
+
+--- Tiempo 11d 02h 00m ---
+
+--- Tiempo 11d 03h 00m ---
+
+--- Tiempo 11d 04h 00m ---
+
+--- Tiempo 11d 05h 00m ---
+
+--- Tiempo 11d 06h 00m ---
+
+--- Tiempo 11d 07h 00m ---
+
+--- Tiempo 11d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+16380
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+16380
+
+--- Tiempo 11d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 11d 10h 00m ---
+
+--- Tiempo 11d 11h 00m ---
+
+--- Tiempo 11d 12h 00m ---
+
+--- Tiempo 11d 13h 00m ---
+
+--- Tiempo 11d 14h 00m ---
+
+--- Tiempo 11d 15h 00m ---
+
+--- Tiempo 11d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+16890
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+16890
+
+--- Tiempo 11d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 11d 18h 00m ---
+
+--- Tiempo 11d 19h 00m ---
+
+--- Tiempo 11d 20h 00m ---
+
+--- Tiempo 11d 21h 00m ---
+
+--- Tiempo 11d 22h 00m ---
+
+--- Tiempo 11d 23h 00m ---
+
+--- Tiempo 12d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+17310
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+17310
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 12d 01h 00m ---
+
+--- Tiempo 12d 02h 00m ---
+
+--- Tiempo 12d 03h 00m ---
+
+--- Tiempo 12d 04h 00m ---
+
+--- Tiempo 12d 05h 00m ---
+
+--- Tiempo 12d 06h 00m ---
+
+--- Tiempo 12d 07h 00m ---
+
+--- Tiempo 12d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+17820
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+17820
+
+--- Tiempo 12d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 12d 10h 00m ---
+
+--- Tiempo 12d 11h 00m ---
+
+--- Tiempo 12d 12h 00m ---
+
+--- Tiempo 12d 13h 00m ---
+
+--- Tiempo 12d 14h 00m ---
+
+--- Tiempo 12d 15h 00m ---
+
+--- Tiempo 12d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+18330
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+18330
+
+--- Tiempo 12d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 12d 18h 00m ---
+
+--- Tiempo 12d 19h 00m ---
+
+--- Tiempo 12d 20h 00m ---
+
+--- Tiempo 12d 21h 00m ---
+
+--- Tiempo 12d 22h 00m ---
+
+--- Tiempo 12d 23h 00m ---
+
+--- Tiempo 13d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+18750
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+18750
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 13d 01h 00m ---
+
+--- Tiempo 13d 02h 00m ---
+
+--- Tiempo 13d 03h 00m ---
+
+--- Tiempo 13d 04h 00m ---
+
+--- Tiempo 13d 05h 00m ---
+
+--- Tiempo 13d 06h 00m ---
+
+--- Tiempo 13d 07h 00m ---
+
+--- Tiempo 13d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+19260
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+19260
+
+--- Tiempo 13d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 13d 10h 00m ---
+
+--- Tiempo 13d 11h 00m ---
+
+--- Tiempo 13d 12h 00m ---
+
+--- Tiempo 13d 13h 00m ---
+
+--- Tiempo 13d 14h 00m ---
+
+--- Tiempo 13d 15h 00m ---
+
+--- Tiempo 13d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+19770
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+19770
+
+--- Tiempo 13d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 13d 18h 00m ---
+
+--- Tiempo 13d 19h 00m ---
+
+--- Tiempo 13d 20h 00m ---
+
+--- Tiempo 13d 21h 00m ---
+
+--- Tiempo 13d 22h 00m ---
+
+--- Tiempo 13d 23h 00m ---
+
+--- Tiempo 14d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+20190
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+20190
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 14d 01h 00m ---
+
+--- Tiempo 14d 02h 00m ---
+
+--- Tiempo 14d 03h 00m ---
+
+--- Tiempo 14d 04h 00m ---
+
+--- Tiempo 14d 05h 00m ---
+
+--- Tiempo 14d 06h 00m ---
+
+--- Tiempo 14d 07h 00m ---
+
+--- Tiempo 14d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+20700
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+20700
+
+--- Tiempo 14d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 14d 10h 00m ---
+
+--- Tiempo 14d 11h 00m ---
+
+--- Tiempo 14d 12h 00m ---
+
+--- Tiempo 14d 13h 00m ---
+
+--- Tiempo 14d 14h 00m ---
+
+--- Tiempo 14d 15h 00m ---
+
+--- Tiempo 14d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+21210
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+21210
+
+--- Tiempo 14d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 14d 18h 00m ---
+
+--- Tiempo 14d 19h 00m ---
+
+--- Tiempo 14d 20h 00m ---
+
+--- Tiempo 14d 21h 00m ---
+
+--- Tiempo 14d 22h 00m ---
+
+--- Tiempo 14d 23h 00m ---
+
+--- Tiempo 15d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+21630
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+21630
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 15d 01h 00m ---
+
+--- Tiempo 15d 02h 00m ---
+
+--- Tiempo 15d 03h 00m ---
+
+--- Tiempo 15d 04h 00m ---
+
+--- Tiempo 15d 05h 00m ---
+
+--- Tiempo 15d 06h 00m ---
+
+--- Tiempo 15d 07h 00m ---
+
+--- Tiempo 15d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+22140
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+22140
+
+--- Tiempo 15d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 15d 10h 00m ---
+
+--- Tiempo 15d 11h 00m ---
+
+--- Tiempo 15d 12h 00m ---
+
+--- Tiempo 15d 13h 00m ---
+
+--- Tiempo 15d 14h 00m ---
+
+--- Tiempo 15d 15h 00m ---
+
+--- Tiempo 15d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+22650
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+22650
+
+--- Tiempo 15d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 15d 18h 00m ---
+
+--- Tiempo 15d 19h 00m ---
+
+--- Tiempo 15d 20h 00m ---
+
+--- Tiempo 15d 21h 00m ---
+
+--- Tiempo 15d 22h 00m ---
+
+--- Tiempo 15d 23h 00m ---
+
+--- Tiempo 16d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+23070
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+23070
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 16d 01h 00m ---
+
+--- Tiempo 16d 02h 00m ---
+
+--- Tiempo 16d 03h 00m ---
+
+--- Tiempo 16d 04h 00m ---
+
+--- Tiempo 16d 05h 00m ---
+
+--- Tiempo 16d 06h 00m ---
+
+--- Tiempo 16d 07h 00m ---
+
+--- Tiempo 16d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+23580
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+23580
+
+--- Tiempo 16d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 16d 10h 00m ---
+
+--- Tiempo 16d 11h 00m ---
+
+--- Tiempo 16d 12h 00m ---
+
+--- Tiempo 16d 13h 00m ---
+
+--- Tiempo 16d 14h 00m ---
+
+--- Tiempo 16d 15h 00m ---
+
+--- Tiempo 16d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+24090
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+24090
+
+--- Tiempo 16d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 16d 18h 00m ---
+
+--- Tiempo 16d 19h 00m ---
+
+--- Tiempo 16d 20h 00m ---
+
+--- Tiempo 16d 21h 00m ---
+
+--- Tiempo 16d 22h 00m ---
+
+--- Tiempo 16d 23h 00m ---
+
+--- Tiempo 17d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+24510
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+24510
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 17d 01h 00m ---
+
+--- Tiempo 17d 02h 00m ---
+
+--- Tiempo 17d 03h 00m ---
+
+--- Tiempo 17d 04h 00m ---
+
+--- Tiempo 17d 05h 00m ---
+
+--- Tiempo 17d 06h 00m ---
+
+--- Tiempo 17d 07h 00m ---
+
+--- Tiempo 17d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+25020
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+25020
+
+--- Tiempo 17d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 17d 10h 00m ---
+
+--- Tiempo 17d 11h 00m ---
+
+--- Tiempo 17d 12h 00m ---
+
+--- Tiempo 17d 13h 00m ---
+
+--- Tiempo 17d 14h 00m ---
+
+--- Tiempo 17d 15h 00m ---
+
+--- Tiempo 17d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+25530
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+25530
+
+--- Tiempo 17d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 17d 18h 00m ---
+
+--- Tiempo 17d 19h 00m ---
+
+--- Tiempo 17d 20h 00m ---
+
+--- Tiempo 17d 21h 00m ---
+
+--- Tiempo 17d 22h 00m ---
+
+--- Tiempo 17d 23h 00m ---
+
+--- Tiempo 18d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+25950
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+25950
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 18d 01h 00m ---
+
+--- Tiempo 18d 02h 00m ---
+
+--- Tiempo 18d 03h 00m ---
+
+--- Tiempo 18d 04h 00m ---
+
+--- Tiempo 18d 05h 00m ---
+
+--- Tiempo 18d 06h 00m ---
+
+--- Tiempo 18d 07h 00m ---
+
+--- Tiempo 18d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+26460
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+26460
+
+--- Tiempo 18d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 18d 10h 00m ---
+
+--- Tiempo 18d 11h 00m ---
+
+--- Tiempo 18d 12h 00m ---
+
+--- Tiempo 18d 13h 00m ---
+
+--- Tiempo 18d 14h 00m ---
+
+--- Tiempo 18d 15h 00m ---
+
+--- Tiempo 18d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+26970
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+26970
+
+--- Tiempo 18d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 18d 18h 00m ---
+
+--- Tiempo 18d 19h 00m ---
+
+--- Tiempo 18d 20h 00m ---
+
+--- Tiempo 18d 21h 00m ---
+
+--- Tiempo 18d 22h 00m ---
+
+--- Tiempo 18d 23h 00m ---
+
+--- Tiempo 19d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+27390
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+27390
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 19d 01h 00m ---
+
+--- Tiempo 19d 02h 00m ---
+
+--- Tiempo 19d 03h 00m ---
+
+--- Tiempo 19d 04h 00m ---
+
+--- Tiempo 19d 05h 00m ---
+
+--- Tiempo 19d 06h 00m ---
+
+--- Tiempo 19d 07h 00m ---
+
+--- Tiempo 19d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+27900
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+27900
+
+--- Tiempo 19d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 19d 10h 00m ---
+
+--- Tiempo 19d 11h 00m ---
+
+--- Tiempo 19d 12h 00m ---
+
+--- Tiempo 19d 13h 00m ---
+
+--- Tiempo 19d 14h 00m ---
+
+--- Tiempo 19d 15h 00m ---
+
+--- Tiempo 19d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+28410
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+28410
+
+--- Tiempo 19d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 19d 18h 00m ---
+
+--- Tiempo 19d 19h 00m ---
+
+--- Tiempo 19d 20h 00m ---
+
+--- Tiempo 19d 21h 00m ---
+
+--- Tiempo 19d 22h 00m ---
+
+--- Tiempo 19d 23h 00m ---
+
+--- Tiempo 20d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+28830
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+28830
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 20d 01h 00m ---
+
+--- Tiempo 20d 02h 00m ---
+
+--- Tiempo 20d 03h 00m ---
+
+--- Tiempo 20d 04h 00m ---
+
+--- Tiempo 20d 05h 00m ---
+
+--- Tiempo 20d 06h 00m ---
+
+--- Tiempo 20d 07h 00m ---
+
+--- Tiempo 20d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+29340
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+29340
+
+--- Tiempo 20d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 20d 10h 00m ---
+
+--- Tiempo 20d 11h 00m ---
+
+--- Tiempo 20d 12h 00m ---
+
+--- Tiempo 20d 13h 00m ---
+
+--- Tiempo 20d 14h 00m ---
+
+--- Tiempo 20d 15h 00m ---
+
+--- Tiempo 20d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+29850
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+29850
+
+--- Tiempo 20d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 20d 18h 00m ---
+
+--- Tiempo 20d 19h 00m ---
+
+--- Tiempo 20d 20h 00m ---
+
+--- Tiempo 20d 21h 00m ---
+
+--- Tiempo 20d 22h 00m ---
+
+--- Tiempo 20d 23h 00m ---
+
+--- Tiempo 21d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+30270
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+30270
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 21d 01h 00m ---
+
+--- Tiempo 21d 02h 00m ---
+
+--- Tiempo 21d 03h 00m ---
+
+--- Tiempo 21d 04h 00m ---
+
+--- Tiempo 21d 05h 00m ---
+
+--- Tiempo 21d 06h 00m ---
+
+--- Tiempo 21d 07h 00m ---
+
+--- Tiempo 21d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+30780
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+30780
+
+--- Tiempo 21d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 21d 10h 00m ---
+
+--- Tiempo 21d 11h 00m ---
+
+--- Tiempo 21d 12h 00m ---
+
+--- Tiempo 21d 13h 00m ---
+
+--- Tiempo 21d 14h 00m ---
+
+--- Tiempo 21d 15h 00m ---
+
+--- Tiempo 21d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+31290
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+31290
+
+--- Tiempo 21d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 21d 18h 00m ---
+
+--- Tiempo 21d 19h 00m ---
+
+--- Tiempo 21d 20h 00m ---
+
+--- Tiempo 21d 21h 00m ---
+
+--- Tiempo 21d 22h 00m ---
+
+--- Tiempo 21d 23h 00m ---
+
+--- Tiempo 22d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+31710
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+31710
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 22d 01h 00m ---
+
+--- Tiempo 22d 02h 00m ---
+
+--- Tiempo 22d 03h 00m ---
+
+--- Tiempo 22d 04h 00m ---
+
+--- Tiempo 22d 05h 00m ---
+
+--- Tiempo 22d 06h 00m ---
+
+--- Tiempo 22d 07h 00m ---
+
+--- Tiempo 22d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+32220
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+32220
+
+--- Tiempo 22d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 22d 10h 00m ---
+
+--- Tiempo 22d 11h 00m ---
+
+--- Tiempo 22d 12h 00m ---
+
+--- Tiempo 22d 13h 00m ---
+
+--- Tiempo 22d 14h 00m ---
+
+--- Tiempo 22d 15h 00m ---
+
+--- Tiempo 22d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+32730
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+32730
+
+--- Tiempo 22d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 22d 18h 00m ---
+
+--- Tiempo 22d 19h 00m ---
+
+--- Tiempo 22d 20h 00m ---
+
+--- Tiempo 22d 21h 00m ---
+
+--- Tiempo 22d 22h 00m ---
+
+--- Tiempo 22d 23h 00m ---
+
+--- Tiempo 23d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+33150
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+33150
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 23d 01h 00m ---
+
+--- Tiempo 23d 02h 00m ---
+
+--- Tiempo 23d 03h 00m ---
+
+--- Tiempo 23d 04h 00m ---
+
+--- Tiempo 23d 05h 00m ---
+
+--- Tiempo 23d 06h 00m ---
+
+--- Tiempo 23d 07h 00m ---
+
+--- Tiempo 23d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+33660
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+33660
+
+--- Tiempo 23d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 23d 10h 00m ---
+
+--- Tiempo 23d 11h 00m ---
+
+--- Tiempo 23d 12h 00m ---
+
+--- Tiempo 23d 13h 00m ---
+
+--- Tiempo 23d 14h 00m ---
+
+--- Tiempo 23d 15h 00m ---
+
+--- Tiempo 23d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+34170
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+34170
+
+--- Tiempo 23d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 23d 18h 00m ---
+
+--- Tiempo 23d 19h 00m ---
+
+--- Tiempo 23d 20h 00m ---
+
+--- Tiempo 23d 21h 00m ---
+
+--- Tiempo 23d 22h 00m ---
+
+--- Tiempo 23d 23h 00m ---
+
+--- Tiempo 24d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+34590
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+34590
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 24d 01h 00m ---
+
+--- Tiempo 24d 02h 00m ---
+
+--- Tiempo 24d 03h 00m ---
+
+--- Tiempo 24d 04h 00m ---
+
+--- Tiempo 24d 05h 00m ---
+
+--- Tiempo 24d 06h 00m ---
+
+--- Tiempo 24d 07h 00m ---
+
+--- Tiempo 24d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+35100
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+35100
+
+--- Tiempo 24d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 24d 10h 00m ---
+
+--- Tiempo 24d 11h 00m ---
+
+--- Tiempo 24d 12h 00m ---
+
+--- Tiempo 24d 13h 00m ---
+
+--- Tiempo 24d 14h 00m ---
+
+--- Tiempo 24d 15h 00m ---
+
+--- Tiempo 24d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+35610
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+35610
+
+--- Tiempo 24d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 24d 18h 00m ---
+
+--- Tiempo 24d 19h 00m ---
+
+--- Tiempo 24d 20h 00m ---
+
+--- Tiempo 24d 21h 00m ---
+
+--- Tiempo 24d 22h 00m ---
+
+--- Tiempo 24d 23h 00m ---
+
+--- Tiempo 25d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+36030
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+36030
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 25d 01h 00m ---
+
+--- Tiempo 25d 02h 00m ---
+
+--- Tiempo 25d 03h 00m ---
+
+--- Tiempo 25d 04h 00m ---
+
+--- Tiempo 25d 05h 00m ---
+
+--- Tiempo 25d 06h 00m ---
+
+--- Tiempo 25d 07h 00m ---
+
+--- Tiempo 25d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+36540
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+36540
+
+--- Tiempo 25d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 25d 10h 00m ---
+
+--- Tiempo 25d 11h 00m ---
+
+--- Tiempo 25d 12h 00m ---
+
+--- Tiempo 25d 13h 00m ---
+
+--- Tiempo 25d 14h 00m ---
+
+--- Tiempo 25d 15h 00m ---
+
+--- Tiempo 25d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+37050
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+37050
+
+--- Tiempo 25d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 25d 18h 00m ---
+
+--- Tiempo 25d 19h 00m ---
+
+--- Tiempo 25d 20h 00m ---
+
+--- Tiempo 25d 21h 00m ---
+
+--- Tiempo 25d 22h 00m ---
+
+--- Tiempo 25d 23h 00m ---
+
+--- Tiempo 26d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+37470
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+37470
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 26d 01h 00m ---
+
+--- Tiempo 26d 02h 00m ---
+
+--- Tiempo 26d 03h 00m ---
+
+--- Tiempo 26d 04h 00m ---
+
+--- Tiempo 26d 05h 00m ---
+
+--- Tiempo 26d 06h 00m ---
+
+--- Tiempo 26d 07h 00m ---
+
+--- Tiempo 26d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+37980
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+37980
+
+--- Tiempo 26d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 26d 10h 00m ---
+
+--- Tiempo 26d 11h 00m ---
+
+--- Tiempo 26d 12h 00m ---
+
+--- Tiempo 26d 13h 00m ---
+
+--- Tiempo 26d 14h 00m ---
+
+--- Tiempo 26d 15h 00m ---
+
+--- Tiempo 26d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+38490
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+38490
+
+--- Tiempo 26d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 26d 18h 00m ---
+
+--- Tiempo 26d 19h 00m ---
+
+--- Tiempo 26d 20h 00m ---
+
+--- Tiempo 26d 21h 00m ---
+
+--- Tiempo 26d 22h 00m ---
+
+--- Tiempo 26d 23h 00m ---
+
+--- Tiempo 27d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+38910
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+38910
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 27d 01h 00m ---
+
+--- Tiempo 27d 02h 00m ---
+
+--- Tiempo 27d 03h 00m ---
+
+--- Tiempo 27d 04h 00m ---
+
+--- Tiempo 27d 05h 00m ---
+
+--- Tiempo 27d 06h 00m ---
+
+--- Tiempo 27d 07h 00m ---
+
+--- Tiempo 27d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+39420
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+39420
+
+--- Tiempo 27d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 27d 10h 00m ---
+
+--- Tiempo 27d 11h 00m ---
+
+--- Tiempo 27d 12h 00m ---
+
+--- Tiempo 27d 13h 00m ---
+
+--- Tiempo 27d 14h 00m ---
+
+--- Tiempo 27d 15h 00m ---
+
+--- Tiempo 27d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+39930
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+39930
+
+--- Tiempo 27d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 27d 18h 00m ---
+
+--- Tiempo 27d 19h 00m ---
+
+--- Tiempo 27d 20h 00m ---
+
+--- Tiempo 27d 21h 00m ---
+
+--- Tiempo 27d 22h 00m ---
+
+--- Tiempo 27d 23h 00m ---
+
+--- Tiempo 28d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+40350
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+40350
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 28d 01h 00m ---
+
+--- Tiempo 28d 02h 00m ---
+
+--- Tiempo 28d 03h 00m ---
+
+--- Tiempo 28d 04h 00m ---
+
+--- Tiempo 28d 05h 00m ---
+
+--- Tiempo 28d 06h 00m ---
+
+--- Tiempo 28d 07h 00m ---
+
+--- Tiempo 28d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+40860
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+40860
+
+--- Tiempo 28d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 28d 10h 00m ---
+
+--- Tiempo 28d 11h 00m ---
+
+--- Tiempo 28d 12h 00m ---
+
+--- Tiempo 28d 13h 00m ---
+
+--- Tiempo 28d 14h 00m ---
+
+--- Tiempo 28d 15h 00m ---
+
+--- Tiempo 28d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+41370
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+41370
+
+--- Tiempo 28d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 28d 18h 00m ---
+
+--- Tiempo 28d 19h 00m ---
+
+--- Tiempo 28d 20h 00m ---
+
+--- Tiempo 28d 21h 00m ---
+
+--- Tiempo 28d 22h 00m ---
+
+--- Tiempo 28d 23h 00m ---
+
+--- Tiempo 29d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+41790
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+41790
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 29d 01h 00m ---
+
+--- Tiempo 29d 02h 00m ---
+
+--- Tiempo 29d 03h 00m ---
+
+--- Tiempo 29d 04h 00m ---
+
+--- Tiempo 29d 05h 00m ---
+
+--- Tiempo 29d 06h 00m ---
+
+--- Tiempo 29d 07h 00m ---
+
+--- Tiempo 29d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+42300
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+42300
+
+--- Tiempo 29d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 29d 10h 00m ---
+
+--- Tiempo 29d 11h 00m ---
+
+--- Tiempo 29d 12h 00m ---
+
+--- Tiempo 29d 13h 00m ---
+
+--- Tiempo 29d 14h 00m ---
+
+--- Tiempo 29d 15h 00m ---
+
+--- Tiempo 29d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+42810
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+42810
+
+--- Tiempo 29d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 29d 18h 00m ---
+
+--- Tiempo 29d 19h 00m ---
+
+--- Tiempo 29d 20h 00m ---
+
+--- Tiempo 29d 21h 00m ---
+
+--- Tiempo 29d 22h 00m ---
+
+--- Tiempo 29d 23h 00m ---
+
+--- Tiempo 30d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+43230
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+43230
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 30d 01h 00m ---
+
+--- Tiempo 30d 02h 00m ---
+
+--- Tiempo 30d 03h 00m ---
+
+--- Tiempo 30d 04h 00m ---
+
+--- Tiempo 30d 05h 00m ---
+
+--- Tiempo 30d 06h 00m ---
+
+--- Tiempo 30d 07h 00m ---
+
+--- Tiempo 30d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+43740
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+43740
+
+--- Tiempo 30d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 30d 10h 00m ---
+
+--- Tiempo 30d 11h 00m ---
+
+--- Tiempo 30d 12h 00m ---
+
+--- Tiempo 30d 13h 00m ---
+
+--- Tiempo 30d 14h 00m ---
+
+--- Tiempo 30d 15h 00m ---
+
+--- Tiempo 30d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+44250
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+44250
+
+--- Tiempo 30d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 30d 18h 00m ---
+
+--- Tiempo 30d 19h 00m ---
+
+--- Tiempo 30d 20h 00m ---
+
+--- Tiempo 30d 21h 00m ---
+
+--- Tiempo 30d 22h 00m ---
+
+--- Tiempo 30d 23h 00m ---
+
+--- Tiempo 31d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+44670
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+44670
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 31d 01h 00m ---
+
+--- Tiempo 31d 02h 00m ---
+
+--- Tiempo 31d 03h 00m ---
+
+--- Tiempo 31d 04h 00m ---
+
+--- Tiempo 31d 05h 00m ---
+
+--- Tiempo 31d 06h 00m ---
+
+--- Tiempo 31d 07h 00m ---
+
+--- Tiempo 31d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+45180
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+45180
+
+--- Tiempo 31d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 31d 10h 00m ---
+
+--- Tiempo 31d 11h 00m ---
+
+--- Tiempo 31d 12h 00m ---
+
+--- Tiempo 31d 13h 00m ---
+
+--- Tiempo 31d 14h 00m ---
+
+--- Tiempo 31d 15h 00m ---
+
+--- Tiempo 31d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+45690
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+45690
+
+--- Tiempo 31d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 31d 18h 00m ---
+
+--- Tiempo 31d 19h 00m ---
+
+--- Tiempo 31d 20h 00m ---
+
+--- Tiempo 31d 21h 00m ---
+
+--- Tiempo 31d 22h 00m ---
+
+--- Tiempo 31d 23h 00m ---
+
+--- Tiempo 32d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+46110
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+46110
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 32d 01h 00m ---
+
+--- Tiempo 32d 02h 00m ---
+
+--- Tiempo 32d 03h 00m ---
+
+--- Tiempo 32d 04h 00m ---
+
+--- Tiempo 32d 05h 00m ---
+
+--- Tiempo 32d 06h 00m ---
+
+--- Tiempo 32d 07h 00m ---
+
+--- Tiempo 32d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+46620
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+46620
+
+--- Tiempo 32d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 32d 10h 00m ---
+
+--- Tiempo 32d 11h 00m ---
+
+--- Tiempo 32d 12h 00m ---
+
+--- Tiempo 32d 13h 00m ---
+
+--- Tiempo 32d 14h 00m ---
+
+--- Tiempo 32d 15h 00m ---
+
+--- Tiempo 32d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+47130
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+47130
+
+--- Tiempo 32d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 32d 18h 00m ---
+
+--- Tiempo 32d 19h 00m ---
+
+--- Tiempo 32d 20h 00m ---
+
+--- Tiempo 32d 21h 00m ---
+
+--- Tiempo 32d 22h 00m ---
+
+--- Tiempo 32d 23h 00m ---
+
+--- Tiempo 33d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+47550
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+47550
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 33d 01h 00m ---
+
+--- Tiempo 33d 02h 00m ---
+
+--- Tiempo 33d 03h 00m ---
+
+--- Tiempo 33d 04h 00m ---
+
+--- Tiempo 33d 05h 00m ---
+
+--- Tiempo 33d 06h 00m ---
+
+--- Tiempo 33d 07h 00m ---
+
+--- Tiempo 33d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+48060
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+48060
+
+--- Tiempo 33d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 33d 10h 00m ---
+
+--- Tiempo 33d 11h 00m ---
+
+--- Tiempo 33d 12h 00m ---
+
+--- Tiempo 33d 13h 00m ---
+
+--- Tiempo 33d 14h 00m ---
+
+--- Tiempo 33d 15h 00m ---
+
+--- Tiempo 33d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+48570
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+48570
+
+--- Tiempo 33d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 33d 18h 00m ---
+
+--- Tiempo 33d 19h 00m ---
+
+--- Tiempo 33d 20h 00m ---
+
+--- Tiempo 33d 21h 00m ---
+
+--- Tiempo 33d 22h 00m ---
+
+--- Tiempo 33d 23h 00m ---
+
+--- Tiempo 34d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+48990
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+48990
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 34d 01h 00m ---
+
+--- Tiempo 34d 02h 00m ---
+
+--- Tiempo 34d 03h 00m ---
+
+--- Tiempo 34d 04h 00m ---
+
+--- Tiempo 34d 05h 00m ---
+
+--- Tiempo 34d 06h 00m ---
+
+--- Tiempo 34d 07h 00m ---
+
+--- Tiempo 34d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+49500
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+49500
+
+--- Tiempo 34d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 34d 10h 00m ---
+
+--- Tiempo 34d 11h 00m ---
+
+--- Tiempo 34d 12h 00m ---
+
+--- Tiempo 34d 13h 00m ---
+
+--- Tiempo 34d 14h 00m ---
+
+--- Tiempo 34d 15h 00m ---
+
+--- Tiempo 34d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+50010
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+50010
+
+--- Tiempo 34d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 34d 18h 00m ---
+
+--- Tiempo 34d 19h 00m ---
+
+--- Tiempo 34d 20h 00m ---
+
+--- Tiempo 34d 21h 00m ---
+
+--- Tiempo 34d 22h 00m ---
+
+--- Tiempo 34d 23h 00m ---
+
+--- Tiempo 35d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+50430
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+50430
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 35d 01h 00m ---
+
+--- Tiempo 35d 02h 00m ---
+
+--- Tiempo 35d 03h 00m ---
+
+--- Tiempo 35d 04h 00m ---
+
+--- Tiempo 35d 05h 00m ---
+
+--- Tiempo 35d 06h 00m ---
+
+--- Tiempo 35d 07h 00m ---
+
+--- Tiempo 35d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+50940
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+50940
+
+--- Tiempo 35d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 35d 10h 00m ---
+
+--- Tiempo 35d 11h 00m ---
+
+--- Tiempo 35d 12h 00m ---
+
+--- Tiempo 35d 13h 00m ---
+
+--- Tiempo 35d 14h 00m ---
+
+--- Tiempo 35d 15h 00m ---
+
+--- Tiempo 35d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+51450
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+51450
+
+--- Tiempo 35d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 35d 18h 00m ---
+
+--- Tiempo 35d 19h 00m ---
+
+--- Tiempo 35d 20h 00m ---
+
+--- Tiempo 35d 21h 00m ---
+
+--- Tiempo 35d 22h 00m ---
+
+--- Tiempo 35d 23h 00m ---
+
+--- Tiempo 36d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+51870
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+51870
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 36d 01h 00m ---
+
+--- Tiempo 36d 02h 00m ---
+
+--- Tiempo 36d 03h 00m ---
+
+--- Tiempo 36d 04h 00m ---
+
+--- Tiempo 36d 05h 00m ---
+
+--- Tiempo 36d 06h 00m ---
+
+--- Tiempo 36d 07h 00m ---
+
+--- Tiempo 36d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+52380
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+52380
+
+--- Tiempo 36d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 36d 10h 00m ---
+
+--- Tiempo 36d 11h 00m ---
+
+--- Tiempo 36d 12h 00m ---
+
+--- Tiempo 36d 13h 00m ---
+
+--- Tiempo 36d 14h 00m ---
+
+--- Tiempo 36d 15h 00m ---
+
+--- Tiempo 36d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+52890
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+52890
+
+--- Tiempo 36d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 36d 18h 00m ---
+
+--- Tiempo 36d 19h 00m ---
+
+--- Tiempo 36d 20h 00m ---
+
+--- Tiempo 36d 21h 00m ---
+
+--- Tiempo 36d 22h 00m ---
+
+--- Tiempo 36d 23h 00m ---
+
+--- Tiempo 37d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+53310
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+53310
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 37d 01h 00m ---
+
+--- Tiempo 37d 02h 00m ---
+
+--- Tiempo 37d 03h 00m ---
+
+--- Tiempo 37d 04h 00m ---
+
+--- Tiempo 37d 05h 00m ---
+
+--- Tiempo 37d 06h 00m ---
+
+--- Tiempo 37d 07h 00m ---
+
+--- Tiempo 37d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+53820
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+53820
+
+--- Tiempo 37d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 37d 10h 00m ---
+
+--- Tiempo 37d 11h 00m ---
+
+--- Tiempo 37d 12h 00m ---
+
+--- Tiempo 37d 13h 00m ---
+
+--- Tiempo 37d 14h 00m ---
+
+--- Tiempo 37d 15h 00m ---
+
+--- Tiempo 37d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+54330
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+54330
+
+--- Tiempo 37d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 37d 18h 00m ---
+
+--- Tiempo 37d 19h 00m ---
+
+--- Tiempo 37d 20h 00m ---
+
+--- Tiempo 37d 21h 00m ---
+
+--- Tiempo 37d 22h 00m ---
+
+--- Tiempo 37d 23h 00m ---
+
+--- Tiempo 38d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+54750
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+54750
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 38d 01h 00m ---
+
+--- Tiempo 38d 02h 00m ---
+
+--- Tiempo 38d 03h 00m ---
+
+--- Tiempo 38d 04h 00m ---
+
+--- Tiempo 38d 05h 00m ---
+
+--- Tiempo 38d 06h 00m ---
+
+--- Tiempo 38d 07h 00m ---
+
+--- Tiempo 38d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+55260
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+55260
+
+--- Tiempo 38d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 38d 10h 00m ---
+
+--- Tiempo 38d 11h 00m ---
+
+--- Tiempo 38d 12h 00m ---
+
+--- Tiempo 38d 13h 00m ---
+
+--- Tiempo 38d 14h 00m ---
+
+--- Tiempo 38d 15h 00m ---
+
+--- Tiempo 38d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+55770
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+55770
+
+--- Tiempo 38d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 38d 18h 00m ---
+
+--- Tiempo 38d 19h 00m ---
+
+--- Tiempo 38d 20h 00m ---
+
+--- Tiempo 38d 21h 00m ---
+
+--- Tiempo 38d 22h 00m ---
+
+--- Tiempo 38d 23h 00m ---
+
+--- Tiempo 39d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+56190
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+56190
+✅ Camión TA01 vuelve a estar disponible tras avería
+✅ Camión TD05 vuelve a estar disponible tras avería
+
+--- Tiempo 39d 01h 00m ---
+
+--- Tiempo 39d 02h 00m ---
+
+--- Tiempo 39d 03h 00m ---
+
+--- Tiempo 39d 04h 00m ---
+
+--- Tiempo 39d 05h 00m ---
+
+--- Tiempo 39d 06h 00m ---
+
+--- Tiempo 39d 07h 00m ---
+
+--- Tiempo 39d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+56700
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+56700
+
+--- Tiempo 39d 09h 00m ---
+✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+
+--- Tiempo 39d 10h 00m ---
+
+--- Tiempo 39d 11h 00m ---
+
+--- Tiempo 39d 12h 00m ---
+
+--- Tiempo 39d 13h 00m ---
+
+--- Tiempo 39d 14h 00m ---
+
+--- Tiempo 39d 15h 00m ---
+
+--- Tiempo 39d 16h 00m ---
+⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+57210
+⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+57210
+
+--- Tiempo 39d 17h 00m ---
+✅ Camión TB01 vuelve a estar disponible tras avería
+✅ Camión TC02 vuelve a estar disponible tras avería
+
+--- Tiempo 39d 18h 00m ---
+
+--- Tiempo 39d 19h 00m ---
+
+--- Tiempo 39d 20h 00m ---
+
+--- Tiempo 39d 21h 00m ---
+
+--- Tiempo 39d 22h 00m ---
+
+--- Tiempo 39d 23h 00m ---
+
+--- Tiempo 40d 00h 00m ---
+⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+57630
+⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+57630
+
+📊 Análisis Final:
+Pedidos Atendidos: 22/28 (78,57%)
+Pedidos No Atendidos: 0
+
+📊 Resumen de Consumo por Camión:
+🚚 TA01 consumió 65,10 galones
+🚚 TA02 consumió 58,80 galones
+🚚 TB01 consumió 56,48 galones
+🚚 TB02 consumió 42,05 galones
+🚚 TB03 consumió 28,60 galones
+🚚 TB04 consumió 38,70 galones
+🚚 TC01 consumió 38,00 galones
+🚚 TC02 consumió 19,00 galones
+🚚 TC03 consumió 2,75 galones
+🚚 TC04 consumió 8,40 galones
+🚚 TD01 consumió 0,00 galones
+🚚 TD02 consumió 0,00 galones
+🚚 TD03 consumió 0,00 galones
+🚚 TD04 consumió 0,00 galones
+🚚 TD05 consumió 0,00 galones
+🚚 TD06 consumió 0,00 galones
+🚚 TD07 consumió 0,00 galones
+🚚 TD08 consumió 0,00 galones
+🚚 TD09 consumió 0,00 galones
+🚚 TD10 consumió 0,00 galones
+🔧 Consumo total acumulado: 357,88 galones
