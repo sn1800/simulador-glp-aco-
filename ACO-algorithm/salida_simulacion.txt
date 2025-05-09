@@ -63,196 +63,130 @@
 --- Tiempo 01d 00h 00m ---
 ⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+1470
 ⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+1470
+🆕 Pedido #0 en (16,13), vol 3,0m³, límite t+1704
+✅ TA02 entrega Pedido #0: (16,13), vol 3,0 → t+1482, regreso t+1500, consumo 4,05 gal, disp. 22,0 m³
 ✅ Camión TA01 vuelve a estar disponible tras avería
 ✅ Camión TD05 vuelve a estar disponible tras avería
+🆕 Pedido #1 en (5,18), vol 9,0m³, límite t+2508
+✅ TA01 entrega Pedido #1: (5,18), vol 9,0 → t+1522, regreso t+1556, consumo 10,20 gal, disp. 16,0 m³
 
 --- Tiempo 01d 01h 00m ---
-🆕 Pedido #0 en (16,13), vol 3,0m³, límite t+1704
-🆕 Pedido #1 en (5,18), vol 9,0m³, límite t+2508
-✅ TA01 entrega Pedido #1: (5,18), vol 9,0 → t+1534, regreso t+1568, consumo 10,20 gal, disp. 16,0 m³
-✅ TA02 entrega Pedido #0: (16,13), vol 3,0 → t+1518, regreso t+1536, consumo 4,05 gal, disp. 22,0 m³
+🆕 Pedido #2 en (63,13), vol 2,0m³, límite t+2052
+✅ TA02 entrega Pedido #2: (63,13), vol 2,0 → t+1606, regreso t+1700, consumo 19,98 gal, disp. 20,0 m³
+🆕 Pedido #3 en (4,6), vol 2,0m³, límite t+2495
+✅ TB01 entrega Pedido #3: (4,6), vol 2,0 → t+1555, regreso t+1575, consumo 3,00 gal, disp. 13,0 m³
+🆕 Pedido #4 en (54,16), vol 9,0m³, límite t+1859
+✅ TB02 entrega Pedido #4: (54,16), vol 9,0 → t+1659, regreso t+1759, consumo 23,75 gal, disp. 6,0 m³
 
 --- Tiempo 01d 02h 00m ---
-🆕 Pedido #2 en (63,13), vol 2,0m³, límite t+2052
-🆕 Pedido #3 en (4,6), vol 2,0m³, límite t+2495
-🆕 Pedido #4 en (54,16), vol 9,0m³, límite t+1859
-✅ TA02 entrega Pedido #3: (4,6), vol 2,0 → t+1580, regreso t+1600, consumo 4,25 gal, disp. 20,0 m³
-✅ TB01 entrega Pedido #4: (54,16), vol 9,0 → t+1660, regreso t+1760, consumo 23,75 gal, disp. 6,0 m³
-✅ TB02 entrega Pedido #2: (63,13), vol 2,0 → t+1672, regreso t+1784, consumo 16,80 gal, disp. 13,0 m³
+🆕 Pedido #5 en (29,47), vol 9,0m³, límite t+1943
+✅ TA01 entrega Pedido #5: (29,47), vol 9,0 → t+1689, regreso t+1795, consumo 31,80 gal, disp. 7,0 m³
+🆕 Pedido #6 en (14,43), vol 5,0m³, límite t+1907
+✅ TB03 entrega Pedido #6: (14,43), vol 5,0 → t+1681, regreso t+1755, consumo 13,88 gal, disp. 10,0 m³
 
 --- Tiempo 01d 03h 00m ---
-🆕 Pedido #5 en (29,47), vol 9,0m³, límite t+1943
-🆕 Pedido #6 en (14,43), vol 5,0m³, límite t+1907
-✅ TA01 entrega Pedido #6: (14,43), vol 5,0 → t+1694, regreso t+1768, consumo 18,50 gal, disp. 11,0 m³
-✅ TA02 entrega Pedido #5: (29,47), vol 9,0 → t+1732, regreso t+1844, consumo 33,60 gal, disp. 11,0 m³
+🆕 Pedido #7 en (10,32), vol 14,0m³, límite t+1930
+✅ TB04 entrega Pedido #7: (10,32), vol 14,0 → t+1682, regreso t+1734, consumo 15,60 gal, disp. 1,0 m³
+🆕 Pedido #8 en (69,46), vol 2,0m³, límite t+1894
+✅ TC01 entrega Pedido #8: (69,46), vol 2,0 → t+1844, regreso t+2034, consumo 23,75 gal, disp. 8,0 m³
+🆕 Pedido #9 en (34,5), vol 3,0m³, límite t+2398
+✅ TC02 entrega Pedido #9: (34,5), vol 3,0 → t+1728, regreso t+1778, consumo 6,88 gal, disp. 7,0 m³
 
 --- Tiempo 01d 04h 00m ---
-🆕 Pedido #7 en (10,32), vol 14,0m³, límite t+1930
-🆕 Pedido #8 en (69,46), vol 2,0m³, límite t+1894
-🆕 Pedido #9 en (34,5), vol 3,0m³, límite t+2398
-✅ TB03 entrega Pedido #9: (34,5), vol 3,0 → t+1730, regreso t+1780, consumo 8,13 gal, disp. 12,0 m³
-✅ TB04 entrega Pedido #7: (10,32), vol 14,0 → t+1732, regreso t+1784, consumo 15,60 gal, disp. 1,0 m³
-✅ TC01 entrega Pedido #8: (69,46), vol 2,0 → t+1870, regreso t+2060, consumo 23,75 gal, disp. 8,0 m³
+🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
+🆕 Pedido #11 en (27,49), vol 11,0m³, límite t+2325
+✅ TB01 entrega Pedido #11: (27,49), vol 11,0 → t+1857, regreso t+1989, consumo 34,65 gal, disp. 2,0 m³
 
 --- Tiempo 01d 05h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #11 en (27,49), vol 11,0m³, límite t+2325
-
---- Tiempo 01d 06h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #11 en (27,49), vol 11,0m³, límite t+2325
 🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
 🆕 Pedido #13 en (22,28), vol 2,0m³, límite t+2013
+✅ TB03 entrega Pedido #13: (22,28), vol 2,0 → t+1819, regreso t+1865, consumo 6,90 gal, disp. 8,0 m³
 🆕 Pedido #14 en (31,27), vol 1,0m³, límite t+2876
-✅ TA01 entrega Pedido #11: (27,49), vol 11,0 → t+1912, regreso t+2024, consumo 36,40 gal, disp. 0,0 m³
-✅ TB01 entrega Pedido #13: (22,28), vol 2,0 → t+1860, regreso t+1920, consumo 9,00 gal, disp. 4,0 m³
-✅ TB02 entrega Pedido #14: (31,27), vol 1,0 → t+1876, regreso t+1952, consumo 10,45 gal, disp. 12,0 m³
+✅ TA01 entrega Pedido #14: (31,27), vol 1,0 → t+1840, regreso t+1884, consumo 8,80 gal, disp. 6,0 m³
+
+--- Tiempo 01d 06h 00m ---
+🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
+✅ TA02 entrega Pedido #15: (23,31), vol 13,0 → t+1936, regreso t+2052, consumo 40,60 gal, disp. 7,0 m³
+🆕 Pedido #16 en (34,4), vol 11,0m³, límite t+2564
 
 --- Tiempo 01d 07h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
-🆕 Pedido #16 en (34,4), vol 11,0m³, límite t+2564
-✅ TA02 entrega Pedido #16: (34,4), vol 11,0 → t+1912, regreso t+1964, consumo 16,90 gal, disp. 0,0 m³
-
---- Tiempo 01d 08h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
 🆕 Pedido #17 en (46,37), vol 3,0m³, límite t+4388
+✅ TB02 entrega Pedido #17: (46,37), vol 3,0 → t+1926, regreso t+1984, consumo 9,43 gal, disp. 3,0 m³
 🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
 🆕 Pedido #19 en (60,33), vol 3,0m³, límite t+2635
-✅ TB01 entrega Pedido #19: (60,33), vol 3,0 → t+2066, regreso t+2212, consumo 23,73 gal, disp. 1,0 m³
-✅ TB03 entrega Pedido #17: (46,37), vol 3,0 → t+2046, regreso t+2172, consumo 20,48 gal, disp. 9,0 m³
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+2024
+✅ TA01 entrega Pedido #19: (60,33), vol 3,0 → t+1985, regreso t+2055, consumo 15,75 gal, disp. 3,0 m³
+
+--- Tiempo 01d 08h 00m ---
+⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+1980
+🆕 Pedido #20 en (62,34), vol 2,0m³, límite t+3019
+✅ TC02 entrega Pedido #20: (62,34), vol 2,0 → t+2053, regreso t+2167, consumo 14,25 gal, disp. 5,0 m³
+🆕 Pedido #21 en (44,3), vol 6,0m³, límite t+2203
+✅ TC03 entrega Pedido #21: (44,3), vol 6,0 → t+2037, regreso t+2111, consumo 12,95 gal, disp. 4,0 m³
 
 --- Tiempo 01d 09h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #20 en (62,34), vol 2,0m³, límite t+3019
-🆕 Pedido #21 en (44,3), vol 6,0m³, límite t+2203
-✅ TB02 entrega Pedido #21: (44,3), vol 6,0 → t+2054, regreso t+2128, consumo 14,80 gal, disp. 6,0 m³
-✅ TC02 entrega Pedido #20: (62,34), vol 2,0 → t+2132, regreso t+2284, consumo 19,00 gal, disp. 8,0 m³
-✅ Camión TA02 vuelve a estar disponible tras avería
+✅ Camión TB03 vuelve a estar disponible tras avería
+🆕 Pedido #22 en (3,7), vol 3,0m³, límite t+3006
+✅ TC04 entrega Pedido #22: (3,7), vol 3,0 → t+2006, regreso t+2026, consumo 2,75 gal, disp. 7,0 m³
+🆕 Pedido #23 en (56,48), vol 1,0m³, límite t+3330
+✅ TB02 entrega Pedido #23: (56,48), vol 1,0 → t+2052, regreso t+2094, consumo 5,78 gal, disp. 2,0 m³
+🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
 
 --- Tiempo 01d 10h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #22 en (3,7), vol 3,0m³, límite t+3006
-🆕 Pedido #23 en (56,48), vol 1,0m³, límite t+3330
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-✅ TB04 entrega Pedido #23: (56,48), vol 1,0 → t+2208, regreso t+2376, consumo 23,10 gal, disp. 0,0 m³
-✅ TC03 entrega Pedido #22: (3,7), vol 3,0 → t+2060, regreso t+2080, consumo 2,75 gal, disp. 7,0 m³
+⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+2112
+🆕 Pedido #25 en (7,41), vol 7,0m³, límite t+3137
+✅ TB03 entrega Pedido #25: (7,41), vol 7,0 → t+2113, regreso t+2169, consumo 11,90 gal, disp. 1,0 m³
+🆕 Pedido #26 en (9,26), vol 8,0m³, límite t+3461
+✅ TC01 entrega Pedido #26: (9,26), vol 8,0 → t+2241, regreso t+2401, consumo 32,00 gal, disp. 0,0 m³
 
 --- Tiempo 01d 11h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #25 en (7,41), vol 7,0m³, límite t+3137
-🆕 Pedido #26 en (9,26), vol 8,0m³, límite t+3461
-✅ TC01 entrega Pedido #25: (7,41), vol 7,0 → t+2176, regreso t+2252, consumo 14,25 gal, disp. 1,0 m³
-✅ TC04 entrega Pedido #26: (9,26), vol 8,0 → t+2142, regreso t+2184, consumo 8,40 gal, disp. 2,0 m³
+🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+✅ Camión TA02 vuelve a estar disponible tras avería
 
 --- Tiempo 01d 12h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+2232
 
 --- Tiempo 01d 13h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
-✅ Camión TB03 vuelve a estar disponible tras avería
 
 --- Tiempo 01d 14h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 
 --- Tiempo 01d 15h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 
 --- Tiempo 01d 16h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 ⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+2490
 ⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+2490
 
 --- Tiempo 01d 17h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 ✅ Camión TB01 vuelve a estar disponible tras avería
 ✅ Camión TC02 vuelve a estar disponible tras avería
 
 --- Tiempo 01d 18h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+❌ Pedido #16 no fue entregado a tiempo (límite t+2564), se descartó.
 
 --- Tiempo 01d 19h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+❌ Pedido #24 no fue entregado a tiempo (límite t+2634), se descartó.
 
 --- Tiempo 01d 20h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+❌ Pedido #18 no fue entregado a tiempo (límite t+2671), se descartó.
 
 --- Tiempo 01d 21h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+❌ Pedido #10 no fue entregado a tiempo (límite t+2722), se descartó.
 
 --- Tiempo 01d 22h 00m ---
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+❌ Pedido #12 no fue entregado a tiempo (límite t+2769), se descartó.
 
 --- Tiempo 01d 23h 00m ---
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 
 --- Tiempo 02d 00h 00m ---
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 ⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+2910
 ⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+2910
 ✅ Camión TA01 vuelve a estar disponible tras avería
 ✅ Camión TD05 vuelve a estar disponible tras avería
 
 --- Tiempo 02d 01h 00m ---
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 
 --- Tiempo 02d 02h 00m ---
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
 
 --- Tiempo 02d 03h 00m ---
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
+❌ Pedido #27 no fue entregado a tiempo (límite t+3065), se descartó.
 
 --- Tiempo 02d 04h 00m ---
 
@@ -2528,19 +2462,19 @@
 
 📊 Análisis Final:
 Pedidos Atendidos: 22/28 (78,57%)
-Pedidos No Atendidos: 0
+Pedidos No Atendidos: 6
 
 📊 Resumen de Consumo por Camión:
-🚚 TA01 consumió 65,10 galones
-🚚 TA02 consumió 58,80 galones
-🚚 TB01 consumió 56,48 galones
-🚚 TB02 consumió 42,05 galones
-🚚 TB03 consumió 28,60 galones
-🚚 TB04 consumió 38,70 galones
-🚚 TC01 consumió 38,00 galones
-🚚 TC02 consumió 19,00 galones
-🚚 TC03 consumió 2,75 galones
-🚚 TC04 consumió 8,40 galones
+🚚 TA01 consumió 66,55 galones
+🚚 TA02 consumió 64,63 galones
+🚚 TB01 consumió 37,65 galones
+🚚 TB02 consumió 38,95 galones
+🚚 TB03 consumió 32,68 galones
+🚚 TB04 consumió 15,60 galones
+🚚 TC01 consumió 55,75 galones
+🚚 TC02 consumió 21,13 galones
+🚚 TC03 consumió 12,95 galones
+🚚 TC04 consumió 2,75 galones
 🚚 TD01 consumió 0,00 galones
 🚚 TD02 consumió 0,00 galones
 🚚 TD03 consumió 0,00 galones
@@ -2551,4 +2485,4 @@ Pedidos No Atendidos: 0
 🚚 TD08 consumió 0,00 galones
 🚚 TD09 consumió 0,00 galones
 🚚 TD10 consumió 0,00 galones
-🔧 Consumo total acumulado: 357,88 galones
+🔧 Consumo total acumulado: 348,63 galones

@@ -123,25 +123,15 @@ public class ACOPlanner {
             for (int t = 0; t <= 57600; t++) {
                 if (t % 60 == 0)
                     System.out.printf("\n--- Tiempo %02dd %02dh %02dm ---%n", t / 1440, (t / 60) % 24, t % 60);
-                if (t % 60 == 0) visualizador.render(t, pedidos, flota, bloqueos, depositoX, depositoY);
+                if (t % 60 == 0)
+                    visualizador.render(t, pedidos, flota, bloqueos, depositoX, depositoY);
 
-                // ACO cada hora
-                if (t % 60 == 0) {
-                    List<Pedido> activos = new ArrayList<>();
-                    for (Pedido p : pedidos) {
-                        if (!p.atendido && !p.descartado && p.tiempoCreacion <= t && p.tiempoLimite >= t){
-                            System.out.printf("🆕 Pedido #%d en (%d,%d), vol %.1fm³, límite t+%d%n", p.id, p.x, p.y, p.volumen, p.tiempoLimite);
-                            activos.add(p);
-                        }
-                    }
-                    if (!activos.isEmpty()) {
-                        List<Integer> mejorRuta = ejecutarACO(activos);
-                        asignarPedidos(t, mejorRuta, activos);
-                    }
+                List<Pedido> nuevos = pedidosPorTiempo.getOrDefault(t, new ArrayList<>());
+                for (Pedido p : nuevos) {
+                    System.out.printf("🆕 Pedido #%d en (%d,%d), vol %.1fm³, límite t+%d%n", p.id, p.x, p.y, p.volumen, p.tiempoLimite);
                 }
 
-                // Averías y liberaciones
-                // (mantener el bloque existente aquí)
+                // Averías
                 String turnoActual = turnoDeMinuto(t);
                 if (!turnoActual.equals(turnoAnterior)) {
                     turnoAnterior = turnoActual;
@@ -169,8 +159,28 @@ public class ACOPlanner {
                         System.out.printf("✅ Camión %s vuelve a estar disponible tras avería%n", c.id);
                     }
                 }
+                // ACO y asignación
+                List<Pedido> activos = new ArrayList<>();
+                for (Pedido p : pedidos) {
+                    if (!p.atendido && !p.descartado && p.tiempoCreacion <= t && p.tiempoLimite >= t)
+                        activos.add(p);
+                }
+                if (!activos.isEmpty()) {
+                    List<Integer> mejorRuta = ejecutarACO(activos);
+                    asignarPedidos(t, mejorRuta, activos);
+                }
+
+
+                // Descarta pedidos vencidos
+                for (Pedido p : pedidos) {
+                    if (!p.atendido && !p.descartado && t > p.tiempoLimite) {
+                        p.descartado = true;
+                        System.out.printf("❌ Pedido #%d no fue entregado a tiempo (límite t+%d), se descartó.%n", p.id, p.tiempoLimite);
+                    }
+                }
             }
-            // resumen final (mantener existente)
+
+            // Reporte final
             int totalPedidos = pedidos.size();
             int pedidosAtendidos = (int) pedidos.stream().filter(p -> p.atendido).count();
             int pedidosNoAtendidos = (int) pedidos.stream().filter(p -> p.descartado).count();
@@ -189,193 +199,95 @@ public class ACOPlanner {
             System.out.printf("🔧 Consumo total acumulado: %.2f galones\n", totalConsumo);
         }
         private List<Integer> ejecutarACO(List<Pedido> activos) {
-            int N = activos.size();
-            double[][] feromonas = new double[N][N];
-            for (double[] row : feromonas) Arrays.fill(row, 1.0);
+            int Nlocal = activos.size();
+            if (Nlocal == 0) return new ArrayList<>();
+            double[][] feromonasLoc = new double[Nlocal][Nlocal];
+            for (double[] row : feromonasLoc) Arrays.fill(row, 1.0);
 
-            List<Integer> mejorRuta = null;
-            double mejorLongitud = Double.MAX_VALUE;
-
-            for (int iter = 0; iter < ITERACIONES; iter++) {
-                List<List<Integer>> rutas = new ArrayList<>();
-                for (int k = 0; k < HORMIGAS; k++) {
-                    List<Integer> ruta = construirRutaACO(N, feromonas, activos);
-                    rutas.add(ruta);
-                }
-                evaporarFeromonas(feromonas);
-                for (List<Integer> ruta : rutas) {
-                    double longitud = calcularLongitud(ruta, activos);
-                    if (longitud < mejorLongitud) {
-                        mejorLongitud = longitud;
-                        mejorRuta = ruta;
-                    }
-                    for (int i = 0; i < ruta.size() - 1; i++) {
-                        int a = ruta.get(i), b = ruta.get(i + 1);
-                        feromonas[a][b] += Q / longitud;
-                    }
-                }
-            }
-            return mejorRuta != null ? mejorRuta : new ArrayList<>();
-        }
-        private List<Integer> construirRutaACO(int N, double[][] feromonas, List<Pedido> activos) {
-            List<Integer> ruta = new ArrayList<>();
-            boolean[] visitados = new boolean[N];
-            int actual = new Random().nextInt(N);
-            ruta.add(actual);
-            visitados[actual] = true;
-
-            while (ruta.size() < N) {
-                int siguiente = seleccionarSiguiente(actual, visitados, feromonas, activos);
-                if (siguiente == -1) break;
-                ruta.add(siguiente);
-                visitados[siguiente] = true;
-                actual = siguiente;
-            }
-            return ruta;
-        }
-        private double calcularLongitud(List<Integer> ruta, List<Pedido> activos) {
-            double total = 0.0;
-            for (int i = 0; i < ruta.size() - 1; i++) {
-                total += distancia(activos.get(ruta.get(i)), activos.get(ruta.get(i + 1)));
-            }
-            return total;
-        }
-        public void simularYAsignar() {
             List<Integer> mejorRuta = null;
             double mejorLongitud = Double.MAX_VALUE;
 
             for (int iter = 0; iter < ITERACIONES; iter++) {
                 List<List<Integer>> rutasHormigas = new ArrayList<>();
                 for (int k = 0; k < HORMIGAS; k++) {
-                    rutasHormigas.add(construirRuta());
+                    boolean[] visitados = new boolean[Nlocal];
+                    List<Integer> ruta = new ArrayList<>();
+                    int actual = new Random().nextInt(Nlocal);
+                    ruta.add(actual);
+                    visitados[actual] = true;
+
+                    while (ruta.size() < Nlocal) {
+                        int siguiente = -1;
+                        double suma = 0.0;
+                        double[] probs = new double[Nlocal];
+                        for (int j = 0; j < Nlocal; j++) {
+                            if (!visitados[j]) {
+                                double tau = feromonasLoc[actual][j];
+                                double eta = 1.0 / (distancia(activos.get(actual), activos.get(j)) + 1);
+                                probs[j] = Math.pow(tau, ALPHA) * Math.pow(eta, BETA);
+                                suma += probs[j];
+                            }
+                        }
+                        if (suma == 0) break;
+                        double r = Math.random() * suma, acumulado = 0;
+                        for (int j = 0; j < Nlocal; j++) {
+                            if (!visitados[j]) {
+                                acumulado += probs[j];
+                                if (acumulado >= r) {
+                                    siguiente = j;
+                                    break;
+                                }
+                            }
+                        }
+                        if (siguiente == -1) break;
+                        ruta.add(siguiente);
+                        visitados[siguiente] = true;
+                        actual = siguiente;
+                    }
+                    rutasHormigas.add(ruta);
                 }
-                evaporarFeromonas();
+
+                for (int i = 0; i < Nlocal; i++)
+                    for (int j = 0; j < Nlocal; j++)
+                        feromonasLoc[i][j] *= (1 - RHO);
+
                 for (List<Integer> ruta : rutasHormigas) {
-                    double longitud = calcularLongitud(ruta);
+                    double longitud = 0.0;
+                    for (int i = 0; i < ruta.size() - 1; i++) {
+                        longitud += distancia(activos.get(ruta.get(i)), activos.get(ruta.get(i + 1)));
+                    }
                     if (longitud < mejorLongitud) {
                         mejorLongitud = longitud;
-                        mejorRuta = ruta;
+                        mejorRuta = new ArrayList<>(ruta);
                     }
                     for (int i = 0; i < ruta.size() - 1; i++) {
-                        int a = ruta.get(i);
-                        int b = ruta.get(i + 1);
-                        feromonas[a][b] += Q / longitud;
+                        int a = ruta.get(i), b = ruta.get(i + 1);
+                        feromonasLoc[a][b] += Q / longitud;
                     }
                 }
             }
 
-            if (mejorRuta == null) {
-                System.out.println("❌ No se encontró ruta óptima.");
-                return;
-            }
-
-            String turnoAnterior = "";
-            Map<Integer, List<Pedido>> pedidosPorTiempo = new HashMap<>();
-            for (Pedido p : pedidos) {
-                pedidosPorTiempo.computeIfAbsent(p.tiempoCreacion, k -> new ArrayList<>()).add(p);
-            }
-
-            for (int t = 0; t <= 57600; t++) {
-                if( t == 1465)
-                    continue;
-                if (t % 60 == 0)
-                    System.out.printf("\n--- Tiempo %02dd %02dh %02dm ---%n", t / 1440, (t / 60) % 24, t % 60);
-                if (t % 60 == 0) visualizador.render(t, pedidos, flota, bloqueos, depositoX, depositoY);
-                List<Pedido> nuevos = pedidosPorTiempo.getOrDefault(t, new ArrayList<>());
-                for (Pedido p : nuevos) {
-                    System.out.printf("🆕 Pedido #%d en (%d,%d), vol %.1fm³, límite t+%d%n", p.id, p.x, p.y, p.volumen, p.tiempoLimite);
-                }
-
-                String turnoActual = turnoDeMinuto(t);
-                if (!turnoActual.equals(turnoAnterior)) {
-                    turnoAnterior = turnoActual;
-                    averiasAplicadas.clear();
-                    camionesInhabilitados.clear();
-                }
-
-                Map<String, String> averiasTurno = averiasPorTurno.getOrDefault(turnoActual, new HashMap<>());
-                for (Map.Entry<String, String> entry : averiasTurno.entrySet()) {
-                    String key = turnoActual + "_" + entry.getKey();
-                    if (averiasAplicadas.contains(key)) continue;
-                    Camion c = flota.stream().filter(cam -> cam.id.equals(entry.getKey())).findFirst().orElse(null);
-                    if (c != null && c.libreEn <= t) {
-                        int penalizacion = entry.getValue().equals("T1") ? 30 : entry.getValue().equals("T2") ? 60 : 90;
-                        c.libreEn = t + penalizacion;
-                        camionesInhabilitados.add(c.id);
-                        averiasAplicadas.add(key);
-                        System.out.printf("⛔ Camión %s inhabilitado por avería tipo %s hasta t+%d%n", c.id, entry.getValue(), c.libreEn);
-                    }
-                }
-
-                for (Camion c : flota) {
-                    if (camionesInhabilitados.contains(c.id) && c.libreEn <= t) {
-                        camionesInhabilitados.remove(c.id);
-                        System.out.printf("✅ Camión %s vuelve a estar disponible tras avería%n", c.id);
-                    }
-                }
-
-                for (int i : mejorRuta) {
-                    Pedido p = pedidos.get(i);
-                    if (p.atendido || p.descartado || p.tiempoCreacion > t) continue;
-
-                    Camion mejorCamion = null;
-                    double mejorCosto = Double.MAX_VALUE;
-
-                    for (Camion c : flota) {
-                        if (c.disponible < p.volumen || c.libreEn > t || camionesInhabilitados.contains(c.id)) continue;
-                        if (hayBloqueo(t, c.x, c.y, p.x, p.y)) continue;
-                        double d = distancia(c.x, c.y, p.x, p.y);
-                        if (d < mejorCosto) {
-                            mejorCamion = c;
-                            mejorCosto = d;
-                        }
-                    }
-
-                    if (mejorCamion != null) {
-                        double consumo = calcularConsumo(mejorCosto, p.volumen, mejorCamion.tara);
-                        mejorCamion.combustibleGastado += consumo;
-                        mejorCamion.disponible -= p.volumen;
-                        int ida = (int)(mejorCosto / 0.5);
-                        mejorCamion.libreEn = t + ida * 2;
-                        p.atendido = true;
-                        System.out.printf("✅ %s entrega Pedido #%d: (%d,%d), vol %.1f → t+%d, regreso t+%d, consumo %.2f gal, disp. %.1f m³%n",
-                                mejorCamion.id, p.id, p.x, p.y, p.volumen, t + ida, mejorCamion.libreEn, consumo, mejorCamion.disponible);
-                    } else if (!p.atendido && !p.descartado && t > p.tiempoLimite) {
-                        System.out.printf("❌ Pedido #%d no fue entregado a tiempo (límite t+%d), se descartó.%n", p.id, p.tiempoLimite);
-                        p.descartado = true;
-                    }
-                }
-            }
-
-            int totalPedidos = pedidos.size();
-            int pedidosAtendidos = (int) pedidos.stream().filter(p -> p.atendido).count();
-            int pedidosNoAtendidos = (int) pedidos.stream().filter(p -> p.descartado).count();
-            double porcentajeAtendidos = (100.0 * pedidosAtendidos) / totalPedidos;
-
-            System.out.println("\n📊 Análisis Final:");
-            System.out.printf("Pedidos Atendidos: %d/%d (%.2f%%)%n", pedidosAtendidos, totalPedidos, porcentajeAtendidos);
-            System.out.printf("Pedidos No Atendidos: %d%n", pedidosNoAtendidos);
-
-            System.out.println("\n📊 Resumen de Consumo por Camión:");
-            double totalConsumo = 0.0;
-            for (Camion c : flota) {
-                System.out.printf("🚚 %s consumió %.2f galones\n", c.id, c.combustibleGastado);
-                totalConsumo += c.combustibleGastado;
-            }
-            System.out.printf("🔧 Consumo total acumulado: %.2f galones\n", totalConsumo);
+            return mejorRuta != null ? mejorRuta : new ArrayList<>();
         }
-        private void asignarPedidos(int t, List<Integer> ruta, List<Pedido> activos) {
-            for (int i : ruta) {
+
+        private void asignarPedidos(int t, List<Integer> mejorRuta, List<Pedido> activos) {
+            AStarPathfinder pathfinder = new AStarPathfinder(70, 50, bloqueos, t);
+
+            for (int i : mejorRuta) {
                 Pedido p = activos.get(i);
-                if (p.atendido || p.descartado || p.tiempoCreacion > t) continue;
+                if (p.atendido || p.descartado) continue;
 
                 Camion mejorCamion = null;
                 double mejorCosto = Double.MAX_VALUE;
 
                 for (Camion c : flota) {
-                    if (c.disponible < p.volumen || c.libreEn > t || camionesInhabilitados.contains(c.id)) continue;
-                    if (hayBloqueo(t, c.x, c.y, p.x, p.y)) continue;
-                    double d = distancia(c.x, c.y, p.x, p.y);
+                    if (c.disponible < p.volumen || c.libreEn > t || camionesInhabilitados.contains(c.id))
+                        continue;
+
+                    List<int[]> camino = pathfinder.encontrarRuta(c.x, c.y, p.x, p.y);
+                    if (camino.isEmpty()) continue;
+
+                    double d = camino.size() - 1;
                     if (d < mejorCosto) {
                         mejorCamion = c;
                         mejorCosto = d;
@@ -388,90 +300,23 @@ public class ACOPlanner {
                     mejorCamion.disponible -= p.volumen;
                     int ida = (int)(mejorCosto / 0.5);
                     mejorCamion.libreEn = t + ida * 2;
+
+                    // Actualiza ubicación al destino del pedido
+                    mejorCamion.x = p.x;
+                    mejorCamion.y = p.y;
+
                     p.atendido = true;
+
                     System.out.printf("✅ %s entrega Pedido #%d: (%d,%d), vol %.1f → t+%d, regreso t+%d, consumo %.2f gal, disp. %.1f m³%n",
                             mejorCamion.id, p.id, p.x, p.y, p.volumen, t + ida, mejorCamion.libreEn, consumo, mejorCamion.disponible);
-                } else if (!p.atendido && !p.descartado && t > p.tiempoLimite) {
-                    System.out.printf("❌ Pedido #%d no fue entregado a tiempo (límite t+%d), se descartó.%n", p.id, p.tiempoLimite);
+                } else if (t > p.tiempoLimite && !p.atendido && !p.descartado) {
                     p.descartado = true;
+                    System.out.printf("❌ Pedido #%d no fue entregado a tiempo (límite t+%d), se descartó.%n", p.id, p.tiempoLimite);
                 }
             }
-        }
-        private void evaporarFeromonas(double[][] feromonas) {
-            for (int i = 0; i < feromonas.length; i++)
-                for (int j = 0; j < feromonas[i].length; j++)
-                    feromonas[i][j] *= (1 - RHO);
-        }
-        private List<Integer> construirRuta() {
-            List<Integer> ruta = new ArrayList<>();
-            boolean[] visitados = new boolean[N];
-            int actual = new Random().nextInt(N); // tiene que ser el nodo base
-            ruta.add(actual);
-            visitados[actual] = true;
-            while (ruta.size() < N) {
-                int siguiente = seleccionarSiguiente(actual, visitados);
-                if (siguiente == -1) break;
-                ruta.add(siguiente);
-                visitados[siguiente] = true;
-                actual = siguiente;
-            }
-            return ruta;
-        }
-        private int seleccionarSiguiente(int actual, boolean[] visitados, double[][] feromonas, List<Pedido> activos) {
-            int N = activos.size();
-            double[] prob = new double[N];
-            double suma = 0.0;
-            for (int j = 0; j < N; j++) {
-                if (!visitados[j]) {
-                    double tau = feromonas[actual][j];
-                    double eta = 1.0 / (distancia(activos.get(actual), activos.get(j)) + 1);
-                    prob[j] = Math.pow(tau, ALPHA) * Math.pow(eta, BETA);
-                    suma += prob[j];
-                }
-            }
-            if (suma == 0) return -1;
-            double r = Math.random() * suma, acumulado = 0;
-            for (int j = 0; j < N; j++) {
-                if (!visitados[j]) {
-                    acumulado += prob[j];
-                    if (acumulado >= r) return j;
-                }
-            }
-            return -1;
-        }
-        private int seleccionarSiguiente(int actual, boolean[] visitados) {
-            double suma = 0.0;
-            double[] probabilidades = new double[N];
-            for (int j = 0; j < N; j++) {
-                if (!visitados[j]) {
-                    double tau = feromonas[actual][j];
-                    double eta = 1.0 / (distancia(pedidos.get(actual), pedidos.get(j)) + 1);
-                    probabilidades[j] = Math.pow(tau, ALPHA) * Math.pow(eta, BETA);
-                    suma += probabilidades[j];
-                }
-            }
-            if (suma == 0) return -1;
-            double r = Math.random() * suma, acumulado = 0;
-            for (int j = 0; j < N; j++) {
-                if (!visitados[j]) {
-                    acumulado += probabilidades[j];
-                    if (acumulado >= r) return j;
-                }
-            }
-            return -1;
         }
 
-        private void evaporarFeromonas() {
-            for (int i = 0; i < N; i++) for (int j = 0; j < N; j++) feromonas[i][j] *= (1 - RHO);
-        }
 
-        private double calcularLongitud(List<Integer> ruta) {
-            double total = 0.0;
-            for (int i = 0; i < ruta.size() - 1; i++) {
-                total += distancia(pedidos.get(ruta.get(i)), pedidos.get(ruta.get(i + 1)));
-            }
-            return total;
-        }
 
         private double calcularConsumo(double distancia, double volumen, double tara) {
             double pesoTotal = tara + volumen * 500; // volumen en m³ → 500 kg/m³
@@ -487,10 +332,6 @@ public class ACOPlanner {
 
         private int distancia(Pedido a, Pedido b) {
             return Math.abs(b.x - a.x) + Math.abs(b.y - a.y);
-        }
-
-        private int distancia(int x1, int y1, int x2, int y2) {
-            return Math.abs(x2 - x1) + Math.abs(y2 - y1);
         }
         static class Punto {
             int x, y;
@@ -571,6 +412,7 @@ public class ACOPlanner {
             private int manhattan(int x1, int y1, int x2, int y2) {
                 return Math.abs(x1 - x2) + Math.abs(y1 - y2);
             }
+        }
         private List<Camion> inicializarFlota() {
             List<Camion> flota = new ArrayList<>();
 
