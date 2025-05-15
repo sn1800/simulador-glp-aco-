@@ -235,10 +235,9 @@ public class ACOPlanner {
                     } else {
                         System.out.printf("🔄 t+%d: Camión %s llegó a planta (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.id, depositoX, depositoY, c.capacidad);
                     }
-                    // c.disponible = c.capacidad;
-                    // c.enRetorno = false;
-                    // c.reabastecerEnTanque = null;
-                    c.setRuta(Collections.emptyList());  // ruta vacía = camión “idle” en ese punto
+                    c.disponible = c.capacidad;
+                    c.enRetorno = false;
+                    c.reabastecerEnTanque = null;
                     // determina destino de retorno
                     int dx = tq != null ? tq.x : depositoX;
                     int dy = tq != null ? tq.y : depositoY;
