@@ -123,7 +123,41 @@ public class ACOPlanner {
         String turnoAnterior = "";
         Map<Integer, List<Pedido>> pedidosPorTiempo = new HashMap<>();
         List<Double> holguras = new ArrayList<>();
+        // ————————————————————————————————————————————————————————————
+        // 0.a) Fraccionar pedidos mayores a la capacidad máxima de la flota
+        double maxCapacidad = flota.stream()
+                .mapToDouble(c -> c.getCapacidad())   // o .capacidad si es campo público
+                .max()
+                .orElse(0);
 
+        List<Pedido> listaParticionada = new ArrayList<>();
+        for (Pedido p : pedidos) {
+            if (p.volumen > maxCapacidad) {
+                // cuántos trozos de tamaño maxCapacidad necesitamos
+                int nPartes = (int) Math.ceil(p.volumen / maxCapacidad);
+                double restante = p.volumen;
+                for (int i = 1; i <= nPartes; i++) {
+                    double parte = Math.min(maxCapacidad, restante);
+                    Pedido sub = new Pedido(
+                            p.id * 100 + i,    // nuevo id
+                            p.tiempoCreacion,  // creación
+                            p.x,               // coordenada X
+                            p.y,               // coordenada Y
+                            parte,             // volumen de esta fracción
+                            p.tiempoLimite     // misma fecha límite
+                    );
+                    // (opcional) guarda referencia al original:
+                    //sub.parentId       = p.id;
+
+                    listaParticionada.add(sub);
+                    restante -= maxCapacidad;
+                }
+            } else {
+                listaParticionada.add(p);
+            }
+        }
+        // reemplazamos la lista original por la particionada
+        pedidos = listaParticionada;
         // Preprocesamiento: filtrar pedidos con <4h de anticipación
         for (Pedido p : pedidos) {
             if (p.tiempoLimite - p.tiempoCreacion < 4 * 60) {
@@ -362,7 +396,6 @@ public class ACOPlanner {
                 // eventosEntrega.removeIf(ev -> candidatos.contains(ev.pedido));
                 Set<Integer> idsCandidatos = candidatos.stream().map(p->p.id).collect(toSet());
                 eventosEntrega.removeIf(ev -> idsCandidatos.contains(ev.pedido.id));
-
                 // ——— B ———  desprogramar los pedidos para que puedan reasignarse
                 for (Pedido p : candidatos) p.programado = false;
                 List<Ruta> rutas = ejecutarACO(candidatos, flotaEstado, tiempoActual);
