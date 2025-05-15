@@ -1,2488 +1,2153 @@
 📦 Inicializando estado global...
-
---- Tiempo 00d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+30
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+30
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 00d 01h 00m ---
-
---- Tiempo 00d 02h 00m ---
-
---- Tiempo 00d 03h 00m ---
-
---- Tiempo 00d 04h 00m ---
-
---- Tiempo 00d 05h 00m ---
-
---- Tiempo 00d 06h 00m ---
-
---- Tiempo 00d 07h 00m ---
-
---- Tiempo 00d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+540
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+540
-
---- Tiempo 00d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 00d 10h 00m ---
-
---- Tiempo 00d 11h 00m ---
-
---- Tiempo 00d 12h 00m ---
-
---- Tiempo 00d 13h 00m ---
-
---- Tiempo 00d 14h 00m ---
-
---- Tiempo 00d 15h 00m ---
-
---- Tiempo 00d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+1050
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+1050
-
---- Tiempo 00d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 00d 18h 00m ---
-
---- Tiempo 00d 19h 00m ---
-
---- Tiempo 00d 20h 00m ---
-
---- Tiempo 00d 21h 00m ---
-
---- Tiempo 00d 22h 00m ---
-
---- Tiempo 00d 23h 00m ---
-
---- Tiempo 01d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+1470
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+1470
-🆕 Pedido #0 en (16,13), vol 3,0m³, límite t+1704
-✅ TA02 entrega Pedido #0: (16,13), vol 3,0 → t+1482, regreso t+1500, consumo 4,05 gal, disp. 22,0 m³
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-🆕 Pedido #1 en (5,18), vol 9,0m³, límite t+2508
-✅ TA01 entrega Pedido #1: (5,18), vol 9,0 → t+1522, regreso t+1556, consumo 10,20 gal, disp. 16,0 m³
-
---- Tiempo 01d 01h 00m ---
-🆕 Pedido #2 en (63,13), vol 2,0m³, límite t+2052
-✅ TA02 entrega Pedido #2: (63,13), vol 2,0 → t+1606, regreso t+1700, consumo 19,98 gal, disp. 20,0 m³
-🆕 Pedido #3 en (4,6), vol 2,0m³, límite t+2495
-✅ TB01 entrega Pedido #3: (4,6), vol 2,0 → t+1555, regreso t+1575, consumo 3,00 gal, disp. 13,0 m³
-🆕 Pedido #4 en (54,16), vol 9,0m³, límite t+1859
-✅ TB02 entrega Pedido #4: (54,16), vol 9,0 → t+1659, regreso t+1759, consumo 23,75 gal, disp. 6,0 m³
-
---- Tiempo 01d 02h 00m ---
-🆕 Pedido #5 en (29,47), vol 9,0m³, límite t+1943
-✅ TA01 entrega Pedido #5: (29,47), vol 9,0 → t+1689, regreso t+1795, consumo 31,80 gal, disp. 7,0 m³
-🆕 Pedido #6 en (14,43), vol 5,0m³, límite t+1907
-✅ TB03 entrega Pedido #6: (14,43), vol 5,0 → t+1681, regreso t+1755, consumo 13,88 gal, disp. 10,0 m³
-
---- Tiempo 01d 03h 00m ---
-🆕 Pedido #7 en (10,32), vol 14,0m³, límite t+1930
-✅ TB04 entrega Pedido #7: (10,32), vol 14,0 → t+1682, regreso t+1734, consumo 15,60 gal, disp. 1,0 m³
-🆕 Pedido #8 en (69,46), vol 2,0m³, límite t+1894
-✅ TC01 entrega Pedido #8: (69,46), vol 2,0 → t+1844, regreso t+2034, consumo 23,75 gal, disp. 8,0 m³
-🆕 Pedido #9 en (34,5), vol 3,0m³, límite t+2398
-✅ TC02 entrega Pedido #9: (34,5), vol 3,0 → t+1728, regreso t+1778, consumo 6,88 gal, disp. 7,0 m³
-
---- Tiempo 01d 04h 00m ---
-🆕 Pedido #10 en (56,11), vol 47,0m³, límite t+2722
-🆕 Pedido #11 en (27,49), vol 11,0m³, límite t+2325
-✅ TB01 entrega Pedido #11: (27,49), vol 11,0 → t+1857, regreso t+1989, consumo 34,65 gal, disp. 2,0 m³
-
---- Tiempo 01d 05h 00m ---
-🆕 Pedido #12 en (58,33), vol 23,0m³, límite t+2769
-🆕 Pedido #13 en (22,28), vol 2,0m³, límite t+2013
-✅ TB03 entrega Pedido #13: (22,28), vol 2,0 → t+1819, regreso t+1865, consumo 6,90 gal, disp. 8,0 m³
-🆕 Pedido #14 en (31,27), vol 1,0m³, límite t+2876
-✅ TA01 entrega Pedido #14: (31,27), vol 1,0 → t+1840, regreso t+1884, consumo 8,80 gal, disp. 6,0 m³
-
---- Tiempo 01d 06h 00m ---
-🆕 Pedido #15 en (23,31), vol 13,0m³, límite t+2060
-✅ TA02 entrega Pedido #15: (23,31), vol 13,0 → t+1936, regreso t+2052, consumo 40,60 gal, disp. 7,0 m³
-🆕 Pedido #16 en (34,4), vol 11,0m³, límite t+2564
-
---- Tiempo 01d 07h 00m ---
-🆕 Pedido #17 en (46,37), vol 3,0m³, límite t+4388
-✅ TB02 entrega Pedido #17: (46,37), vol 3,0 → t+1926, regreso t+1984, consumo 9,43 gal, disp. 3,0 m³
-🆕 Pedido #18 en (6,13), vol 13,0m³, límite t+2671
-🆕 Pedido #19 en (60,33), vol 3,0m³, límite t+2635
-✅ TA01 entrega Pedido #19: (60,33), vol 3,0 → t+1985, regreso t+2055, consumo 15,75 gal, disp. 3,0 m³
-
---- Tiempo 01d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+1980
-🆕 Pedido #20 en (62,34), vol 2,0m³, límite t+3019
-✅ TC02 entrega Pedido #20: (62,34), vol 2,0 → t+2053, regreso t+2167, consumo 14,25 gal, disp. 5,0 m³
-🆕 Pedido #21 en (44,3), vol 6,0m³, límite t+2203
-✅ TC03 entrega Pedido #21: (44,3), vol 6,0 → t+2037, regreso t+2111, consumo 12,95 gal, disp. 4,0 m³
-
---- Tiempo 01d 09h 00m ---
-✅ Camión TB03 vuelve a estar disponible tras avería
-🆕 Pedido #22 en (3,7), vol 3,0m³, límite t+3006
-✅ TC04 entrega Pedido #22: (3,7), vol 3,0 → t+2006, regreso t+2026, consumo 2,75 gal, disp. 7,0 m³
-🆕 Pedido #23 en (56,48), vol 1,0m³, límite t+3330
-✅ TB02 entrega Pedido #23: (56,48), vol 1,0 → t+2052, regreso t+2094, consumo 5,78 gal, disp. 2,0 m³
-🆕 Pedido #24 en (10,26), vol 22,0m³, límite t+2634
-
---- Tiempo 01d 10h 00m ---
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+2112
-🆕 Pedido #25 en (7,41), vol 7,0m³, límite t+3137
-✅ TB03 entrega Pedido #25: (7,41), vol 7,0 → t+2113, regreso t+2169, consumo 11,90 gal, disp. 1,0 m³
-🆕 Pedido #26 en (9,26), vol 8,0m³, límite t+3461
-✅ TC01 entrega Pedido #26: (9,26), vol 8,0 → t+2241, regreso t+2401, consumo 32,00 gal, disp. 0,0 m³
-
---- Tiempo 01d 11h 00m ---
-🆕 Pedido #27 en (44,47), vol 16,0m³, límite t+3065
-✅ Camión TA02 vuelve a estar disponible tras avería
-
---- Tiempo 01d 12h 00m ---
-
---- Tiempo 01d 13h 00m ---
-
---- Tiempo 01d 14h 00m ---
-
---- Tiempo 01d 15h 00m ---
-
---- Tiempo 01d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+2490
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+2490
-
---- Tiempo 01d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 01d 18h 00m ---
-❌ Pedido #16 no fue entregado a tiempo (límite t+2564), se descartó.
-
---- Tiempo 01d 19h 00m ---
-❌ Pedido #24 no fue entregado a tiempo (límite t+2634), se descartó.
-
---- Tiempo 01d 20h 00m ---
-❌ Pedido #18 no fue entregado a tiempo (límite t+2671), se descartó.
-
---- Tiempo 01d 21h 00m ---
-❌ Pedido #10 no fue entregado a tiempo (límite t+2722), se descartó.
-
---- Tiempo 01d 22h 00m ---
-❌ Pedido #12 no fue entregado a tiempo (límite t+2769), se descartó.
-
---- Tiempo 01d 23h 00m ---
-
---- Tiempo 02d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+2910
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+2910
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 02d 01h 00m ---
-
---- Tiempo 02d 02h 00m ---
-
---- Tiempo 02d 03h 00m ---
-❌ Pedido #27 no fue entregado a tiempo (límite t+3065), se descartó.
-
---- Tiempo 02d 04h 00m ---
-
---- Tiempo 02d 05h 00m ---
-
---- Tiempo 02d 06h 00m ---
-
---- Tiempo 02d 07h 00m ---
-
---- Tiempo 02d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+3420
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+3420
-
---- Tiempo 02d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 02d 10h 00m ---
-
---- Tiempo 02d 11h 00m ---
-
---- Tiempo 02d 12h 00m ---
-
---- Tiempo 02d 13h 00m ---
-
---- Tiempo 02d 14h 00m ---
-
---- Tiempo 02d 15h 00m ---
-
---- Tiempo 02d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+3930
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+3930
-
---- Tiempo 02d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 02d 18h 00m ---
-
---- Tiempo 02d 19h 00m ---
-
---- Tiempo 02d 20h 00m ---
-
---- Tiempo 02d 21h 00m ---
-
---- Tiempo 02d 22h 00m ---
-
---- Tiempo 02d 23h 00m ---
-
---- Tiempo 03d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+4350
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+4350
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 03d 01h 00m ---
-
---- Tiempo 03d 02h 00m ---
-
---- Tiempo 03d 03h 00m ---
-
---- Tiempo 03d 04h 00m ---
-
---- Tiempo 03d 05h 00m ---
-
---- Tiempo 03d 06h 00m ---
-
---- Tiempo 03d 07h 00m ---
-
---- Tiempo 03d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+4860
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+4860
-
---- Tiempo 03d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 03d 10h 00m ---
-
---- Tiempo 03d 11h 00m ---
-
---- Tiempo 03d 12h 00m ---
-
---- Tiempo 03d 13h 00m ---
-
---- Tiempo 03d 14h 00m ---
-
---- Tiempo 03d 15h 00m ---
-
---- Tiempo 03d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+5370
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+5370
-
---- Tiempo 03d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 03d 18h 00m ---
-
---- Tiempo 03d 19h 00m ---
-
---- Tiempo 03d 20h 00m ---
-
---- Tiempo 03d 21h 00m ---
-
---- Tiempo 03d 22h 00m ---
-
---- Tiempo 03d 23h 00m ---
-
---- Tiempo 04d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+5790
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+5790
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 04d 01h 00m ---
-
---- Tiempo 04d 02h 00m ---
-
---- Tiempo 04d 03h 00m ---
-
---- Tiempo 04d 04h 00m ---
-
---- Tiempo 04d 05h 00m ---
-
---- Tiempo 04d 06h 00m ---
-
---- Tiempo 04d 07h 00m ---
-
---- Tiempo 04d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+6300
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+6300
-
---- Tiempo 04d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 04d 10h 00m ---
-
---- Tiempo 04d 11h 00m ---
-
---- Tiempo 04d 12h 00m ---
-
---- Tiempo 04d 13h 00m ---
-
---- Tiempo 04d 14h 00m ---
-
---- Tiempo 04d 15h 00m ---
-
---- Tiempo 04d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+6810
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+6810
-
---- Tiempo 04d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 04d 18h 00m ---
-
---- Tiempo 04d 19h 00m ---
-
---- Tiempo 04d 20h 00m ---
-
---- Tiempo 04d 21h 00m ---
-
---- Tiempo 04d 22h 00m ---
-
---- Tiempo 04d 23h 00m ---
-
---- Tiempo 05d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+7230
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+7230
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 05d 01h 00m ---
-
---- Tiempo 05d 02h 00m ---
-
---- Tiempo 05d 03h 00m ---
-
---- Tiempo 05d 04h 00m ---
-
---- Tiempo 05d 05h 00m ---
-
---- Tiempo 05d 06h 00m ---
-
---- Tiempo 05d 07h 00m ---
-
---- Tiempo 05d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+7740
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+7740
-
---- Tiempo 05d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 05d 10h 00m ---
-
---- Tiempo 05d 11h 00m ---
-
---- Tiempo 05d 12h 00m ---
-
---- Tiempo 05d 13h 00m ---
-
---- Tiempo 05d 14h 00m ---
-
---- Tiempo 05d 15h 00m ---
-
---- Tiempo 05d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+8250
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+8250
-
---- Tiempo 05d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 05d 18h 00m ---
-
---- Tiempo 05d 19h 00m ---
-
---- Tiempo 05d 20h 00m ---
-
---- Tiempo 05d 21h 00m ---
-
---- Tiempo 05d 22h 00m ---
-
---- Tiempo 05d 23h 00m ---
-
---- Tiempo 06d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+8670
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+8670
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 06d 01h 00m ---
-
---- Tiempo 06d 02h 00m ---
-
---- Tiempo 06d 03h 00m ---
-
---- Tiempo 06d 04h 00m ---
-
---- Tiempo 06d 05h 00m ---
-
---- Tiempo 06d 06h 00m ---
-
---- Tiempo 06d 07h 00m ---
-
---- Tiempo 06d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+9180
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+9180
-
---- Tiempo 06d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 06d 10h 00m ---
-
---- Tiempo 06d 11h 00m ---
-
---- Tiempo 06d 12h 00m ---
-
---- Tiempo 06d 13h 00m ---
-
---- Tiempo 06d 14h 00m ---
-
---- Tiempo 06d 15h 00m ---
-
---- Tiempo 06d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+9690
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+9690
-
---- Tiempo 06d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 06d 18h 00m ---
-
---- Tiempo 06d 19h 00m ---
-
---- Tiempo 06d 20h 00m ---
-
---- Tiempo 06d 21h 00m ---
-
---- Tiempo 06d 22h 00m ---
-
---- Tiempo 06d 23h 00m ---
-
---- Tiempo 07d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+10110
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+10110
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 07d 01h 00m ---
-
---- Tiempo 07d 02h 00m ---
-
---- Tiempo 07d 03h 00m ---
-
---- Tiempo 07d 04h 00m ---
-
---- Tiempo 07d 05h 00m ---
-
---- Tiempo 07d 06h 00m ---
-
---- Tiempo 07d 07h 00m ---
-
---- Tiempo 07d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+10620
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+10620
-
---- Tiempo 07d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 07d 10h 00m ---
-
---- Tiempo 07d 11h 00m ---
-
---- Tiempo 07d 12h 00m ---
-
---- Tiempo 07d 13h 00m ---
-
---- Tiempo 07d 14h 00m ---
-
---- Tiempo 07d 15h 00m ---
-
---- Tiempo 07d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+11130
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+11130
-
---- Tiempo 07d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 07d 18h 00m ---
-
---- Tiempo 07d 19h 00m ---
-
---- Tiempo 07d 20h 00m ---
-
---- Tiempo 07d 21h 00m ---
-
---- Tiempo 07d 22h 00m ---
-
---- Tiempo 07d 23h 00m ---
-
---- Tiempo 08d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+11550
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+11550
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 08d 01h 00m ---
-
---- Tiempo 08d 02h 00m ---
-
---- Tiempo 08d 03h 00m ---
-
---- Tiempo 08d 04h 00m ---
-
---- Tiempo 08d 05h 00m ---
-
---- Tiempo 08d 06h 00m ---
-
---- Tiempo 08d 07h 00m ---
-
---- Tiempo 08d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+12060
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+12060
-
---- Tiempo 08d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 08d 10h 00m ---
-
---- Tiempo 08d 11h 00m ---
-
---- Tiempo 08d 12h 00m ---
-
---- Tiempo 08d 13h 00m ---
-
---- Tiempo 08d 14h 00m ---
-
---- Tiempo 08d 15h 00m ---
-
---- Tiempo 08d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+12570
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+12570
-
---- Tiempo 08d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 08d 18h 00m ---
-
---- Tiempo 08d 19h 00m ---
-
---- Tiempo 08d 20h 00m ---
-
---- Tiempo 08d 21h 00m ---
-
---- Tiempo 08d 22h 00m ---
-
---- Tiempo 08d 23h 00m ---
-
---- Tiempo 09d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+12990
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+12990
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 09d 01h 00m ---
-
---- Tiempo 09d 02h 00m ---
-
---- Tiempo 09d 03h 00m ---
-
---- Tiempo 09d 04h 00m ---
-
---- Tiempo 09d 05h 00m ---
-
---- Tiempo 09d 06h 00m ---
-
---- Tiempo 09d 07h 00m ---
-
---- Tiempo 09d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+13500
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+13500
-
---- Tiempo 09d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 09d 10h 00m ---
-
---- Tiempo 09d 11h 00m ---
-
---- Tiempo 09d 12h 00m ---
-
---- Tiempo 09d 13h 00m ---
-
---- Tiempo 09d 14h 00m ---
-
---- Tiempo 09d 15h 00m ---
-
---- Tiempo 09d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+14010
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+14010
-
---- Tiempo 09d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 09d 18h 00m ---
-
---- Tiempo 09d 19h 00m ---
-
---- Tiempo 09d 20h 00m ---
-
---- Tiempo 09d 21h 00m ---
-
---- Tiempo 09d 22h 00m ---
-
---- Tiempo 09d 23h 00m ---
-
---- Tiempo 10d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+14430
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+14430
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 10d 01h 00m ---
-
---- Tiempo 10d 02h 00m ---
-
---- Tiempo 10d 03h 00m ---
-
---- Tiempo 10d 04h 00m ---
-
---- Tiempo 10d 05h 00m ---
-
---- Tiempo 10d 06h 00m ---
-
---- Tiempo 10d 07h 00m ---
-
---- Tiempo 10d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+14940
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+14940
-
---- Tiempo 10d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 10d 10h 00m ---
-
---- Tiempo 10d 11h 00m ---
-
---- Tiempo 10d 12h 00m ---
-
---- Tiempo 10d 13h 00m ---
-
---- Tiempo 10d 14h 00m ---
-
---- Tiempo 10d 15h 00m ---
-
---- Tiempo 10d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+15450
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+15450
-
---- Tiempo 10d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 10d 18h 00m ---
-
---- Tiempo 10d 19h 00m ---
-
---- Tiempo 10d 20h 00m ---
-
---- Tiempo 10d 21h 00m ---
-
---- Tiempo 10d 22h 00m ---
-
---- Tiempo 10d 23h 00m ---
-
---- Tiempo 11d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+15870
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+15870
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 11d 01h 00m ---
-
---- Tiempo 11d 02h 00m ---
-
---- Tiempo 11d 03h 00m ---
-
---- Tiempo 11d 04h 00m ---
-
---- Tiempo 11d 05h 00m ---
-
---- Tiempo 11d 06h 00m ---
-
---- Tiempo 11d 07h 00m ---
-
---- Tiempo 11d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+16380
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+16380
-
---- Tiempo 11d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 11d 10h 00m ---
-
---- Tiempo 11d 11h 00m ---
-
---- Tiempo 11d 12h 00m ---
-
---- Tiempo 11d 13h 00m ---
-
---- Tiempo 11d 14h 00m ---
-
---- Tiempo 11d 15h 00m ---
-
---- Tiempo 11d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+16890
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+16890
-
---- Tiempo 11d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 11d 18h 00m ---
-
---- Tiempo 11d 19h 00m ---
-
---- Tiempo 11d 20h 00m ---
-
---- Tiempo 11d 21h 00m ---
-
---- Tiempo 11d 22h 00m ---
-
---- Tiempo 11d 23h 00m ---
-
---- Tiempo 12d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+17310
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+17310
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 12d 01h 00m ---
-
---- Tiempo 12d 02h 00m ---
-
---- Tiempo 12d 03h 00m ---
-
---- Tiempo 12d 04h 00m ---
-
---- Tiempo 12d 05h 00m ---
-
---- Tiempo 12d 06h 00m ---
-
---- Tiempo 12d 07h 00m ---
-
---- Tiempo 12d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+17820
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+17820
-
---- Tiempo 12d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 12d 10h 00m ---
-
---- Tiempo 12d 11h 00m ---
-
---- Tiempo 12d 12h 00m ---
-
---- Tiempo 12d 13h 00m ---
-
---- Tiempo 12d 14h 00m ---
-
---- Tiempo 12d 15h 00m ---
-
---- Tiempo 12d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+18330
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+18330
-
---- Tiempo 12d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 12d 18h 00m ---
-
---- Tiempo 12d 19h 00m ---
-
---- Tiempo 12d 20h 00m ---
-
---- Tiempo 12d 21h 00m ---
-
---- Tiempo 12d 22h 00m ---
-
---- Tiempo 12d 23h 00m ---
-
---- Tiempo 13d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+18750
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+18750
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 13d 01h 00m ---
-
---- Tiempo 13d 02h 00m ---
-
---- Tiempo 13d 03h 00m ---
-
---- Tiempo 13d 04h 00m ---
-
---- Tiempo 13d 05h 00m ---
-
---- Tiempo 13d 06h 00m ---
-
---- Tiempo 13d 07h 00m ---
-
---- Tiempo 13d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+19260
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+19260
-
---- Tiempo 13d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 13d 10h 00m ---
-
---- Tiempo 13d 11h 00m ---
-
---- Tiempo 13d 12h 00m ---
-
---- Tiempo 13d 13h 00m ---
-
---- Tiempo 13d 14h 00m ---
-
---- Tiempo 13d 15h 00m ---
-
---- Tiempo 13d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+19770
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+19770
-
---- Tiempo 13d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 13d 18h 00m ---
-
---- Tiempo 13d 19h 00m ---
-
---- Tiempo 13d 20h 00m ---
-
---- Tiempo 13d 21h 00m ---
-
---- Tiempo 13d 22h 00m ---
-
---- Tiempo 13d 23h 00m ---
-
---- Tiempo 14d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+20190
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+20190
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 14d 01h 00m ---
-
---- Tiempo 14d 02h 00m ---
-
---- Tiempo 14d 03h 00m ---
-
---- Tiempo 14d 04h 00m ---
-
---- Tiempo 14d 05h 00m ---
-
---- Tiempo 14d 06h 00m ---
-
---- Tiempo 14d 07h 00m ---
-
---- Tiempo 14d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+20700
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+20700
-
---- Tiempo 14d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 14d 10h 00m ---
-
---- Tiempo 14d 11h 00m ---
-
---- Tiempo 14d 12h 00m ---
-
---- Tiempo 14d 13h 00m ---
-
---- Tiempo 14d 14h 00m ---
-
---- Tiempo 14d 15h 00m ---
-
---- Tiempo 14d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+21210
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+21210
-
---- Tiempo 14d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 14d 18h 00m ---
-
---- Tiempo 14d 19h 00m ---
-
---- Tiempo 14d 20h 00m ---
-
---- Tiempo 14d 21h 00m ---
-
---- Tiempo 14d 22h 00m ---
-
---- Tiempo 14d 23h 00m ---
-
---- Tiempo 15d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+21630
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+21630
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 15d 01h 00m ---
-
---- Tiempo 15d 02h 00m ---
-
---- Tiempo 15d 03h 00m ---
-
---- Tiempo 15d 04h 00m ---
-
---- Tiempo 15d 05h 00m ---
-
---- Tiempo 15d 06h 00m ---
-
---- Tiempo 15d 07h 00m ---
-
---- Tiempo 15d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+22140
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+22140
-
---- Tiempo 15d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 15d 10h 00m ---
-
---- Tiempo 15d 11h 00m ---
-
---- Tiempo 15d 12h 00m ---
-
---- Tiempo 15d 13h 00m ---
-
---- Tiempo 15d 14h 00m ---
-
---- Tiempo 15d 15h 00m ---
-
---- Tiempo 15d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+22650
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+22650
-
---- Tiempo 15d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 15d 18h 00m ---
-
---- Tiempo 15d 19h 00m ---
-
---- Tiempo 15d 20h 00m ---
-
---- Tiempo 15d 21h 00m ---
-
---- Tiempo 15d 22h 00m ---
-
---- Tiempo 15d 23h 00m ---
-
---- Tiempo 16d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+23070
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+23070
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 16d 01h 00m ---
-
---- Tiempo 16d 02h 00m ---
-
---- Tiempo 16d 03h 00m ---
-
---- Tiempo 16d 04h 00m ---
-
---- Tiempo 16d 05h 00m ---
-
---- Tiempo 16d 06h 00m ---
-
---- Tiempo 16d 07h 00m ---
-
---- Tiempo 16d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+23580
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+23580
-
---- Tiempo 16d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 16d 10h 00m ---
-
---- Tiempo 16d 11h 00m ---
-
---- Tiempo 16d 12h 00m ---
-
---- Tiempo 16d 13h 00m ---
-
---- Tiempo 16d 14h 00m ---
-
---- Tiempo 16d 15h 00m ---
-
---- Tiempo 16d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+24090
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+24090
-
---- Tiempo 16d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 16d 18h 00m ---
-
---- Tiempo 16d 19h 00m ---
-
---- Tiempo 16d 20h 00m ---
-
---- Tiempo 16d 21h 00m ---
-
---- Tiempo 16d 22h 00m ---
-
---- Tiempo 16d 23h 00m ---
-
---- Tiempo 17d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+24510
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+24510
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 17d 01h 00m ---
-
---- Tiempo 17d 02h 00m ---
-
---- Tiempo 17d 03h 00m ---
-
---- Tiempo 17d 04h 00m ---
-
---- Tiempo 17d 05h 00m ---
-
---- Tiempo 17d 06h 00m ---
-
---- Tiempo 17d 07h 00m ---
-
---- Tiempo 17d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+25020
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+25020
-
---- Tiempo 17d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 17d 10h 00m ---
-
---- Tiempo 17d 11h 00m ---
-
---- Tiempo 17d 12h 00m ---
-
---- Tiempo 17d 13h 00m ---
-
---- Tiempo 17d 14h 00m ---
-
---- Tiempo 17d 15h 00m ---
-
---- Tiempo 17d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+25530
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+25530
-
---- Tiempo 17d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 17d 18h 00m ---
-
---- Tiempo 17d 19h 00m ---
-
---- Tiempo 17d 20h 00m ---
-
---- Tiempo 17d 21h 00m ---
-
---- Tiempo 17d 22h 00m ---
-
---- Tiempo 17d 23h 00m ---
-
---- Tiempo 18d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+25950
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+25950
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 18d 01h 00m ---
-
---- Tiempo 18d 02h 00m ---
-
---- Tiempo 18d 03h 00m ---
-
---- Tiempo 18d 04h 00m ---
-
---- Tiempo 18d 05h 00m ---
-
---- Tiempo 18d 06h 00m ---
-
---- Tiempo 18d 07h 00m ---
-
---- Tiempo 18d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+26460
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+26460
-
---- Tiempo 18d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 18d 10h 00m ---
-
---- Tiempo 18d 11h 00m ---
-
---- Tiempo 18d 12h 00m ---
-
---- Tiempo 18d 13h 00m ---
-
---- Tiempo 18d 14h 00m ---
-
---- Tiempo 18d 15h 00m ---
-
---- Tiempo 18d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+26970
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+26970
-
---- Tiempo 18d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 18d 18h 00m ---
-
---- Tiempo 18d 19h 00m ---
-
---- Tiempo 18d 20h 00m ---
-
---- Tiempo 18d 21h 00m ---
-
---- Tiempo 18d 22h 00m ---
-
---- Tiempo 18d 23h 00m ---
-
---- Tiempo 19d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+27390
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+27390
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 19d 01h 00m ---
-
---- Tiempo 19d 02h 00m ---
-
---- Tiempo 19d 03h 00m ---
-
---- Tiempo 19d 04h 00m ---
-
---- Tiempo 19d 05h 00m ---
-
---- Tiempo 19d 06h 00m ---
-
---- Tiempo 19d 07h 00m ---
-
---- Tiempo 19d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+27900
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+27900
-
---- Tiempo 19d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 19d 10h 00m ---
-
---- Tiempo 19d 11h 00m ---
-
---- Tiempo 19d 12h 00m ---
-
---- Tiempo 19d 13h 00m ---
-
---- Tiempo 19d 14h 00m ---
-
---- Tiempo 19d 15h 00m ---
-
---- Tiempo 19d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+28410
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+28410
-
---- Tiempo 19d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 19d 18h 00m ---
-
---- Tiempo 19d 19h 00m ---
-
---- Tiempo 19d 20h 00m ---
-
---- Tiempo 19d 21h 00m ---
-
---- Tiempo 19d 22h 00m ---
-
---- Tiempo 19d 23h 00m ---
-
---- Tiempo 20d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+28830
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+28830
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 20d 01h 00m ---
-
---- Tiempo 20d 02h 00m ---
-
---- Tiempo 20d 03h 00m ---
-
---- Tiempo 20d 04h 00m ---
-
---- Tiempo 20d 05h 00m ---
-
---- Tiempo 20d 06h 00m ---
-
---- Tiempo 20d 07h 00m ---
-
---- Tiempo 20d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+29340
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+29340
-
---- Tiempo 20d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 20d 10h 00m ---
-
---- Tiempo 20d 11h 00m ---
-
---- Tiempo 20d 12h 00m ---
-
---- Tiempo 20d 13h 00m ---
-
---- Tiempo 20d 14h 00m ---
-
---- Tiempo 20d 15h 00m ---
-
---- Tiempo 20d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+29850
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+29850
-
---- Tiempo 20d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 20d 18h 00m ---
-
---- Tiempo 20d 19h 00m ---
-
---- Tiempo 20d 20h 00m ---
-
---- Tiempo 20d 21h 00m ---
-
---- Tiempo 20d 22h 00m ---
-
---- Tiempo 20d 23h 00m ---
-
---- Tiempo 21d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+30270
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+30270
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 21d 01h 00m ---
-
---- Tiempo 21d 02h 00m ---
-
---- Tiempo 21d 03h 00m ---
-
---- Tiempo 21d 04h 00m ---
-
---- Tiempo 21d 05h 00m ---
-
---- Tiempo 21d 06h 00m ---
-
---- Tiempo 21d 07h 00m ---
-
---- Tiempo 21d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+30780
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+30780
-
---- Tiempo 21d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 21d 10h 00m ---
-
---- Tiempo 21d 11h 00m ---
-
---- Tiempo 21d 12h 00m ---
-
---- Tiempo 21d 13h 00m ---
-
---- Tiempo 21d 14h 00m ---
-
---- Tiempo 21d 15h 00m ---
-
---- Tiempo 21d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+31290
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+31290
-
---- Tiempo 21d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 21d 18h 00m ---
-
---- Tiempo 21d 19h 00m ---
-
---- Tiempo 21d 20h 00m ---
-
---- Tiempo 21d 21h 00m ---
-
---- Tiempo 21d 22h 00m ---
-
---- Tiempo 21d 23h 00m ---
-
---- Tiempo 22d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+31710
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+31710
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 22d 01h 00m ---
-
---- Tiempo 22d 02h 00m ---
-
---- Tiempo 22d 03h 00m ---
-
---- Tiempo 22d 04h 00m ---
-
---- Tiempo 22d 05h 00m ---
-
---- Tiempo 22d 06h 00m ---
-
---- Tiempo 22d 07h 00m ---
-
---- Tiempo 22d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+32220
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+32220
-
---- Tiempo 22d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 22d 10h 00m ---
-
---- Tiempo 22d 11h 00m ---
-
---- Tiempo 22d 12h 00m ---
-
---- Tiempo 22d 13h 00m ---
-
---- Tiempo 22d 14h 00m ---
-
---- Tiempo 22d 15h 00m ---
-
---- Tiempo 22d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+32730
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+32730
-
---- Tiempo 22d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 22d 18h 00m ---
-
---- Tiempo 22d 19h 00m ---
-
---- Tiempo 22d 20h 00m ---
-
---- Tiempo 22d 21h 00m ---
-
---- Tiempo 22d 22h 00m ---
-
---- Tiempo 22d 23h 00m ---
-
---- Tiempo 23d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+33150
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+33150
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 23d 01h 00m ---
-
---- Tiempo 23d 02h 00m ---
-
---- Tiempo 23d 03h 00m ---
-
---- Tiempo 23d 04h 00m ---
-
---- Tiempo 23d 05h 00m ---
-
---- Tiempo 23d 06h 00m ---
-
---- Tiempo 23d 07h 00m ---
-
---- Tiempo 23d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+33660
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+33660
-
---- Tiempo 23d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 23d 10h 00m ---
-
---- Tiempo 23d 11h 00m ---
-
---- Tiempo 23d 12h 00m ---
-
---- Tiempo 23d 13h 00m ---
-
---- Tiempo 23d 14h 00m ---
-
---- Tiempo 23d 15h 00m ---
-
---- Tiempo 23d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+34170
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+34170
-
---- Tiempo 23d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 23d 18h 00m ---
-
---- Tiempo 23d 19h 00m ---
-
---- Tiempo 23d 20h 00m ---
-
---- Tiempo 23d 21h 00m ---
-
---- Tiempo 23d 22h 00m ---
-
---- Tiempo 23d 23h 00m ---
-
---- Tiempo 24d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+34590
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+34590
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 24d 01h 00m ---
-
---- Tiempo 24d 02h 00m ---
-
---- Tiempo 24d 03h 00m ---
-
---- Tiempo 24d 04h 00m ---
-
---- Tiempo 24d 05h 00m ---
-
---- Tiempo 24d 06h 00m ---
-
---- Tiempo 24d 07h 00m ---
-
---- Tiempo 24d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+35100
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+35100
-
---- Tiempo 24d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 24d 10h 00m ---
-
---- Tiempo 24d 11h 00m ---
-
---- Tiempo 24d 12h 00m ---
-
---- Tiempo 24d 13h 00m ---
-
---- Tiempo 24d 14h 00m ---
-
---- Tiempo 24d 15h 00m ---
-
---- Tiempo 24d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+35610
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+35610
-
---- Tiempo 24d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 24d 18h 00m ---
-
---- Tiempo 24d 19h 00m ---
-
---- Tiempo 24d 20h 00m ---
-
---- Tiempo 24d 21h 00m ---
-
---- Tiempo 24d 22h 00m ---
-
---- Tiempo 24d 23h 00m ---
-
---- Tiempo 25d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+36030
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+36030
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 25d 01h 00m ---
-
---- Tiempo 25d 02h 00m ---
-
---- Tiempo 25d 03h 00m ---
-
---- Tiempo 25d 04h 00m ---
-
---- Tiempo 25d 05h 00m ---
-
---- Tiempo 25d 06h 00m ---
-
---- Tiempo 25d 07h 00m ---
-
---- Tiempo 25d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+36540
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+36540
-
---- Tiempo 25d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 25d 10h 00m ---
-
---- Tiempo 25d 11h 00m ---
-
---- Tiempo 25d 12h 00m ---
-
---- Tiempo 25d 13h 00m ---
-
---- Tiempo 25d 14h 00m ---
-
---- Tiempo 25d 15h 00m ---
-
---- Tiempo 25d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+37050
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+37050
-
---- Tiempo 25d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 25d 18h 00m ---
-
---- Tiempo 25d 19h 00m ---
-
---- Tiempo 25d 20h 00m ---
-
---- Tiempo 25d 21h 00m ---
-
---- Tiempo 25d 22h 00m ---
-
---- Tiempo 25d 23h 00m ---
-
---- Tiempo 26d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+37470
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+37470
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 26d 01h 00m ---
-
---- Tiempo 26d 02h 00m ---
-
---- Tiempo 26d 03h 00m ---
-
---- Tiempo 26d 04h 00m ---
-
---- Tiempo 26d 05h 00m ---
-
---- Tiempo 26d 06h 00m ---
-
---- Tiempo 26d 07h 00m ---
-
---- Tiempo 26d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+37980
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+37980
-
---- Tiempo 26d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 26d 10h 00m ---
-
---- Tiempo 26d 11h 00m ---
-
---- Tiempo 26d 12h 00m ---
-
---- Tiempo 26d 13h 00m ---
-
---- Tiempo 26d 14h 00m ---
-
---- Tiempo 26d 15h 00m ---
-
---- Tiempo 26d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+38490
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+38490
-
---- Tiempo 26d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 26d 18h 00m ---
-
---- Tiempo 26d 19h 00m ---
-
---- Tiempo 26d 20h 00m ---
-
---- Tiempo 26d 21h 00m ---
-
---- Tiempo 26d 22h 00m ---
-
---- Tiempo 26d 23h 00m ---
-
---- Tiempo 27d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+38910
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+38910
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 27d 01h 00m ---
-
---- Tiempo 27d 02h 00m ---
-
---- Tiempo 27d 03h 00m ---
-
---- Tiempo 27d 04h 00m ---
-
---- Tiempo 27d 05h 00m ---
-
---- Tiempo 27d 06h 00m ---
-
---- Tiempo 27d 07h 00m ---
-
---- Tiempo 27d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+39420
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+39420
-
---- Tiempo 27d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 27d 10h 00m ---
-
---- Tiempo 27d 11h 00m ---
-
---- Tiempo 27d 12h 00m ---
-
---- Tiempo 27d 13h 00m ---
-
---- Tiempo 27d 14h 00m ---
-
---- Tiempo 27d 15h 00m ---
-
---- Tiempo 27d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+39930
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+39930
-
---- Tiempo 27d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 27d 18h 00m ---
-
---- Tiempo 27d 19h 00m ---
-
---- Tiempo 27d 20h 00m ---
-
---- Tiempo 27d 21h 00m ---
-
---- Tiempo 27d 22h 00m ---
-
---- Tiempo 27d 23h 00m ---
-
---- Tiempo 28d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+40350
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+40350
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 28d 01h 00m ---
-
---- Tiempo 28d 02h 00m ---
-
---- Tiempo 28d 03h 00m ---
-
---- Tiempo 28d 04h 00m ---
-
---- Tiempo 28d 05h 00m ---
-
---- Tiempo 28d 06h 00m ---
-
---- Tiempo 28d 07h 00m ---
-
---- Tiempo 28d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+40860
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+40860
-
---- Tiempo 28d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 28d 10h 00m ---
-
---- Tiempo 28d 11h 00m ---
-
---- Tiempo 28d 12h 00m ---
-
---- Tiempo 28d 13h 00m ---
-
---- Tiempo 28d 14h 00m ---
-
---- Tiempo 28d 15h 00m ---
-
---- Tiempo 28d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+41370
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+41370
-
---- Tiempo 28d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 28d 18h 00m ---
-
---- Tiempo 28d 19h 00m ---
-
---- Tiempo 28d 20h 00m ---
-
---- Tiempo 28d 21h 00m ---
-
---- Tiempo 28d 22h 00m ---
-
---- Tiempo 28d 23h 00m ---
-
---- Tiempo 29d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+41790
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+41790
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 29d 01h 00m ---
-
---- Tiempo 29d 02h 00m ---
-
---- Tiempo 29d 03h 00m ---
-
---- Tiempo 29d 04h 00m ---
-
---- Tiempo 29d 05h 00m ---
-
---- Tiempo 29d 06h 00m ---
-
---- Tiempo 29d 07h 00m ---
-
---- Tiempo 29d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+42300
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+42300
-
---- Tiempo 29d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 29d 10h 00m ---
-
---- Tiempo 29d 11h 00m ---
-
---- Tiempo 29d 12h 00m ---
-
---- Tiempo 29d 13h 00m ---
-
---- Tiempo 29d 14h 00m ---
-
---- Tiempo 29d 15h 00m ---
-
---- Tiempo 29d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+42810
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+42810
-
---- Tiempo 29d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 29d 18h 00m ---
-
---- Tiempo 29d 19h 00m ---
-
---- Tiempo 29d 20h 00m ---
-
---- Tiempo 29d 21h 00m ---
-
---- Tiempo 29d 22h 00m ---
-
---- Tiempo 29d 23h 00m ---
-
---- Tiempo 30d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+43230
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+43230
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 30d 01h 00m ---
-
---- Tiempo 30d 02h 00m ---
-
---- Tiempo 30d 03h 00m ---
-
---- Tiempo 30d 04h 00m ---
-
---- Tiempo 30d 05h 00m ---
-
---- Tiempo 30d 06h 00m ---
-
---- Tiempo 30d 07h 00m ---
-
---- Tiempo 30d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+43740
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+43740
-
---- Tiempo 30d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 30d 10h 00m ---
-
---- Tiempo 30d 11h 00m ---
-
---- Tiempo 30d 12h 00m ---
-
---- Tiempo 30d 13h 00m ---
-
---- Tiempo 30d 14h 00m ---
-
---- Tiempo 30d 15h 00m ---
-
---- Tiempo 30d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+44250
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+44250
-
---- Tiempo 30d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 30d 18h 00m ---
-
---- Tiempo 30d 19h 00m ---
-
---- Tiempo 30d 20h 00m ---
-
---- Tiempo 30d 21h 00m ---
-
---- Tiempo 30d 22h 00m ---
-
---- Tiempo 30d 23h 00m ---
-
---- Tiempo 31d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+44670
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+44670
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 31d 01h 00m ---
-
---- Tiempo 31d 02h 00m ---
-
---- Tiempo 31d 03h 00m ---
-
---- Tiempo 31d 04h 00m ---
-
---- Tiempo 31d 05h 00m ---
-
---- Tiempo 31d 06h 00m ---
-
---- Tiempo 31d 07h 00m ---
-
---- Tiempo 31d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+45180
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+45180
-
---- Tiempo 31d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 31d 10h 00m ---
-
---- Tiempo 31d 11h 00m ---
-
---- Tiempo 31d 12h 00m ---
-
---- Tiempo 31d 13h 00m ---
-
---- Tiempo 31d 14h 00m ---
-
---- Tiempo 31d 15h 00m ---
-
---- Tiempo 31d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+45690
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+45690
-
---- Tiempo 31d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 31d 18h 00m ---
-
---- Tiempo 31d 19h 00m ---
-
---- Tiempo 31d 20h 00m ---
-
---- Tiempo 31d 21h 00m ---
-
---- Tiempo 31d 22h 00m ---
-
---- Tiempo 31d 23h 00m ---
-
---- Tiempo 32d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+46110
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+46110
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 32d 01h 00m ---
-
---- Tiempo 32d 02h 00m ---
-
---- Tiempo 32d 03h 00m ---
-
---- Tiempo 32d 04h 00m ---
-
---- Tiempo 32d 05h 00m ---
-
---- Tiempo 32d 06h 00m ---
-
---- Tiempo 32d 07h 00m ---
-
---- Tiempo 32d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+46620
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+46620
-
---- Tiempo 32d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 32d 10h 00m ---
-
---- Tiempo 32d 11h 00m ---
-
---- Tiempo 32d 12h 00m ---
-
---- Tiempo 32d 13h 00m ---
-
---- Tiempo 32d 14h 00m ---
-
---- Tiempo 32d 15h 00m ---
-
---- Tiempo 32d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+47130
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+47130
-
---- Tiempo 32d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 32d 18h 00m ---
-
---- Tiempo 32d 19h 00m ---
-
---- Tiempo 32d 20h 00m ---
-
---- Tiempo 32d 21h 00m ---
-
---- Tiempo 32d 22h 00m ---
-
---- Tiempo 32d 23h 00m ---
-
---- Tiempo 33d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+47550
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+47550
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 33d 01h 00m ---
-
---- Tiempo 33d 02h 00m ---
-
---- Tiempo 33d 03h 00m ---
-
---- Tiempo 33d 04h 00m ---
-
---- Tiempo 33d 05h 00m ---
-
---- Tiempo 33d 06h 00m ---
-
---- Tiempo 33d 07h 00m ---
-
---- Tiempo 33d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+48060
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+48060
-
---- Tiempo 33d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 33d 10h 00m ---
-
---- Tiempo 33d 11h 00m ---
-
---- Tiempo 33d 12h 00m ---
-
---- Tiempo 33d 13h 00m ---
-
---- Tiempo 33d 14h 00m ---
-
---- Tiempo 33d 15h 00m ---
-
---- Tiempo 33d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+48570
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+48570
-
---- Tiempo 33d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 33d 18h 00m ---
-
---- Tiempo 33d 19h 00m ---
-
---- Tiempo 33d 20h 00m ---
-
---- Tiempo 33d 21h 00m ---
-
---- Tiempo 33d 22h 00m ---
-
---- Tiempo 33d 23h 00m ---
-
---- Tiempo 34d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+48990
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+48990
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 34d 01h 00m ---
-
---- Tiempo 34d 02h 00m ---
-
---- Tiempo 34d 03h 00m ---
-
---- Tiempo 34d 04h 00m ---
-
---- Tiempo 34d 05h 00m ---
-
---- Tiempo 34d 06h 00m ---
-
---- Tiempo 34d 07h 00m ---
-
---- Tiempo 34d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+49500
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+49500
-
---- Tiempo 34d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 34d 10h 00m ---
-
---- Tiempo 34d 11h 00m ---
-
---- Tiempo 34d 12h 00m ---
-
---- Tiempo 34d 13h 00m ---
-
---- Tiempo 34d 14h 00m ---
-
---- Tiempo 34d 15h 00m ---
-
---- Tiempo 34d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+50010
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+50010
-
---- Tiempo 34d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 34d 18h 00m ---
-
---- Tiempo 34d 19h 00m ---
-
---- Tiempo 34d 20h 00m ---
-
---- Tiempo 34d 21h 00m ---
-
---- Tiempo 34d 22h 00m ---
-
---- Tiempo 34d 23h 00m ---
-
---- Tiempo 35d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+50430
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+50430
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 35d 01h 00m ---
-
---- Tiempo 35d 02h 00m ---
-
---- Tiempo 35d 03h 00m ---
-
---- Tiempo 35d 04h 00m ---
-
---- Tiempo 35d 05h 00m ---
-
---- Tiempo 35d 06h 00m ---
-
---- Tiempo 35d 07h 00m ---
-
---- Tiempo 35d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+50940
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+50940
-
---- Tiempo 35d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 35d 10h 00m ---
-
---- Tiempo 35d 11h 00m ---
-
---- Tiempo 35d 12h 00m ---
-
---- Tiempo 35d 13h 00m ---
-
---- Tiempo 35d 14h 00m ---
-
---- Tiempo 35d 15h 00m ---
-
---- Tiempo 35d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+51450
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+51450
-
---- Tiempo 35d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 35d 18h 00m ---
-
---- Tiempo 35d 19h 00m ---
-
---- Tiempo 35d 20h 00m ---
-
---- Tiempo 35d 21h 00m ---
-
---- Tiempo 35d 22h 00m ---
-
---- Tiempo 35d 23h 00m ---
-
---- Tiempo 36d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+51870
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+51870
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 36d 01h 00m ---
-
---- Tiempo 36d 02h 00m ---
-
---- Tiempo 36d 03h 00m ---
-
---- Tiempo 36d 04h 00m ---
-
---- Tiempo 36d 05h 00m ---
-
---- Tiempo 36d 06h 00m ---
-
---- Tiempo 36d 07h 00m ---
-
---- Tiempo 36d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+52380
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+52380
-
---- Tiempo 36d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 36d 10h 00m ---
-
---- Tiempo 36d 11h 00m ---
-
---- Tiempo 36d 12h 00m ---
-
---- Tiempo 36d 13h 00m ---
-
---- Tiempo 36d 14h 00m ---
-
---- Tiempo 36d 15h 00m ---
-
---- Tiempo 36d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+52890
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+52890
-
---- Tiempo 36d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 36d 18h 00m ---
-
---- Tiempo 36d 19h 00m ---
-
---- Tiempo 36d 20h 00m ---
-
---- Tiempo 36d 21h 00m ---
-
---- Tiempo 36d 22h 00m ---
-
---- Tiempo 36d 23h 00m ---
-
---- Tiempo 37d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+53310
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+53310
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 37d 01h 00m ---
-
---- Tiempo 37d 02h 00m ---
-
---- Tiempo 37d 03h 00m ---
-
---- Tiempo 37d 04h 00m ---
-
---- Tiempo 37d 05h 00m ---
-
---- Tiempo 37d 06h 00m ---
-
---- Tiempo 37d 07h 00m ---
-
---- Tiempo 37d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+53820
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+53820
-
---- Tiempo 37d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 37d 10h 00m ---
-
---- Tiempo 37d 11h 00m ---
-
---- Tiempo 37d 12h 00m ---
-
---- Tiempo 37d 13h 00m ---
-
---- Tiempo 37d 14h 00m ---
-
---- Tiempo 37d 15h 00m ---
-
---- Tiempo 37d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+54330
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+54330
-
---- Tiempo 37d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 37d 18h 00m ---
-
---- Tiempo 37d 19h 00m ---
-
---- Tiempo 37d 20h 00m ---
-
---- Tiempo 37d 21h 00m ---
-
---- Tiempo 37d 22h 00m ---
-
---- Tiempo 37d 23h 00m ---
-
---- Tiempo 38d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+54750
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+54750
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 38d 01h 00m ---
-
---- Tiempo 38d 02h 00m ---
-
---- Tiempo 38d 03h 00m ---
-
---- Tiempo 38d 04h 00m ---
-
---- Tiempo 38d 05h 00m ---
-
---- Tiempo 38d 06h 00m ---
-
---- Tiempo 38d 07h 00m ---
-
---- Tiempo 38d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+55260
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+55260
-
---- Tiempo 38d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 38d 10h 00m ---
-
---- Tiempo 38d 11h 00m ---
-
---- Tiempo 38d 12h 00m ---
-
---- Tiempo 38d 13h 00m ---
-
---- Tiempo 38d 14h 00m ---
-
---- Tiempo 38d 15h 00m ---
-
---- Tiempo 38d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+55770
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+55770
-
---- Tiempo 38d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 38d 18h 00m ---
-
---- Tiempo 38d 19h 00m ---
-
---- Tiempo 38d 20h 00m ---
-
---- Tiempo 38d 21h 00m ---
-
---- Tiempo 38d 22h 00m ---
-
---- Tiempo 38d 23h 00m ---
-
---- Tiempo 39d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+56190
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+56190
-✅ Camión TA01 vuelve a estar disponible tras avería
-✅ Camión TD05 vuelve a estar disponible tras avería
-
---- Tiempo 39d 01h 00m ---
-
---- Tiempo 39d 02h 00m ---
-
---- Tiempo 39d 03h 00m ---
-
---- Tiempo 39d 04h 00m ---
-
---- Tiempo 39d 05h 00m ---
-
---- Tiempo 39d 06h 00m ---
-
---- Tiempo 39d 07h 00m ---
-
---- Tiempo 39d 08h 00m ---
-⛔ Camión TB03 inhabilitado por avería tipo T2 hasta t+56700
-⛔ Camión TA02 inhabilitado por avería tipo T2 hasta t+56700
-
---- Tiempo 39d 09h 00m ---
-✅ Camión TA02 vuelve a estar disponible tras avería
-✅ Camión TB03 vuelve a estar disponible tras avería
-
---- Tiempo 39d 10h 00m ---
-
---- Tiempo 39d 11h 00m ---
-
---- Tiempo 39d 12h 00m ---
-
---- Tiempo 39d 13h 00m ---
-
---- Tiempo 39d 14h 00m ---
-
---- Tiempo 39d 15h 00m ---
-
---- Tiempo 39d 16h 00m ---
-⛔ Camión TC02 inhabilitado por avería tipo T3 hasta t+57210
-⛔ Camión TB01 inhabilitado por avería tipo T3 hasta t+57210
-
---- Tiempo 39d 17h 00m ---
-✅ Camión TB01 vuelve a estar disponible tras avería
-✅ Camión TC02 vuelve a estar disponible tras avería
-
---- Tiempo 39d 18h 00m ---
-
---- Tiempo 39d 19h 00m ---
-
---- Tiempo 39d 20h 00m ---
-
---- Tiempo 39d 21h 00m ---
-
---- Tiempo 39d 22h 00m ---
-
---- Tiempo 39d 23h 00m ---
-
---- Tiempo 40d 00h 00m ---
-⛔ Camión TD05 inhabilitado por avería tipo T1 hasta t+57630
-⛔ Camión TA01 inhabilitado por avería tipo T1 hasta t+57630
-
-📊 Análisis Final:
-Pedidos Atendidos: 22/28 (78,57%)
-Pedidos No Atendidos: 6
-
-📊 Resumen de Consumo por Camión:
-🚚 TA01 consumió 66,55 galones
-🚚 TA02 consumió 64,63 galones
-🚚 TB01 consumió 37,65 galones
-🚚 TB02 consumió 38,95 galones
-🚚 TB03 consumió 32,68 galones
-🚚 TB04 consumió 15,60 galones
-🚚 TC01 consumió 55,75 galones
-🚚 TC02 consumió 21,13 galones
-🚚 TC03 consumió 12,95 galones
-🚚 TC04 consumió 2,75 galones
-🚚 TD01 consumió 0,00 galones
-🚚 TD02 consumió 0,00 galones
-🚚 TD03 consumió 0,00 galones
-🚚 TD04 consumió 0,00 galones
-🚚 TD05 consumió 0,00 galones
-🚚 TD06 consumió 0,00 galones
-🚚 TD07 consumió 0,00 galones
-🚚 TD08 consumió 0,00 galones
-🚚 TD09 consumió 0,00 galones
-🚚 TD10 consumió 0,00 galones
-🔧 Consumo total acumulado: 348,63 galones
+🔁 t+1440: Tanques intermedios recargados a 0,0 m³ cada uno
+🆕 t+1464: Pedido #0 recibido (destino=(16,13), vol=3,0m³, límite t+1704)
+⏲️ t+1464: Replanificando, candidatos = [0, 0]
+    → Rutas devueltas para [0, 0]
+⏱️ t+1464: Asignando Pedido #0 al Camión TA02
+Manhattan path desde (12,8) hasta (16,13): 
+🕒 eventoEntrega programado para t+1475 en (16,13)
+Ruta TA02 → start=(13,8) end=(16,13) size=9
+⏱️ t+1464: Asignando Pedido #0 al Camión TB01
+Manhattan path desde (12,8) hasta (16,13): 
+🕒 eventoEntrega programado para t+1475 en (16,13)
+Ruta TB01 → start=(13,8) end=(16,13) size=9
+→ Camión TA02 avanza a (13,8)
+→ Camión TB01 avanza a (13,8)
+→ Camión TA02 avanza a (14,8)
+→ Camión TB01 avanza a (14,8)
+→ Camión TA02 avanza a (15,8)
+→ Camión TB01 avanza a (15,8)
+→ Camión TA02 avanza a (16,8)
+→ Camión TB01 avanza a (16,8)
+→ Camión TA02 avanza a (16,9)
+→ Camión TB01 avanza a (16,9)
+→ Camión TA02 avanza a (16,10)
+→ Camión TB01 avanza a (16,10)
+→ Camión TA02 avanza a (16,11)
+→ Camión TB01 avanza a (16,11)
+→ Camión TA02 avanza a (16,12)
+→ Camión TB01 avanza a (16,12)
+→ Camión TA02 avanza a (16,13)
+→ Camión TB01 avanza a (16,13)
+▶▶▶ disparando eventoEntrega para Pedido 0
+✅ t+1475: Pedido #0 completado por Camión TA02 en (16,13); capacidad: 25,0→22,0 m³
+⏱️ t+1475: Camión TA02 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 0
+✅ t+1475: Pedido #0 completado por Camión TB01 en (16,13); capacidad: 15,0→12,0 m³
+⏱️ t+1475: Camión TB01 inicia retorno a planta principal
+→ Camión TA02 avanza a (15,13)
+→ Camión TB01 avanza a (15,13)
+→ Camión TA02 avanza a (14,13)
+→ Camión TB01 avanza a (14,13)
+→ Camión TA02 avanza a (13,13)
+→ Camión TB01 avanza a (13,13)
+→ Camión TA02 avanza a (12,13)
+→ Camión TB01 avanza a (12,13)
+→ Camión TA02 avanza a (12,12)
+→ Camión TB01 avanza a (12,12)
+→ Camión TA02 avanza a (12,11)
+→ Camión TB01 avanza a (12,11)
+→ Camión TA02 avanza a (12,10)
+→ Camión TB01 avanza a (12,10)
+→ Camión TA02 avanza a (12,9)
+→ Camión TB01 avanza a (12,9)
+→ Camión TA02 avanza a (12,8)
+→ Camión TB01 avanza a (12,8)
+🔄 t+1484: Camión TA02 llegó a planta (12,8) y recargado a 25,0 m³
+🔄 t+1484: Camión TB01 llegó a planta (12,8) y recargado a 15,0 m³
+🆕 t+1488: Pedido #1 recibido (destino=(5,18), vol=9,0m³, límite t+2508)
+⏲️ t+1488: Replanificando, candidatos = [1, 1]
+    → Rutas devueltas para []
+🆕 t+1512: Pedido #2 recibido (destino=(63,13), vol=2,0m³, límite t+2052)
+⏲️ t+1512: Replanificando, candidatos = [1, 2, 1, 2]
+    → Rutas devueltas para [2, 2]
+⏱️ t+1512: Asignando Pedido #2 al Camión TA02
+Manhattan path desde (12,8) hasta (63,13): 
+🕒 eventoEntrega programado para t+1580 en (63,13)
+Ruta TA02 → start=(13,8) end=(63,13) size=56
+⏱️ t+1512: Asignando Pedido #2 al Camión TC04
+Manhattan path desde (12,8) hasta (63,13): 
+🕒 eventoEntrega programado para t+1580 en (63,13)
+Ruta TC04 → start=(13,8) end=(63,13) size=56
+→ Camión TA02 avanza a (13,8)
+→ Camión TC04 avanza a (13,8)
+→ Camión TA02 avanza a (14,8)
+→ Camión TC04 avanza a (14,8)
+→ Camión TA02 avanza a (15,8)
+→ Camión TC04 avanza a (15,8)
+→ Camión TA02 avanza a (16,8)
+→ Camión TC04 avanza a (16,8)
+→ Camión TA02 avanza a (17,8)
+→ Camión TC04 avanza a (17,8)
+→ Camión TA02 avanza a (18,8)
+→ Camión TC04 avanza a (18,8)
+→ Camión TA02 avanza a (19,8)
+→ Camión TC04 avanza a (19,8)
+→ Camión TA02 avanza a (20,8)
+→ Camión TC04 avanza a (20,8)
+→ Camión TA02 avanza a (21,8)
+→ Camión TC04 avanza a (21,8)
+→ Camión TA02 avanza a (22,8)
+→ Camión TC04 avanza a (22,8)
+→ Camión TA02 avanza a (23,8)
+→ Camión TC04 avanza a (23,8)
+→ Camión TA02 avanza a (24,8)
+→ Camión TC04 avanza a (24,8)
+→ Camión TA02 avanza a (25,8)
+→ Camión TC04 avanza a (25,8)
+→ Camión TA02 avanza a (26,8)
+→ Camión TC04 avanza a (26,8)
+→ Camión TA02 avanza a (27,8)
+→ Camión TC04 avanza a (27,8)
+→ Camión TA02 avanza a (28,8)
+→ Camión TC04 avanza a (28,8)
+→ Camión TA02 avanza a (29,8)
+→ Camión TC04 avanza a (29,8)
+→ Camión TA02 avanza a (30,8)
+→ Camión TC04 avanza a (30,8)
+→ Camión TA02 avanza a (31,8)
+→ Camión TC04 avanza a (31,8)
+→ Camión TA02 avanza a (32,8)
+→ Camión TC04 avanza a (32,8)
+→ Camión TA02 avanza a (33,8)
+→ Camión TC04 avanza a (33,8)
+→ Camión TA02 avanza a (34,8)
+→ Camión TC04 avanza a (34,8)
+→ Camión TA02 avanza a (35,8)
+→ Camión TC04 avanza a (35,8)
+🆕 t+1535: Pedido #3 recibido (destino=(4,6), vol=2,0m³, límite t+2495)
+⏲️ t+1535: Replanificando, candidatos = [1, 3, 1, 3]
+    → Rutas devueltas para [3, 3]
+⏱️ t+1535: Asignando Pedido #3 al Camión TA01
+Manhattan path desde (12,8) hasta (4,6): 
+🕒 eventoEntrega programado para t+1547 en (4,6)
+Ruta TA01 → start=(11,8) end=(4,6) size=10
+⏱️ t+1535: Asignando Pedido #3 al Camión TD02
+Manhattan path desde (12,8) hasta (4,6): 
+🕒 eventoEntrega programado para t+1547 en (4,6)
+Ruta TD02 → start=(11,8) end=(4,6) size=10
+→ Camión TA01 avanza a (11,8)
+→ Camión TA02 avanza a (36,8)
+→ Camión TC04 avanza a (36,8)
+→ Camión TD02 avanza a (11,8)
+→ Camión TA01 avanza a (10,8)
+→ Camión TA02 avanza a (37,8)
+→ Camión TC04 avanza a (37,8)
+→ Camión TD02 avanza a (10,8)
+→ Camión TA01 avanza a (9,8)
+→ Camión TA02 avanza a (38,8)
+→ Camión TC04 avanza a (38,8)
+→ Camión TD02 avanza a (9,8)
+→ Camión TA01 avanza a (8,8)
+→ Camión TA02 avanza a (39,8)
+→ Camión TC04 avanza a (39,8)
+→ Camión TD02 avanza a (8,8)
+→ Camión TA01 avanza a (7,8)
+→ Camión TA02 avanza a (40,8)
+→ Camión TC04 avanza a (40,8)
+→ Camión TD02 avanza a (7,8)
+→ Camión TA01 avanza a (6,8)
+→ Camión TA02 avanza a (41,8)
+→ Camión TC04 avanza a (41,8)
+→ Camión TD02 avanza a (6,8)
+→ Camión TA01 avanza a (5,8)
+→ Camión TA02 avanza a (42,8)
+→ Camión TC04 avanza a (42,8)
+→ Camión TD02 avanza a (5,8)
+→ Camión TA01 avanza a (4,8)
+→ Camión TA02 avanza a (43,8)
+→ Camión TC04 avanza a (43,8)
+→ Camión TD02 avanza a (4,8)
+→ Camión TA01 avanza a (4,7)
+→ Camión TA02 avanza a (44,8)
+→ Camión TC04 avanza a (44,8)
+→ Camión TD02 avanza a (4,7)
+→ Camión TA01 avanza a (4,6)
+→ Camión TA02 avanza a (45,8)
+→ Camión TC04 avanza a (45,8)
+→ Camión TD02 avanza a (4,6)
+→ Camión TA02 avanza a (46,8)
+→ Camión TC04 avanza a (46,8)
+▶▶▶ disparando eventoEntrega para Pedido 3
+✅ t+1547: Pedido #3 completado por Camión TA01 en (4,6); capacidad: 25,0→23,0 m³
+⏱️ t+1547: Camión TA01 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 3
+✅ t+1547: Pedido #3 completado por Camión TD02 en (4,6); capacidad: 5,0→3,0 m³
+⏱️ t+1547: Camión TD02 inicia retorno a planta principal
+→ Camión TA01 avanza a (5,6)
+→ Camión TA02 avanza a (47,8)
+→ Camión TC04 avanza a (47,8)
+→ Camión TD02 avanza a (5,6)
+→ Camión TA01 avanza a (6,6)
+→ Camión TA02 avanza a (48,8)
+→ Camión TC04 avanza a (48,8)
+→ Camión TD02 avanza a (6,6)
+→ Camión TA01 avanza a (7,6)
+→ Camión TA02 avanza a (49,8)
+→ Camión TC04 avanza a (49,8)
+→ Camión TD02 avanza a (7,6)
+→ Camión TA01 avanza a (8,6)
+→ Camión TA02 avanza a (50,8)
+→ Camión TC04 avanza a (50,8)
+→ Camión TD02 avanza a (8,6)
+→ Camión TA01 avanza a (9,6)
+→ Camión TA02 avanza a (51,8)
+→ Camión TC04 avanza a (51,8)
+→ Camión TD02 avanza a (9,6)
+→ Camión TA01 avanza a (10,6)
+→ Camión TA02 avanza a (52,8)
+→ Camión TC04 avanza a (52,8)
+→ Camión TD02 avanza a (10,6)
+→ Camión TA01 avanza a (11,6)
+→ Camión TA02 avanza a (53,8)
+→ Camión TC04 avanza a (53,8)
+→ Camión TD02 avanza a (11,6)
+→ Camión TA01 avanza a (12,6)
+→ Camión TA02 avanza a (54,8)
+→ Camión TC04 avanza a (54,8)
+→ Camión TD02 avanza a (12,6)
+→ Camión TA01 avanza a (12,7)
+→ Camión TA02 avanza a (55,8)
+→ Camión TC04 avanza a (55,8)
+→ Camión TD02 avanza a (12,7)
+→ Camión TA01 avanza a (12,8)
+→ Camión TA02 avanza a (56,8)
+→ Camión TC04 avanza a (56,8)
+→ Camión TD02 avanza a (12,8)
+🔄 t+1557: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TA02 avanza a (57,8)
+→ Camión TC04 avanza a (57,8)
+🔄 t+1557: Camión TD02 llegó a planta (12,8) y recargado a 5,0 m³
+→ Camión TA02 avanza a (58,8)
+→ Camión TC04 avanza a (58,8)
+→ Camión TA02 avanza a (59,8)
+→ Camión TC04 avanza a (59,8)
+🆕 t+1559: Pedido #4 recibido (destino=(54,16), vol=9,0m³, límite t+1859)
+⏲️ t+1559: Replanificando, candidatos = [1, 4, 1, 4]
+    → Rutas devueltas para [4]
+⏱️ t+1559: Asignando Pedido #4 al Camión TC04
+Manhattan path desde (59,8) hasta (54,16): 
+🕒 eventoEntrega programado para t+1575 en (54,16)
+Ruta TC04 → start=(58,8) end=(54,16) size=13
+→ Camión TA02 avanza a (60,8)
+→ Camión TC04 avanza a (58,8)
+→ Camión TA02 avanza a (61,8)
+→ Camión TC04 avanza a (57,8)
+→ Camión TA02 avanza a (62,8)
+→ Camión TC04 avanza a (56,8)
+→ Camión TA02 avanza a (63,8)
+→ Camión TC04 avanza a (55,8)
+→ Camión TA02 avanza a (63,9)
+→ Camión TC04 avanza a (54,8)
+→ Camión TA02 avanza a (63,10)
+→ Camión TC04 avanza a (54,9)
+→ Camión TA02 avanza a (63,11)
+→ Camión TC04 avanza a (54,10)
+→ Camión TA02 avanza a (63,12)
+→ Camión TC04 avanza a (54,11)
+→ Camión TA02 avanza a (63,13)
+→ Camión TC04 avanza a (54,12)
+→ Camión TC04 avanza a (54,13)
+→ Camión TC04 avanza a (54,14)
+→ Camión TC04 avanza a (54,15)
+→ Camión TC04 avanza a (54,16)
+▶▶▶ disparando eventoEntrega para Pedido 4
+✅ t+1575: Pedido #4 completado por Camión TC04 en (54,16); capacidad: 10,0→1,0 m³
+⏱️ t+1575: Camión TC04 inicia retorno a planta principal
+→ Camión TC04 avanza a (53,16)
+→ Camión TC04 avanza a (52,16)
+→ Camión TC04 avanza a (51,16)
+→ Camión TC04 avanza a (50,16)
+→ Camión TC04 avanza a (49,16)
+▶▶▶ disparando eventoEntrega para Pedido 2
+✅ t+1580: Pedido #2 completado por Camión TA02 en (63,13); capacidad: 25,0→23,0 m³
+⏱️ t+1580: Camión TA02 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 2
+✅ t+1580: Pedido #2 completado por Camión TC04 en (63,13); capacidad: 1,0→-1,0 m³
+⏱️ t+1580: Camión TC04 inicia retorno a planta principal
+→ Camión TA02 avanza a (62,13)
+→ Camión TC04 avanza a (62,13)
+→ Camión TA02 avanza a (61,13)
+→ Camión TC04 avanza a (61,13)
+→ Camión TA02 avanza a (60,13)
+→ Camión TC04 avanza a (60,13)
+→ Camión TA02 avanza a (59,13)
+→ Camión TC04 avanza a (59,13)
+🆕 t+1583: Pedido #5 recibido (destino=(29,47), vol=9,0m³, límite t+1943)
+⏲️ t+1583: Replanificando, candidatos = [1, 5, 1, 5]
+    → Rutas devueltas para [1, 1]
+⏱️ t+1583: Asignando Pedido #1 al Camión TA01
+Manhattan path desde (12,8) hasta (5,18): 
+🕒 eventoEntrega programado para t+1604 en (5,18)
+Ruta TA01 → start=(11,8) end=(5,18) size=17
+⏱️ t+1583: Asignando Pedido #1 al Camión TC03
+Manhattan path desde (12,8) hasta (5,18): 
+🕒 eventoEntrega programado para t+1604 en (5,18)
+Ruta TC03 → start=(11,8) end=(5,18) size=17
+→ Camión TA01 avanza a (11,8)
+→ Camión TA02 avanza a (58,13)
+→ Camión TC03 avanza a (11,8)
+→ Camión TC04 avanza a (58,13)
+→ Camión TA01 avanza a (10,8)
+→ Camión TA02 avanza a (57,13)
+→ Camión TC03 avanza a (10,8)
+→ Camión TC04 avanza a (57,13)
+→ Camión TA01 avanza a (9,8)
+→ Camión TA02 avanza a (56,13)
+→ Camión TC03 avanza a (9,8)
+→ Camión TC04 avanza a (56,13)
+→ Camión TA01 avanza a (8,8)
+→ Camión TA02 avanza a (55,13)
+→ Camión TC03 avanza a (8,8)
+→ Camión TC04 avanza a (55,13)
+→ Camión TA01 avanza a (7,8)
+→ Camión TA02 avanza a (54,13)
+→ Camión TC03 avanza a (7,8)
+→ Camión TC04 avanza a (54,13)
+→ Camión TA01 avanza a (6,8)
+→ Camión TA02 avanza a (53,13)
+→ Camión TC03 avanza a (6,8)
+→ Camión TC04 avanza a (53,13)
+→ Camión TA01 avanza a (5,8)
+→ Camión TA02 avanza a (52,13)
+→ Camión TC03 avanza a (5,8)
+→ Camión TC04 avanza a (52,13)
+→ Camión TA01 avanza a (5,9)
+→ Camión TA02 avanza a (51,13)
+→ Camión TC03 avanza a (5,9)
+→ Camión TC04 avanza a (51,13)
+→ Camión TA01 avanza a (5,10)
+→ Camión TA02 avanza a (50,13)
+→ Camión TC03 avanza a (5,10)
+→ Camión TC04 avanza a (50,13)
+→ Camión TA01 avanza a (5,11)
+→ Camión TA02 avanza a (49,13)
+→ Camión TC03 avanza a (5,11)
+→ Camión TC04 avanza a (49,13)
+→ Camión TA01 avanza a (5,12)
+→ Camión TA02 avanza a (48,13)
+→ Camión TC03 avanza a (5,12)
+→ Camión TC04 avanza a (48,13)
+→ Camión TA01 avanza a (5,13)
+→ Camión TA02 avanza a (47,13)
+→ Camión TC03 avanza a (5,13)
+→ Camión TC04 avanza a (47,13)
+→ Camión TA01 avanza a (5,14)
+→ Camión TA02 avanza a (46,13)
+→ Camión TC03 avanza a (5,14)
+→ Camión TC04 avanza a (46,13)
+→ Camión TA01 avanza a (5,15)
+→ Camión TA02 avanza a (45,13)
+→ Camión TC03 avanza a (5,15)
+→ Camión TC04 avanza a (45,13)
+→ Camión TA01 avanza a (5,16)
+→ Camión TA02 avanza a (44,13)
+→ Camión TC03 avanza a (5,16)
+→ Camión TC04 avanza a (44,13)
+→ Camión TA01 avanza a (5,17)
+→ Camión TA02 avanza a (43,13)
+→ Camión TC03 avanza a (5,17)
+→ Camión TC04 avanza a (43,13)
+→ Camión TA01 avanza a (5,18)
+→ Camión TA02 avanza a (42,13)
+→ Camión TC03 avanza a (5,18)
+→ Camión TC04 avanza a (42,13)
+→ Camión TA02 avanza a (41,13)
+→ Camión TC04 avanza a (41,13)
+→ Camión TA02 avanza a (40,13)
+→ Camión TC04 avanza a (40,13)
+→ Camión TA02 avanza a (39,13)
+→ Camión TC04 avanza a (39,13)
+▶▶▶ disparando eventoEntrega para Pedido 1
+✅ t+1604: Pedido #1 completado por Camión TA01 en (5,18); capacidad: 25,0→16,0 m³
+⏱️ t+1604: Camión TA01 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 1
+✅ t+1604: Pedido #1 completado por Camión TC03 en (5,18); capacidad: 10,0→1,0 m³
+⏱️ t+1604: Camión TC03 inicia retorno a planta principal
+→ Camión TA01 avanza a (6,18)
+→ Camión TA02 avanza a (38,13)
+→ Camión TC03 avanza a (6,18)
+→ Camión TC04 avanza a (38,13)
+→ Camión TA01 avanza a (7,18)
+→ Camión TA02 avanza a (37,13)
+→ Camión TC03 avanza a (7,18)
+→ Camión TC04 avanza a (37,13)
+→ Camión TA01 avanza a (8,18)
+→ Camión TA02 avanza a (36,13)
+→ Camión TC03 avanza a (8,18)
+→ Camión TC04 avanza a (36,13)
+→ Camión TA01 avanza a (9,18)
+→ Camión TA02 avanza a (35,13)
+→ Camión TC03 avanza a (9,18)
+→ Camión TC04 avanza a (35,13)
+🆕 t+1607: Pedido #6 recibido (destino=(14,43), vol=5,0m³, límite t+1907)
+⏲️ t+1607: Replanificando, candidatos = [5, 6, 5, 6]
+    → Rutas devueltas para [6]
+⏱️ t+1607: Asignando Pedido #6 al Camión TA01
+Manhattan path desde (9,18) hasta (14,43): 
+🕒 eventoEntrega programado para t+1643 en (14,43)
+Ruta TA01 → start=(10,18) end=(14,43) size=30
+→ Camión TA01 avanza a (10,18)
+→ Camión TA02 avanza a (34,13)
+→ Camión TC03 avanza a (10,18)
+→ Camión TC04 avanza a (34,13)
+→ Camión TA01 avanza a (11,18)
+→ Camión TA02 avanza a (33,13)
+→ Camión TC03 avanza a (11,18)
+→ Camión TC04 avanza a (33,13)
+→ Camión TA01 avanza a (12,18)
+→ Camión TA02 avanza a (32,13)
+→ Camión TC03 avanza a (12,18)
+→ Camión TC04 avanza a (32,13)
+→ Camión TA01 avanza a (13,18)
+→ Camión TA02 avanza a (31,13)
+→ Camión TC03 avanza a (12,17)
+→ Camión TC04 avanza a (31,13)
+→ Camión TA01 avanza a (14,18)
+→ Camión TA02 avanza a (30,13)
+→ Camión TC03 avanza a (12,16)
+→ Camión TC04 avanza a (30,13)
+→ Camión TA01 avanza a (14,19)
+→ Camión TA02 avanza a (29,13)
+→ Camión TC03 avanza a (12,15)
+→ Camión TC04 avanza a (29,13)
+→ Camión TA01 avanza a (14,20)
+→ Camión TA02 avanza a (28,13)
+→ Camión TC03 avanza a (12,14)
+→ Camión TC04 avanza a (28,13)
+→ Camión TA01 avanza a (14,21)
+→ Camión TA02 avanza a (27,13)
+→ Camión TC03 avanza a (12,13)
+→ Camión TC04 avanza a (27,13)
+→ Camión TA01 avanza a (14,22)
+→ Camión TA02 avanza a (26,13)
+→ Camión TC03 avanza a (12,12)
+→ Camión TC04 avanza a (26,13)
+→ Camión TA01 avanza a (14,23)
+→ Camión TA02 avanza a (25,13)
+→ Camión TC03 avanza a (12,11)
+→ Camión TC04 avanza a (25,13)
+→ Camión TA01 avanza a (14,24)
+→ Camión TA02 avanza a (24,13)
+→ Camión TC03 avanza a (12,10)
+→ Camión TC04 avanza a (24,13)
+→ Camión TA01 avanza a (14,25)
+→ Camión TA02 avanza a (23,13)
+→ Camión TC03 avanza a (12,9)
+→ Camión TC04 avanza a (23,13)
+→ Camión TA01 avanza a (14,26)
+→ Camión TA02 avanza a (22,13)
+→ Camión TC03 avanza a (12,8)
+→ Camión TC04 avanza a (22,13)
+→ Camión TA01 avanza a (14,27)
+→ Camión TA02 avanza a (21,13)
+🔄 t+1621: Camión TC03 llegó a planta (12,8) y recargado a 10,0 m³
+→ Camión TC04 avanza a (21,13)
+→ Camión TA01 avanza a (14,28)
+→ Camión TA02 avanza a (20,13)
+→ Camión TC04 avanza a (20,13)
+→ Camión TA01 avanza a (14,29)
+→ Camión TA02 avanza a (19,13)
+→ Camión TC04 avanza a (19,13)
+→ Camión TA01 avanza a (14,30)
+→ Camión TA02 avanza a (18,13)
+→ Camión TC04 avanza a (18,13)
+→ Camión TA01 avanza a (14,31)
+→ Camión TA02 avanza a (17,13)
+→ Camión TC04 avanza a (17,13)
+→ Camión TA01 avanza a (14,32)
+→ Camión TA02 avanza a (16,13)
+→ Camión TC04 avanza a (16,13)
+→ Camión TA01 avanza a (14,33)
+→ Camión TA02 avanza a (15,13)
+→ Camión TC04 avanza a (15,13)
+→ Camión TA01 avanza a (14,34)
+→ Camión TA02 avanza a (14,13)
+→ Camión TC04 avanza a (14,13)
+→ Camión TA01 avanza a (14,35)
+→ Camión TA02 avanza a (13,13)
+→ Camión TC04 avanza a (13,13)
+→ Camión TA01 avanza a (14,36)
+→ Camión TA02 avanza a (12,13)
+→ Camión TC04 avanza a (12,13)
+🆕 t+1630: Pedido #7 recibido (destino=(10,32), vol=14,0m³, límite t+1930)
+⏲️ t+1630: Replanificando, candidatos = [5, 7, 5, 7]
+    → Rutas devueltas para [7]
+⏱️ t+1630: Asignando Pedido #7 al Camión TA01
+Manhattan path desde (14,36) hasta (10,32): 
+🕒 eventoEntrega programado para t+1640 en (10,32)
+Ruta TA01 → start=(13,36) end=(10,32) size=8
+→ Camión TA01 avanza a (13,36)
+→ Camión TA02 avanza a (12,12)
+→ Camión TC04 avanza a (12,12)
+→ Camión TA01 avanza a (12,36)
+→ Camión TA02 avanza a (12,11)
+→ Camión TC04 avanza a (12,11)
+→ Camión TA01 avanza a (11,36)
+→ Camión TA02 avanza a (12,10)
+→ Camión TC04 avanza a (12,10)
+→ Camión TA01 avanza a (10,36)
+→ Camión TA02 avanza a (12,9)
+→ Camión TC04 avanza a (12,9)
+→ Camión TA01 avanza a (10,35)
+→ Camión TA02 avanza a (12,8)
+→ Camión TC04 avanza a (12,8)
+→ Camión TA01 avanza a (10,34)
+🔄 t+1636: Camión TA02 llegó a planta (12,8) y recargado a 25,0 m³
+🔄 t+1636: Camión TC04 llegó a planta (12,8) y recargado a 10,0 m³
+→ Camión TA01 avanza a (10,33)
+→ Camión TA01 avanza a (10,32)
+🔄 t+1639: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+▶▶▶ disparando eventoEntrega para Pedido 7
+✅ t+1640: Pedido #7 completado por Camión TA01 en (10,32); capacidad: 25,0→11,0 m³
+⏱️ t+1640: Camión TA01 inicia retorno a planta principal
+→ Camión TA01 avanza a (11,32)
+→ Camión TA01 avanza a (12,32)
+→ Camión TA01 avanza a (12,31)
+▶▶▶ disparando eventoEntrega para Pedido 6
+✅ t+1643: Pedido #6 completado por Camión TA01 en (14,43); capacidad: 11,0→6,0 m³
+⏱️ t+1643: Camión TA01 inicia retorno a planta principal
+→ Camión TA01 avanza a (13,43)
+→ Camión TA01 avanza a (12,43)
+→ Camión TA01 avanza a (12,42)
+→ Camión TA01 avanza a (12,41)
+→ Camión TA01 avanza a (12,40)
+→ Camión TA01 avanza a (12,39)
+→ Camión TA01 avanza a (12,38)
+→ Camión TA01 avanza a (12,37)
+→ Camión TA01 avanza a (12,36)
+→ Camión TA01 avanza a (12,35)
+→ Camión TA01 avanza a (12,34)
+→ Camión TA01 avanza a (12,33)
+🆕 t+1654: Pedido #8 recibido (destino=(69,46), vol=2,0m³, límite t+1894)
+⏲️ t+1654: Replanificando, candidatos = [5, 8, 5, 8]
+    → Rutas devueltas para [8, 8]
+⏱️ t+1654: Asignando Pedido #8 al Camión TA01
+Manhattan path desde (12,33) hasta (69,46): 
+🕒 eventoEntrega programado para t+1738 en (69,46)
+Ruta TA01 → start=(13,33) end=(69,46) size=70
+⏱️ t+1654: Asignando Pedido #8 al Camión TB02
+Manhattan path desde (12,8) hasta (69,46): 
+🕒 eventoEntrega programado para t+1768 en (69,46)
+Ruta TB02 → start=(13,8) end=(69,46) size=95
+→ Camión TA01 avanza a (13,33)
+→ Camión TB02 avanza a (13,8)
+→ Camión TA01 avanza a (14,33)
+→ Camión TB02 avanza a (14,8)
+→ Camión TA01 avanza a (15,33)
+→ Camión TB02 avanza a (15,8)
+→ Camión TA01 avanza a (16,33)
+→ Camión TB02 avanza a (16,8)
+→ Camión TA01 avanza a (17,33)
+→ Camión TB02 avanza a (17,8)
+→ Camión TA01 avanza a (18,33)
+→ Camión TB02 avanza a (18,8)
+→ Camión TA01 avanza a (19,33)
+→ Camión TB02 avanza a (19,8)
+→ Camión TA01 avanza a (20,33)
+→ Camión TB02 avanza a (20,8)
+→ Camión TA01 avanza a (21,33)
+→ Camión TB02 avanza a (21,8)
+→ Camión TA01 avanza a (22,33)
+→ Camión TB02 avanza a (22,8)
+→ Camión TA01 avanza a (23,33)
+→ Camión TB02 avanza a (23,8)
+→ Camión TA01 avanza a (24,33)
+→ Camión TB02 avanza a (24,8)
+→ Camión TA01 avanza a (25,33)
+→ Camión TB02 avanza a (25,8)
+→ Camión TA01 avanza a (26,33)
+→ Camión TB02 avanza a (26,8)
+→ Camión TA01 avanza a (27,33)
+→ Camión TB02 avanza a (27,8)
+→ Camión TA01 avanza a (28,33)
+→ Camión TB02 avanza a (28,8)
+→ Camión TA01 avanza a (29,33)
+→ Camión TB02 avanza a (29,8)
+→ Camión TA01 avanza a (30,33)
+→ Camión TB02 avanza a (30,8)
+→ Camión TA01 avanza a (31,33)
+→ Camión TB02 avanza a (31,8)
+→ Camión TA01 avanza a (32,33)
+→ Camión TB02 avanza a (32,8)
+→ Camión TA01 avanza a (33,33)
+→ Camión TB02 avanza a (33,8)
+→ Camión TA01 avanza a (34,33)
+→ Camión TB02 avanza a (34,8)
+→ Camión TA01 avanza a (35,33)
+→ Camión TB02 avanza a (35,8)
+→ Camión TA01 avanza a (36,33)
+→ Camión TB02 avanza a (36,8)
+🆕 t+1678: Pedido #9 recibido (destino=(34,5), vol=3,0m³, límite t+2398)
+⏲️ t+1678: Replanificando, candidatos = [5, 9, 5, 9]
+    → Rutas devueltas para [9, 9]
+⏱️ t+1678: Asignando Pedido #9 al Camión TB02
+Manhattan path desde (36,8) hasta (34,5): 
+🕒 eventoEntrega programado para t+1684 en (34,5)
+Ruta TB02 → start=(35,8) end=(34,5) size=5
+⏱️ t+1678: Asignando Pedido #9 al Camión TB03
+Manhattan path desde (12,8) hasta (34,5): 
+🕒 eventoEntrega programado para t+1708 en (34,5)
+Ruta TB03 → start=(13,8) end=(34,5) size=25
+→ Camión TA01 avanza a (37,33)
+→ Camión TB02 avanza a (35,8)
+→ Camión TB03 avanza a (13,8)
+→ Camión TA01 avanza a (38,33)
+→ Camión TB02 avanza a (34,8)
+→ Camión TB03 avanza a (14,8)
+→ Camión TA01 avanza a (39,33)
+→ Camión TB02 avanza a (34,7)
+→ Camión TB03 avanza a (15,8)
+→ Camión TA01 avanza a (40,33)
+→ Camión TB02 avanza a (34,6)
+→ Camión TB03 avanza a (16,8)
+→ Camión TA01 avanza a (41,33)
+→ Camión TB02 avanza a (34,5)
+→ Camión TB03 avanza a (17,8)
+▶▶▶ disparando eventoEntrega para Pedido 9
+✅ t+1684: Pedido #9 completado por Camión TB02 en (34,5); capacidad: 15,0→12,0 m³
+⏱️ t+1684: Camión TB02 inicia retorno a planta principal
+→ Camión TA01 avanza a (42,33)
+→ Camión TB02 avanza a (33,5)
+→ Camión TB03 avanza a (18,8)
+→ Camión TA01 avanza a (43,33)
+→ Camión TB02 avanza a (32,5)
+→ Camión TB03 avanza a (19,8)
+→ Camión TA01 avanza a (44,33)
+→ Camión TB02 avanza a (31,5)
+→ Camión TB03 avanza a (20,8)
+→ Camión TA01 avanza a (45,33)
+→ Camión TB02 avanza a (30,5)
+→ Camión TB03 avanza a (21,8)
+→ Camión TA01 avanza a (46,33)
+→ Camión TB02 avanza a (29,5)
+→ Camión TB03 avanza a (22,8)
+→ Camión TA01 avanza a (47,33)
+→ Camión TB02 avanza a (28,5)
+→ Camión TB03 avanza a (23,8)
+→ Camión TA01 avanza a (48,33)
+→ Camión TB02 avanza a (27,5)
+→ Camión TB03 avanza a (24,8)
+→ Camión TA01 avanza a (49,33)
+→ Camión TB02 avanza a (26,5)
+→ Camión TB03 avanza a (25,8)
+→ Camión TA01 avanza a (50,33)
+→ Camión TB02 avanza a (25,5)
+→ Camión TB03 avanza a (26,8)
+→ Camión TA01 avanza a (51,33)
+→ Camión TB02 avanza a (24,5)
+→ Camión TB03 avanza a (27,8)
+→ Camión TA01 avanza a (52,33)
+→ Camión TB02 avanza a (23,5)
+→ Camión TB03 avanza a (28,8)
+→ Camión TA01 avanza a (53,33)
+→ Camión TB02 avanza a (22,5)
+→ Camión TB03 avanza a (29,8)
+→ Camión TA01 avanza a (54,33)
+→ Camión TB02 avanza a (21,5)
+→ Camión TB03 avanza a (30,8)
+→ Camión TA01 avanza a (55,33)
+→ Camión TB02 avanza a (20,5)
+→ Camión TB03 avanza a (31,8)
+→ Camión TA01 avanza a (56,33)
+→ Camión TB02 avanza a (19,5)
+→ Camión TB03 avanza a (32,8)
+→ Camión TA01 avanza a (57,33)
+→ Camión TB02 avanza a (18,5)
+→ Camión TB03 avanza a (33,8)
+→ Camión TA01 avanza a (58,33)
+→ Camión TB02 avanza a (17,5)
+→ Camión TB03 avanza a (34,8)
+→ Camión TA01 avanza a (59,33)
+→ Camión TB02 avanza a (16,5)
+→ Camión TB03 avanza a (34,7)
+→ Camión TA01 avanza a (60,33)
+→ Camión TB02 avanza a (15,5)
+→ Camión TB03 avanza a (34,6)
+🆕 t+1702: Pedido #10 recibido (destino=(56,11), vol=47,0m³, límite t+2722)
+⏲️ t+1702: Replanificando, candidatos = [5, 10, 5, 10]
+    → Rutas devueltas para []
+→ Camión TA01 avanza a (61,33)
+→ Camión TB02 avanza a (14,5)
+→ Camión TB03 avanza a (34,5)
+→ Camión TA01 avanza a (62,33)
+→ Camión TB02 avanza a (13,5)
+→ Camión TA01 avanza a (63,33)
+→ Camión TB02 avanza a (12,5)
+→ Camión TA01 avanza a (64,33)
+→ Camión TB02 avanza a (12,6)
+→ Camión TA01 avanza a (65,33)
+→ Camión TB02 avanza a (12,7)
+▶▶▶ disparando eventoEntrega para Pedido 9
+✅ t+1708: Pedido #9 completado por Camión TB03 en (34,5); capacidad: 15,0→12,0 m³
+⏱️ t+1708: Camión TB03 inicia retorno a planta principal
+→ Camión TA01 avanza a (66,33)
+→ Camión TB02 avanza a (12,8)
+→ Camión TB03 avanza a (33,5)
+→ Camión TA01 avanza a (67,33)
+🔄 t+1709: Camión TB02 llegó a planta (12,8) y recargado a 15,0 m³
+→ Camión TB03 avanza a (32,5)
+→ Camión TA01 avanza a (68,33)
+→ Camión TB03 avanza a (31,5)
+→ Camión TA01 avanza a (69,33)
+→ Camión TB03 avanza a (30,5)
+→ Camión TA01 avanza a (69,34)
+→ Camión TB03 avanza a (29,5)
+→ Camión TA01 avanza a (69,35)
+→ Camión TB03 avanza a (28,5)
+→ Camión TA01 avanza a (69,36)
+→ Camión TB03 avanza a (27,5)
+→ Camión TA01 avanza a (69,37)
+→ Camión TB03 avanza a (26,5)
+→ Camión TA01 avanza a (69,38)
+→ Camión TB03 avanza a (25,5)
+→ Camión TA01 avanza a (69,39)
+→ Camión TB03 avanza a (24,5)
+→ Camión TA01 avanza a (69,40)
+→ Camión TB03 avanza a (23,5)
+→ Camión TA01 avanza a (69,41)
+→ Camión TB03 avanza a (22,5)
+→ Camión TA01 avanza a (69,42)
+→ Camión TB03 avanza a (21,5)
+→ Camión TA01 avanza a (69,43)
+→ Camión TB03 avanza a (20,5)
+→ Camión TA01 avanza a (69,44)
+→ Camión TB03 avanza a (19,5)
+→ Camión TA01 avanza a (69,45)
+→ Camión TB03 avanza a (18,5)
+→ Camión TA01 avanza a (69,46)
+→ Camión TB03 avanza a (17,5)
+🔄 t+1725: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TB03 avanza a (16,5)
+🆕 t+1725: Pedido #11 recibido (destino=(27,49), vol=11,0m³, límite t+2325)
+⏲️ t+1725: Replanificando, candidatos = [5, 10, 11, 5, 10, 11]
+    → Rutas devueltas para []
+→ Camión TA01 avanza a (68,46)
+→ Camión TB03 avanza a (15,5)
+→ Camión TA01 avanza a (67,46)
+→ Camión TB03 avanza a (14,5)
+→ Camión TA01 avanza a (66,46)
+→ Camión TB03 avanza a (13,5)
+→ Camión TA01 avanza a (65,46)
+→ Camión TB03 avanza a (12,5)
+→ Camión TA01 avanza a (64,46)
+→ Camión TB03 avanza a (12,6)
+→ Camión TA01 avanza a (63,46)
+→ Camión TB03 avanza a (12,7)
+→ Camión TA01 avanza a (62,46)
+→ Camión TB03 avanza a (12,8)
+→ Camión TA01 avanza a (61,46)
+🔄 t+1733: Camión TB03 llegó a planta (12,8) y recargado a 15,0 m³
+→ Camión TA01 avanza a (60,46)
+→ Camión TA01 avanza a (59,46)
+→ Camión TA01 avanza a (58,46)
+→ Camión TA01 avanza a (57,46)
+▶▶▶ disparando eventoEntrega para Pedido 8
+✅ t+1738: Pedido #8 completado por Camión TA01 en (69,46); capacidad: 25,0→23,0 m³
+⏱️ t+1738: Camión TA01 inicia retorno a planta principal
+→ Camión TA01 avanza a (68,46)
+→ Camión TA01 avanza a (67,46)
+→ Camión TA01 avanza a (66,46)
+→ Camión TA01 avanza a (65,46)
+→ Camión TA01 avanza a (64,46)
+→ Camión TA01 avanza a (63,46)
+→ Camión TA01 avanza a (62,46)
+→ Camión TA01 avanza a (61,46)
+→ Camión TA01 avanza a (60,46)
+→ Camión TA01 avanza a (59,46)
+→ Camión TA01 avanza a (58,46)
+→ Camión TA01 avanza a (57,46)
+🆕 t+1749: Pedido #12 recibido (destino=(58,33), vol=23,0m³, límite t+2769)
+⏲️ t+1749: Replanificando, candidatos = [5, 10, 11, 12, 5, 10, 11, 12]
+    → Rutas devueltas para [12]
+⏱️ t+1749: Asignando Pedido #12 al Camión TA01
+Manhattan path desde (57,46) hasta (58,33): 
+🕒 eventoEntrega programado para t+1766 en (58,33)
+Ruta TA01 → start=(58,46) end=(58,33) size=14
+→ Camión TA01 avanza a (58,46)
+→ Camión TA01 avanza a (58,45)
+→ Camión TA01 avanza a (58,44)
+→ Camión TA01 avanza a (58,43)
+→ Camión TA01 avanza a (58,42)
+→ Camión TA01 avanza a (58,41)
+→ Camión TA01 avanza a (58,40)
+→ Camión TA01 avanza a (58,39)
+→ Camión TA01 avanza a (58,38)
+→ Camión TA01 avanza a (58,37)
+→ Camión TA01 avanza a (58,36)
+→ Camión TA01 avanza a (58,35)
+→ Camión TA01 avanza a (58,34)
+→ Camión TA01 avanza a (58,33)
+🔄 t+1764: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TA01 avanza a (57,33)
+▶▶▶ disparando eventoEntrega para Pedido 12
+✅ t+1766: Pedido #12 completado por Camión TA01 en (58,33); capacidad: 25,0→2,0 m³
+⏱️ t+1766: Camión TA01 inicia retorno a planta principal
+→ Camión TA01 avanza a (57,33)
+→ Camión TA01 avanza a (56,33)
+▶▶▶ disparando eventoEntrega para Pedido 8
+✅ t+1768: Pedido #8 completado por Camión TB02 en (69,46); capacidad: 15,0→13,0 m³
+⏱️ t+1768: Camión TB02 inicia retorno a planta principal
+→ Camión TA01 avanza a (55,33)
+→ Camión TB02 avanza a (68,46)
+→ Camión TA01 avanza a (54,33)
+→ Camión TB02 avanza a (67,46)
+→ Camión TA01 avanza a (53,33)
+→ Camión TB02 avanza a (66,46)
+→ Camión TA01 avanza a (52,33)
+→ Camión TB02 avanza a (65,46)
+→ Camión TA01 avanza a (51,33)
+→ Camión TB02 avanza a (64,46)
+→ Camión TA01 avanza a (50,33)
+→ Camión TB02 avanza a (63,46)
+🆕 t+1773: Pedido #13 recibido (destino=(22,28), vol=2,0m³, límite t+2013)
+⏲️ t+1773: Replanificando, candidatos = [5, 10, 11, 13, 5, 10, 11, 13]
+    → Rutas devueltas para [13, 13]
+⏱️ t+1773: Asignando Pedido #13 al Camión TA02
+Manhattan path desde (12,8) hasta (22,28): 
+🕒 eventoEntrega programado para t+1809 en (22,28)
+Ruta TA02 → start=(13,8) end=(22,28) size=30
+⏱️ t+1773: Asignando Pedido #13 al Camión TC04
+Manhattan path desde (12,8) hasta (22,28): 
+🕒 eventoEntrega programado para t+1809 en (22,28)
+Ruta TC04 → start=(13,8) end=(22,28) size=30
+→ Camión TA01 avanza a (49,33)
+→ Camión TA02 avanza a (13,8)
+→ Camión TB02 avanza a (62,46)
+→ Camión TC04 avanza a (13,8)
+→ Camión TA01 avanza a (48,33)
+→ Camión TA02 avanza a (14,8)
+→ Camión TB02 avanza a (61,46)
+→ Camión TC04 avanza a (14,8)
+→ Camión TA01 avanza a (47,33)
+→ Camión TA02 avanza a (15,8)
+→ Camión TB02 avanza a (60,46)
+→ Camión TC04 avanza a (15,8)
+→ Camión TA01 avanza a (46,33)
+→ Camión TA02 avanza a (16,8)
+→ Camión TB02 avanza a (59,46)
+→ Camión TC04 avanza a (16,8)
+→ Camión TA01 avanza a (45,33)
+→ Camión TA02 avanza a (17,8)
+→ Camión TB02 avanza a (58,46)
+→ Camión TC04 avanza a (17,8)
+→ Camión TA01 avanza a (44,33)
+→ Camión TA02 avanza a (18,8)
+→ Camión TB02 avanza a (57,46)
+→ Camión TC04 avanza a (18,8)
+→ Camión TA01 avanza a (43,33)
+→ Camión TA02 avanza a (19,8)
+→ Camión TB02 avanza a (56,46)
+→ Camión TC04 avanza a (19,8)
+→ Camión TA01 avanza a (42,33)
+→ Camión TA02 avanza a (20,8)
+→ Camión TB02 avanza a (55,46)
+→ Camión TC04 avanza a (20,8)
+→ Camión TA01 avanza a (41,33)
+→ Camión TA02 avanza a (21,8)
+→ Camión TB02 avanza a (54,46)
+→ Camión TC04 avanza a (21,8)
+→ Camión TA01 avanza a (40,33)
+→ Camión TA02 avanza a (22,8)
+→ Camión TB02 avanza a (53,46)
+→ Camión TC04 avanza a (22,8)
+→ Camión TA01 avanza a (39,33)
+→ Camión TA02 avanza a (22,9)
+→ Camión TB02 avanza a (52,46)
+→ Camión TC04 avanza a (22,9)
+→ Camión TA01 avanza a (38,33)
+→ Camión TA02 avanza a (22,10)
+→ Camión TB02 avanza a (51,46)
+→ Camión TC04 avanza a (22,10)
+→ Camión TA01 avanza a (37,33)
+→ Camión TA02 avanza a (22,11)
+→ Camión TB02 avanza a (50,46)
+→ Camión TC04 avanza a (22,11)
+→ Camión TA01 avanza a (36,33)
+→ Camión TA02 avanza a (22,12)
+→ Camión TB02 avanza a (49,46)
+→ Camión TC04 avanza a (22,12)
+→ Camión TA01 avanza a (35,33)
+→ Camión TA02 avanza a (22,13)
+→ Camión TB02 avanza a (48,46)
+→ Camión TC04 avanza a (22,13)
+→ Camión TA01 avanza a (34,33)
+→ Camión TA02 avanza a (22,14)
+→ Camión TB02 avanza a (47,46)
+→ Camión TC04 avanza a (22,14)
+→ Camión TA01 avanza a (33,33)
+→ Camión TA02 avanza a (22,15)
+→ Camión TB02 avanza a (46,46)
+→ Camión TC04 avanza a (22,15)
+→ Camión TA01 avanza a (32,33)
+→ Camión TA02 avanza a (22,16)
+→ Camión TB02 avanza a (45,46)
+→ Camión TC04 avanza a (22,16)
+→ Camión TA01 avanza a (31,33)
+→ Camión TA02 avanza a (22,17)
+→ Camión TB02 avanza a (44,46)
+→ Camión TC04 avanza a (22,17)
+→ Camión TA01 avanza a (30,33)
+→ Camión TA02 avanza a (22,18)
+→ Camión TB02 avanza a (43,46)
+→ Camión TC04 avanza a (22,18)
+→ Camión TA01 avanza a (29,33)
+→ Camión TA02 avanza a (22,19)
+→ Camión TB02 avanza a (42,46)
+→ Camión TC04 avanza a (22,19)
+→ Camión TA01 avanza a (28,33)
+→ Camión TA02 avanza a (22,20)
+→ Camión TB02 avanza a (41,46)
+→ Camión TC04 avanza a (22,20)
+→ Camión TA01 avanza a (27,33)
+→ Camión TA02 avanza a (22,21)
+→ Camión TB02 avanza a (40,46)
+→ Camión TC04 avanza a (22,21)
+🆕 t+1796: Pedido #14 recibido (destino=(31,27), vol=1,0m³, límite t+2876)
+⏲️ t+1796: Replanificando, candidatos = [5, 10, 11, 14, 5, 10, 11, 14]
+    → Rutas devueltas para [14, 5, 14]
+⏱️ t+1796: Asignando Pedido #14 al Camión TA02
+Manhattan path desde (22,21) hasta (31,27): 
+🕒 eventoEntrega programado para t+1814 en (31,27)
+Ruta TA02 → start=(23,21) end=(31,27) size=15
+⏱️ t+1796: Asignando Pedido #5 al Camión TB02
+Manhattan path desde (40,46) hasta (29,47): 
+🕒 eventoEntrega programado para t+1811 en (29,47)
+Ruta TB02 → start=(39,46) end=(29,47) size=12
+⏱️ t+1796: Asignando Pedido #14 al Camión TC04
+Manhattan path desde (22,21) hasta (31,27): 
+🕒 eventoEntrega programado para t+1814 en (31,27)
+Ruta TC04 → start=(23,21) end=(31,27) size=15
+→ Camión TA01 avanza a (26,33)
+→ Camión TA02 avanza a (23,21)
+→ Camión TB02 avanza a (39,46)
+→ Camión TC04 avanza a (23,21)
+→ Camión TA01 avanza a (25,33)
+→ Camión TA02 avanza a (24,21)
+→ Camión TB02 avanza a (38,46)
+→ Camión TC04 avanza a (24,21)
+→ Camión TA01 avanza a (24,33)
+→ Camión TA02 avanza a (25,21)
+→ Camión TB02 avanza a (37,46)
+→ Camión TC04 avanza a (25,21)
+→ Camión TA01 avanza a (23,33)
+→ Camión TA02 avanza a (26,21)
+→ Camión TB02 avanza a (36,46)
+→ Camión TC04 avanza a (26,21)
+→ Camión TA01 avanza a (22,33)
+→ Camión TA02 avanza a (27,21)
+→ Camión TB02 avanza a (35,46)
+→ Camión TC04 avanza a (27,21)
+→ Camión TA01 avanza a (21,33)
+→ Camión TA02 avanza a (28,21)
+→ Camión TB02 avanza a (34,46)
+→ Camión TC04 avanza a (28,21)
+→ Camión TA01 avanza a (20,33)
+→ Camión TA02 avanza a (29,21)
+→ Camión TB02 avanza a (33,46)
+→ Camión TC04 avanza a (29,21)
+→ Camión TA01 avanza a (19,33)
+→ Camión TA02 avanza a (30,21)
+→ Camión TB02 avanza a (32,46)
+→ Camión TC04 avanza a (30,21)
+→ Camión TA01 avanza a (18,33)
+→ Camión TA02 avanza a (31,21)
+→ Camión TB02 avanza a (31,46)
+→ Camión TC04 avanza a (31,21)
+→ Camión TA01 avanza a (17,33)
+→ Camión TA02 avanza a (31,22)
+→ Camión TB02 avanza a (30,46)
+→ Camión TC04 avanza a (31,22)
+→ Camión TA01 avanza a (16,33)
+→ Camión TA02 avanza a (31,23)
+→ Camión TB02 avanza a (29,46)
+→ Camión TC04 avanza a (31,23)
+→ Camión TA01 avanza a (15,33)
+→ Camión TA02 avanza a (31,24)
+→ Camión TB02 avanza a (29,47)
+→ Camión TC04 avanza a (31,24)
+▶▶▶ disparando eventoEntrega para Pedido 13
+✅ t+1809: Pedido #13 completado por Camión TA02 en (22,28); capacidad: 25,0→23,0 m³
+⏱️ t+1809: Camión TA02 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 13
+✅ t+1809: Pedido #13 completado por Camión TC04 en (22,28); capacidad: 10,0→8,0 m³
+⏱️ t+1809: Camión TC04 inicia retorno a planta principal
+→ Camión TA01 avanza a (14,33)
+→ Camión TA02 avanza a (21,28)
+🔄 t+1809: Camión TB02 llegó a planta (12,8) y recargado a 15,0 m³
+→ Camión TC04 avanza a (21,28)
+→ Camión TA01 avanza a (13,33)
+→ Camión TA02 avanza a (20,28)
+→ Camión TB02 avanza a (28,47)
+→ Camión TC04 avanza a (20,28)
+▶▶▶ disparando eventoEntrega para Pedido 5
+✅ t+1811: Pedido #5 completado por Camión TB02 en (29,47); capacidad: 15,0→6,0 m³
+⏱️ t+1811: Camión TB02 inicia retorno a planta principal
+→ Camión TA01 avanza a (12,33)
+→ Camión TA02 avanza a (19,28)
+→ Camión TB02 avanza a (28,47)
+→ Camión TC04 avanza a (19,28)
+→ Camión TA01 avanza a (12,32)
+→ Camión TA02 avanza a (18,28)
+→ Camión TB02 avanza a (27,47)
+→ Camión TC04 avanza a (18,28)
+→ Camión TA01 avanza a (12,31)
+→ Camión TA02 avanza a (17,28)
+→ Camión TB02 avanza a (26,47)
+→ Camión TC04 avanza a (17,28)
+▶▶▶ disparando eventoEntrega para Pedido 14
+✅ t+1814: Pedido #14 completado por Camión TA02 en (31,27); capacidad: 23,0→22,0 m³
+⏱️ t+1814: Camión TA02 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 14
+✅ t+1814: Pedido #14 completado por Camión TC04 en (31,27); capacidad: 8,0→7,0 m³
+⏱️ t+1814: Camión TC04 inicia retorno a planta principal
+→ Camión TA01 avanza a (12,30)
+→ Camión TA02 avanza a (30,27)
+→ Camión TB02 avanza a (25,47)
+→ Camión TC04 avanza a (30,27)
+→ Camión TA01 avanza a (12,29)
+→ Camión TA02 avanza a (29,27)
+→ Camión TB02 avanza a (24,47)
+→ Camión TC04 avanza a (29,27)
+→ Camión TA01 avanza a (12,28)
+→ Camión TA02 avanza a (28,27)
+→ Camión TB02 avanza a (23,47)
+→ Camión TC04 avanza a (28,27)
+→ Camión TA01 avanza a (12,27)
+→ Camión TA02 avanza a (27,27)
+→ Camión TB02 avanza a (22,47)
+→ Camión TC04 avanza a (27,27)
+→ Camión TA01 avanza a (12,26)
+→ Camión TA02 avanza a (26,27)
+→ Camión TB02 avanza a (21,47)
+→ Camión TC04 avanza a (26,27)
+→ Camión TA01 avanza a (12,25)
+→ Camión TA02 avanza a (25,27)
+→ Camión TB02 avanza a (20,47)
+→ Camión TC04 avanza a (25,27)
+→ Camión TA01 avanza a (12,24)
+→ Camión TA02 avanza a (24,27)
+→ Camión TB02 avanza a (19,47)
+→ Camión TC04 avanza a (24,27)
+🆕 t+1820: Pedido #15 recibido (destino=(23,31), vol=13,0m³, límite t+2060)
+⏲️ t+1820: Replanificando, candidatos = [10, 11, 15, 10, 11, 15]
+    → Rutas devueltas para []
+→ Camión TA01 avanza a (12,23)
+→ Camión TA02 avanza a (23,27)
+→ Camión TB02 avanza a (18,47)
+→ Camión TC04 avanza a (23,27)
+→ Camión TA01 avanza a (12,22)
+→ Camión TA02 avanza a (22,27)
+→ Camión TB02 avanza a (17,47)
+→ Camión TC04 avanza a (22,27)
+→ Camión TA01 avanza a (12,21)
+→ Camión TA02 avanza a (21,27)
+→ Camión TB02 avanza a (16,47)
+→ Camión TC04 avanza a (21,27)
+→ Camión TA01 avanza a (12,20)
+→ Camión TA02 avanza a (20,27)
+→ Camión TB02 avanza a (15,47)
+→ Camión TC04 avanza a (20,27)
+→ Camión TA01 avanza a (12,19)
+→ Camión TA02 avanza a (19,27)
+→ Camión TB02 avanza a (14,47)
+→ Camión TC04 avanza a (19,27)
+→ Camión TA01 avanza a (12,18)
+→ Camión TA02 avanza a (18,27)
+→ Camión TB02 avanza a (13,47)
+→ Camión TC04 avanza a (18,27)
+→ Camión TA01 avanza a (12,17)
+→ Camión TA02 avanza a (17,27)
+→ Camión TB02 avanza a (12,47)
+→ Camión TC04 avanza a (17,27)
+→ Camión TA01 avanza a (12,16)
+→ Camión TA02 avanza a (16,27)
+→ Camión TB02 avanza a (12,46)
+→ Camión TC04 avanza a (16,27)
+→ Camión TA01 avanza a (12,15)
+→ Camión TA02 avanza a (15,27)
+→ Camión TB02 avanza a (12,45)
+→ Camión TC04 avanza a (15,27)
+→ Camión TA01 avanza a (12,14)
+→ Camión TA02 avanza a (14,27)
+→ Camión TB02 avanza a (12,44)
+→ Camión TC04 avanza a (14,27)
+→ Camión TA01 avanza a (12,13)
+→ Camión TA02 avanza a (13,27)
+→ Camión TB02 avanza a (12,43)
+→ Camión TC04 avanza a (13,27)
+→ Camión TA01 avanza a (12,12)
+→ Camión TA02 avanza a (12,27)
+→ Camión TB02 avanza a (12,42)
+→ Camión TC04 avanza a (12,27)
+→ Camión TA01 avanza a (12,11)
+→ Camión TA02 avanza a (12,26)
+→ Camión TB02 avanza a (12,41)
+→ Camión TC04 avanza a (12,26)
+→ Camión TA01 avanza a (12,10)
+→ Camión TA02 avanza a (12,25)
+→ Camión TB02 avanza a (12,40)
+→ Camión TC04 avanza a (12,25)
+→ Camión TA01 avanza a (12,9)
+→ Camión TA02 avanza a (12,24)
+→ Camión TB02 avanza a (12,39)
+→ Camión TC04 avanza a (12,24)
+→ Camión TA01 avanza a (12,8)
+→ Camión TA02 avanza a (12,23)
+→ Camión TB02 avanza a (12,38)
+→ Camión TC04 avanza a (12,23)
+🔄 t+1837: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TA02 avanza a (12,22)
+→ Camión TB02 avanza a (12,37)
+→ Camión TC04 avanza a (12,22)
+→ Camión TA02 avanza a (12,21)
+→ Camión TB02 avanza a (12,36)
+→ Camión TC04 avanza a (12,21)
+→ Camión TA02 avanza a (12,20)
+→ Camión TB02 avanza a (12,35)
+→ Camión TC04 avanza a (12,20)
+→ Camión TA02 avanza a (12,19)
+→ Camión TB02 avanza a (12,34)
+→ Camión TC04 avanza a (12,19)
+→ Camión TA02 avanza a (12,18)
+→ Camión TB02 avanza a (12,33)
+→ Camión TC04 avanza a (12,18)
+→ Camión TA02 avanza a (12,17)
+→ Camión TB02 avanza a (12,32)
+→ Camión TC04 avanza a (12,17)
+→ Camión TA02 avanza a (12,16)
+→ Camión TB02 avanza a (12,31)
+→ Camión TC04 avanza a (12,16)
+→ Camión TA02 avanza a (12,15)
+→ Camión TB02 avanza a (12,30)
+→ Camión TC04 avanza a (12,15)
+🆕 t+1844: Pedido #16 recibido (destino=(34,4), vol=11,0m³, límite t+2564)
+⏲️ t+1844: Replanificando, candidatos = [10, 11, 15, 16, 10, 11, 15, 16]
+    → Rutas devueltas para []
+→ Camión TA02 avanza a (12,14)
+→ Camión TB02 avanza a (12,29)
+→ Camión TC04 avanza a (12,14)
+→ Camión TA02 avanza a (12,13)
+→ Camión TB02 avanza a (12,28)
+→ Camión TC04 avanza a (12,13)
+→ Camión TA02 avanza a (12,12)
+→ Camión TB02 avanza a (12,27)
+→ Camión TC04 avanza a (12,12)
+→ Camión TA02 avanza a (12,11)
+→ Camión TB02 avanza a (12,26)
+→ Camión TC04 avanza a (12,11)
+→ Camión TA02 avanza a (12,10)
+→ Camión TB02 avanza a (12,25)
+→ Camión TC04 avanza a (12,10)
+→ Camión TA02 avanza a (12,9)
+→ Camión TB02 avanza a (12,24)
+→ Camión TC04 avanza a (12,9)
+→ Camión TA02 avanza a (12,8)
+→ Camión TB02 avanza a (12,23)
+→ Camión TC04 avanza a (12,8)
+🔄 t+1852: Camión TA02 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TB02 avanza a (12,22)
+🔄 t+1852: Camión TC04 llegó a planta (12,8) y recargado a 10,0 m³
+→ Camión TB02 avanza a (12,21)
+→ Camión TB02 avanza a (12,20)
+→ Camión TB02 avanza a (12,19)
+→ Camión TB02 avanza a (12,18)
+→ Camión TB02 avanza a (12,17)
+→ Camión TB02 avanza a (12,16)
+→ Camión TB02 avanza a (12,15)
+→ Camión TB02 avanza a (12,14)
+→ Camión TB02 avanza a (12,13)
+→ Camión TB02 avanza a (12,12)
+→ Camión TB02 avanza a (12,11)
+→ Camión TB02 avanza a (12,10)
+→ Camión TB02 avanza a (12,9)
+→ Camión TB02 avanza a (12,8)
+🔄 t+1867: Camión TB02 llegó a planta (12,8) y recargado a 15,0 m³
+🆕 t+1868: Pedido #17 recibido (destino=(46,37), vol=3,0m³, límite t+4388)
+⏲️ t+1868: Replanificando, candidatos = [10, 11, 15, 16, 17, 10, 11, 15, 16, 17]
+    → Rutas devueltas para [17, 17]
+⏱️ t+1868: Asignando Pedido #17 al Camión TB04
+Manhattan path desde (12,8) hasta (46,37): 
+🕒 eventoEntrega programado para t+1944 en (46,37)
+Ruta TB04 → start=(13,8) end=(46,37) size=63
+⏱️ t+1868: Asignando Pedido #17 al Camión TD02
+Manhattan path desde (12,8) hasta (46,37): 
+🕒 eventoEntrega programado para t+1944 en (46,37)
+Ruta TD02 → start=(13,8) end=(46,37) size=63
+→ Camión TB04 avanza a (13,8)
+→ Camión TD02 avanza a (13,8)
+→ Camión TB04 avanza a (14,8)
+→ Camión TD02 avanza a (14,8)
+→ Camión TB04 avanza a (15,8)
+→ Camión TD02 avanza a (15,8)
+→ Camión TB04 avanza a (16,8)
+→ Camión TD02 avanza a (16,8)
+→ Camión TB04 avanza a (17,8)
+→ Camión TD02 avanza a (17,8)
+→ Camión TB04 avanza a (18,8)
+→ Camión TD02 avanza a (18,8)
+→ Camión TB04 avanza a (19,8)
+→ Camión TD02 avanza a (19,8)
+→ Camión TB04 avanza a (20,8)
+→ Camión TD02 avanza a (20,8)
+→ Camión TB04 avanza a (21,8)
+→ Camión TD02 avanza a (21,8)
+→ Camión TB04 avanza a (22,8)
+→ Camión TD02 avanza a (22,8)
+→ Camión TB04 avanza a (23,8)
+→ Camión TD02 avanza a (23,8)
+→ Camión TB04 avanza a (24,8)
+→ Camión TD02 avanza a (24,8)
+→ Camión TB04 avanza a (25,8)
+→ Camión TD02 avanza a (25,8)
+→ Camión TB04 avanza a (26,8)
+→ Camión TD02 avanza a (26,8)
+→ Camión TB04 avanza a (27,8)
+→ Camión TD02 avanza a (27,8)
+→ Camión TB04 avanza a (28,8)
+→ Camión TD02 avanza a (28,8)
+→ Camión TB04 avanza a (29,8)
+→ Camión TD02 avanza a (29,8)
+→ Camión TB04 avanza a (30,8)
+→ Camión TD02 avanza a (30,8)
+→ Camión TB04 avanza a (31,8)
+→ Camión TD02 avanza a (31,8)
+→ Camión TB04 avanza a (32,8)
+→ Camión TD02 avanza a (32,8)
+→ Camión TB04 avanza a (33,8)
+→ Camión TD02 avanza a (33,8)
+→ Camión TB04 avanza a (34,8)
+→ Camión TD02 avanza a (34,8)
+→ Camión TB04 avanza a (35,8)
+→ Camión TD02 avanza a (35,8)
+🆕 t+1891: Pedido #18 recibido (destino=(6,13), vol=13,0m³, límite t+2671)
+⏲️ t+1891: Replanificando, candidatos = [10, 11, 15, 16, 18, 10, 11, 15, 16, 18]
+    → Rutas devueltas para [16]
+⏱️ t+1891: Asignando Pedido #16 al Camión TB04
+Manhattan path desde (35,8) hasta (34,4): 
+🕒 eventoEntrega programado para t+1897 en (34,4)
+Ruta TB04 → start=(34,8) end=(34,4) size=5
+→ Camión TB04 avanza a (34,8)
+→ Camión TD02 avanza a (36,8)
+→ Camión TB04 avanza a (34,7)
+→ Camión TD02 avanza a (37,8)
+→ Camión TB04 avanza a (34,6)
+→ Camión TD02 avanza a (38,8)
+→ Camión TB04 avanza a (34,5)
+→ Camión TD02 avanza a (39,8)
+→ Camión TB04 avanza a (34,4)
+→ Camión TD02 avanza a (40,8)
+▶▶▶ disparando eventoEntrega para Pedido 16
+✅ t+1897: Pedido #16 completado por Camión TB04 en (34,4); capacidad: 15,0→4,0 m³
+⏱️ t+1897: Camión TB04 inicia retorno a planta principal
+→ Camión TB04 avanza a (33,4)
+→ Camión TD02 avanza a (41,8)
+→ Camión TB04 avanza a (32,4)
+→ Camión TD02 avanza a (42,8)
+→ Camión TB04 avanza a (31,4)
+→ Camión TD02 avanza a (43,8)
+→ Camión TB04 avanza a (30,4)
+→ Camión TD02 avanza a (44,8)
+→ Camión TB04 avanza a (29,4)
+→ Camión TD02 avanza a (45,8)
+→ Camión TB04 avanza a (28,4)
+→ Camión TD02 avanza a (46,8)
+→ Camión TB04 avanza a (27,4)
+→ Camión TD02 avanza a (46,9)
+→ Camión TB04 avanza a (26,4)
+→ Camión TD02 avanza a (46,10)
+→ Camión TB04 avanza a (25,4)
+→ Camión TD02 avanza a (46,11)
+→ Camión TB04 avanza a (24,4)
+→ Camión TD02 avanza a (46,12)
+→ Camión TB04 avanza a (23,4)
+→ Camión TD02 avanza a (46,13)
+→ Camión TB04 avanza a (22,4)
+→ Camión TD02 avanza a (46,14)
+→ Camión TB04 avanza a (21,4)
+→ Camión TD02 avanza a (46,15)
+→ Camión TB04 avanza a (20,4)
+→ Camión TD02 avanza a (46,16)
+→ Camión TB04 avanza a (19,4)
+→ Camión TD02 avanza a (46,17)
+→ Camión TB04 avanza a (18,4)
+→ Camión TD02 avanza a (46,18)
+→ Camión TB04 avanza a (17,4)
+→ Camión TD02 avanza a (46,19)
+→ Camión TB04 avanza a (16,4)
+→ Camión TD02 avanza a (46,20)
+→ Camión TB04 avanza a (15,4)
+→ Camión TD02 avanza a (46,21)
+🆕 t+1915: Pedido #19 recibido (destino=(60,33), vol=3,0m³, límite t+2635)
+⏲️ t+1915: Replanificando, candidatos = [10, 11, 15, 18, 19, 10, 11, 15, 18, 19]
+    → Rutas devueltas para [19, 19]
+⏱️ t+1915: Asignando Pedido #19 al Camión TC03
+Manhattan path desde (12,8) hasta (60,33): 
+🕒 eventoEntrega programado para t+2003 en (60,33)
+Ruta TC03 → start=(13,8) end=(60,33) size=73
+⏱️ t+1915: Asignando Pedido #19 al Camión TD02
+Manhattan path desde (46,21) hasta (60,33): 
+🕒 eventoEntrega programado para t+1947 en (60,33)
+Ruta TD02 → start=(47,21) end=(60,33) size=26
+→ Camión TB04 avanza a (14,4)
+→ Camión TC03 avanza a (13,8)
+→ Camión TD02 avanza a (47,21)
+→ Camión TB04 avanza a (13,4)
+→ Camión TC03 avanza a (14,8)
+→ Camión TD02 avanza a (48,21)
+→ Camión TB04 avanza a (12,4)
+→ Camión TC03 avanza a (15,8)
+→ Camión TD02 avanza a (49,21)
+→ Camión TB04 avanza a (12,5)
+→ Camión TC03 avanza a (16,8)
+→ Camión TD02 avanza a (50,21)
+→ Camión TB04 avanza a (12,6)
+→ Camión TC03 avanza a (17,8)
+→ Camión TD02 avanza a (51,21)
+⏲️ t+1920: Replanificando, candidatos = [10, 11, 15, 18, 10, 11, 15, 18]
+    → Rutas devueltas para []
+→ Camión TB04 avanza a (12,7)
+→ Camión TC03 avanza a (18,8)
+→ Camión TD02 avanza a (52,21)
+→ Camión TB04 avanza a (12,8)
+→ Camión TC03 avanza a (19,8)
+→ Camión TD02 avanza a (53,21)
+🔄 t+1923: Camión TB04 llegó a planta (12,8) y recargado a 15,0 m³
+→ Camión TC03 avanza a (20,8)
+→ Camión TD02 avanza a (54,21)
+→ Camión TC03 avanza a (21,8)
+→ Camión TD02 avanza a (55,21)
+→ Camión TC03 avanza a (22,8)
+→ Camión TD02 avanza a (56,21)
+→ Camión TC03 avanza a (23,8)
+→ Camión TD02 avanza a (57,21)
+→ Camión TC03 avanza a (24,8)
+→ Camión TD02 avanza a (58,21)
+→ Camión TC03 avanza a (25,8)
+→ Camión TD02 avanza a (59,21)
+→ Camión TC03 avanza a (26,8)
+→ Camión TD02 avanza a (60,21)
+→ Camión TC03 avanza a (27,8)
+→ Camión TD02 avanza a (60,22)
+→ Camión TC03 avanza a (28,8)
+→ Camión TD02 avanza a (60,23)
+→ Camión TC03 avanza a (29,8)
+→ Camión TD02 avanza a (60,24)
+→ Camión TC03 avanza a (30,8)
+→ Camión TD02 avanza a (60,25)
+→ Camión TC03 avanza a (31,8)
+→ Camión TD02 avanza a (60,26)
+→ Camión TC03 avanza a (32,8)
+→ Camión TD02 avanza a (60,27)
+→ Camión TC03 avanza a (33,8)
+→ Camión TD02 avanza a (60,28)
+→ Camión TC03 avanza a (34,8)
+→ Camión TD02 avanza a (60,29)
+→ Camión TC03 avanza a (35,8)
+→ Camión TD02 avanza a (60,30)
+→ Camión TC03 avanza a (36,8)
+→ Camión TD02 avanza a (60,31)
+🆕 t+1939: Pedido #20 recibido (destino=(62,34), vol=2,0m³, límite t+3019)
+⏲️ t+1939: Replanificando, candidatos = [10, 11, 15, 18, 20, 10, 11, 15, 18, 20]
+    → Rutas devueltas para [18, 18, 20, 20]
+⏱️ t+1939: Asignando Pedido #18 al Camión TA01
+Manhattan path desde (12,8) hasta (6,13): 
+🕒 eventoEntrega programado para t+1953 en (6,13)
+Ruta TA01 → start=(11,8) end=(6,13) size=11
+⏱️ t+1939: Asignando Pedido #18 al Camión TB04
+Manhattan path desde (12,8) hasta (6,13): 
+🕒 eventoEntrega programado para t+1953 en (6,13)
+Ruta TB04 → start=(11,8) end=(6,13) size=11
+⏱️ t+1939: Asignando Pedido #20 al Camión TC03
+Manhattan path desde (36,8) hasta (62,34): 
+🕒 eventoEntrega programado para t+2002 en (62,34)
+Ruta TC03 → start=(37,8) end=(62,34) size=52
+⏱️ t+1939: Asignando Pedido #20 al Camión TD02
+Manhattan path desde (60,31) hasta (62,34): 
+🕒 eventoEntrega programado para t+1945 en (62,34)
+Ruta TD02 → start=(61,31) end=(62,34) size=5
+→ Camión TA01 avanza a (11,8)
+→ Camión TB04 avanza a (11,8)
+→ Camión TC03 avanza a (37,8)
+→ Camión TD02 avanza a (61,31)
+→ Camión TA01 avanza a (10,8)
+→ Camión TB04 avanza a (10,8)
+→ Camión TC03 avanza a (38,8)
+→ Camión TD02 avanza a (62,31)
+→ Camión TA01 avanza a (9,8)
+→ Camión TB04 avanza a (9,8)
+→ Camión TC03 avanza a (39,8)
+→ Camión TD02 avanza a (62,32)
+→ Camión TA01 avanza a (8,8)
+→ Camión TB04 avanza a (8,8)
+→ Camión TC03 avanza a (40,8)
+→ Camión TD02 avanza a (62,33)
+▶▶▶ disparando eventoEntrega para Pedido 17
+✅ t+1944: Pedido #17 completado por Camión TB04 en (46,37); capacidad: 15,0→12,0 m³
+⏱️ t+1944: Camión TB04 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 17
+✅ t+1944: Pedido #17 completado por Camión TD02 en (46,37); capacidad: 5,0→2,0 m³
+⏱️ t+1944: Camión TD02 inicia retorno a planta principal
+→ Camión TA01 avanza a (7,8)
+→ Camión TB04 avanza a (45,37)
+→ Camión TC03 avanza a (41,8)
+→ Camión TD02 avanza a (45,37)
+▶▶▶ disparando eventoEntrega para Pedido 20
+✅ t+1945: Pedido #20 completado por Camión TD02 en (62,34); capacidad: 2,0→0,0 m³
+⏱️ t+1945: Camión TD02 inicia retorno a planta principal
+→ Camión TA01 avanza a (6,8)
+→ Camión TB04 avanza a (44,37)
+→ Camión TC03 avanza a (42,8)
+→ Camión TD02 avanza a (61,34)
+→ Camión TA01 avanza a (6,9)
+→ Camión TB04 avanza a (43,37)
+→ Camión TC03 avanza a (43,8)
+→ Camión TD02 avanza a (60,34)
+▶▶▶ disparando eventoEntrega para Pedido 19
+✅ t+1947: Pedido #19 completado por Camión TD02 en (60,33); capacidad: 0,0→-3,0 m³
+⏱️ t+1947: Camión TD02 inicia retorno a planta principal
+→ Camión TA01 avanza a (6,10)
+→ Camión TB04 avanza a (42,37)
+→ Camión TC03 avanza a (44,8)
+→ Camión TD02 avanza a (59,33)
+→ Camión TA01 avanza a (6,11)
+→ Camión TB04 avanza a (41,37)
+→ Camión TC03 avanza a (45,8)
+→ Camión TD02 avanza a (58,33)
+→ Camión TA01 avanza a (6,12)
+→ Camión TB04 avanza a (40,37)
+→ Camión TC03 avanza a (46,8)
+→ Camión TD02 avanza a (57,33)
+→ Camión TA01 avanza a (6,13)
+→ Camión TB04 avanza a (39,37)
+→ Camión TC03 avanza a (47,8)
+→ Camión TD02 avanza a (56,33)
+→ Camión TB04 avanza a (38,37)
+→ Camión TC03 avanza a (48,8)
+→ Camión TD02 avanza a (55,33)
+→ Camión TB04 avanza a (37,37)
+→ Camión TC03 avanza a (49,8)
+→ Camión TD02 avanza a (54,33)
+▶▶▶ disparando eventoEntrega para Pedido 18
+✅ t+1953: Pedido #18 completado por Camión TA01 en (6,13); capacidad: 25,0→12,0 m³
+⏱️ t+1953: Camión TA01 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 18
+✅ t+1953: Pedido #18 completado por Camión TB04 en (6,13); capacidad: 12,0→-1,0 m³
+⏱️ t+1953: Camión TB04 inicia retorno a planta principal
+→ Camión TA01 avanza a (7,13)
+→ Camión TB04 avanza a (7,13)
+→ Camión TC03 avanza a (50,8)
+→ Camión TD02 avanza a (53,33)
+→ Camión TA01 avanza a (8,13)
+→ Camión TB04 avanza a (8,13)
+→ Camión TC03 avanza a (51,8)
+→ Camión TD02 avanza a (52,33)
+→ Camión TA01 avanza a (9,13)
+→ Camión TB04 avanza a (9,13)
+→ Camión TC03 avanza a (52,8)
+→ Camión TD02 avanza a (51,33)
+→ Camión TA01 avanza a (10,13)
+→ Camión TB04 avanza a (10,13)
+→ Camión TC03 avanza a (53,8)
+→ Camión TD02 avanza a (50,33)
+→ Camión TA01 avanza a (11,13)
+→ Camión TB04 avanza a (11,13)
+→ Camión TC03 avanza a (54,8)
+→ Camión TD02 avanza a (49,33)
+→ Camión TA01 avanza a (12,13)
+→ Camión TB04 avanza a (12,13)
+→ Camión TC03 avanza a (55,8)
+→ Camión TD02 avanza a (48,33)
+→ Camión TA01 avanza a (12,12)
+→ Camión TB04 avanza a (12,12)
+→ Camión TC03 avanza a (56,8)
+→ Camión TD02 avanza a (47,33)
+→ Camión TA01 avanza a (12,11)
+→ Camión TB04 avanza a (12,11)
+→ Camión TC03 avanza a (57,8)
+→ Camión TD02 avanza a (46,33)
+→ Camión TA01 avanza a (12,10)
+→ Camión TB04 avanza a (12,10)
+→ Camión TC03 avanza a (58,8)
+→ Camión TD02 avanza a (45,33)
+→ Camión TA01 avanza a (12,9)
+→ Camión TB04 avanza a (12,9)
+→ Camión TC03 avanza a (59,8)
+→ Camión TD02 avanza a (44,33)
+→ Camión TA01 avanza a (12,8)
+→ Camión TB04 avanza a (12,8)
+→ Camión TC03 avanza a (60,8)
+→ Camión TD02 avanza a (43,33)
+🆕 t+1963: Pedido #21 recibido (destino=(44,3), vol=6,0m³, límite t+2203)
+⏲️ t+1963: Replanificando, candidatos = [10, 11, 15, 21, 10, 11, 15, 21]
+    → Rutas devueltas para []
+🔄 t+1964: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+🔄 t+1964: Camión TB04 llegó a planta (12,8) y recargado a 15,0 m³
+→ Camión TC03 avanza a (61,8)
+→ Camión TD02 avanza a (42,33)
+→ Camión TC03 avanza a (62,8)
+→ Camión TD02 avanza a (41,33)
+→ Camión TC03 avanza a (62,9)
+→ Camión TD02 avanza a (40,33)
+→ Camión TC03 avanza a (62,10)
+→ Camión TD02 avanza a (39,33)
+→ Camión TC03 avanza a (62,11)
+→ Camión TD02 avanza a (38,33)
+→ Camión TC03 avanza a (62,12)
+→ Camión TD02 avanza a (37,33)
+→ Camión TC03 avanza a (62,13)
+→ Camión TD02 avanza a (36,33)
+→ Camión TC03 avanza a (62,14)
+→ Camión TD02 avanza a (35,33)
+→ Camión TC03 avanza a (62,15)
+→ Camión TD02 avanza a (34,33)
+→ Camión TC03 avanza a (62,16)
+→ Camión TD02 avanza a (33,33)
+→ Camión TC03 avanza a (62,17)
+→ Camión TD02 avanza a (32,33)
+→ Camión TC03 avanza a (62,18)
+→ Camión TD02 avanza a (31,33)
+→ Camión TC03 avanza a (62,19)
+→ Camión TD02 avanza a (30,33)
+→ Camión TC03 avanza a (62,20)
+→ Camión TD02 avanza a (29,33)
+→ Camión TC03 avanza a (62,21)
+→ Camión TD02 avanza a (28,33)
+→ Camión TC03 avanza a (62,22)
+→ Camión TD02 avanza a (27,33)
+→ Camión TC03 avanza a (62,23)
+→ Camión TD02 avanza a (26,33)
+⏲️ t+1980: Replanificando, candidatos = [10, 11, 15, 21, 10, 11, 15, 21]
+    → Rutas devueltas para []
+→ Camión TC03 avanza a (62,24)
+→ Camión TD02 avanza a (25,33)
+→ Camión TC03 avanza a (62,25)
+→ Camión TD02 avanza a (24,33)
+→ Camión TC03 avanza a (62,26)
+→ Camión TD02 avanza a (23,33)
+→ Camión TC03 avanza a (62,27)
+→ Camión TD02 avanza a (22,33)
+→ Camión TC03 avanza a (62,28)
+→ Camión TD02 avanza a (21,33)
+→ Camión TC03 avanza a (62,29)
+→ Camión TD02 avanza a (20,33)
+🆕 t+1986: Pedido #22 recibido (destino=(3,7), vol=3,0m³, límite t+3006)
+⏲️ t+1986: Replanificando, candidatos = [10, 11, 15, 21, 22, 10, 11, 15, 21, 22]
+    → Rutas devueltas para [22, 22]
+⏱️ t+1986: Asignando Pedido #22 al Camión TA01
+Manhattan path desde (12,8) hasta (3,7): 
+🕒 eventoEntrega programado para t+1998 en (3,7)
+Ruta TA01 → start=(11,8) end=(3,7) size=10
+⏱️ t+1986: Asignando Pedido #22 al Camión TD01
+Manhattan path desde (12,8) hasta (3,7): 
+🕒 eventoEntrega programado para t+1998 en (3,7)
+Ruta TD01 → start=(11,8) end=(3,7) size=10
+→ Camión TA01 avanza a (11,8)
+→ Camión TC03 avanza a (62,30)
+→ Camión TD01 avanza a (11,8)
+→ Camión TD02 avanza a (19,33)
+→ Camión TA01 avanza a (10,8)
+→ Camión TC03 avanza a (62,31)
+→ Camión TD01 avanza a (10,8)
+→ Camión TD02 avanza a (18,33)
+→ Camión TA01 avanza a (9,8)
+→ Camión TC03 avanza a (62,32)
+→ Camión TD01 avanza a (9,8)
+→ Camión TD02 avanza a (17,33)
+→ Camión TA01 avanza a (8,8)
+→ Camión TC03 avanza a (62,33)
+→ Camión TD01 avanza a (8,8)
+→ Camión TD02 avanza a (16,33)
+→ Camión TA01 avanza a (7,8)
+→ Camión TC03 avanza a (62,34)
+→ Camión TD01 avanza a (7,8)
+→ Camión TD02 avanza a (15,33)
+→ Camión TA01 avanza a (6,8)
+→ Camión TD01 avanza a (6,8)
+→ Camión TD02 avanza a (14,33)
+→ Camión TA01 avanza a (5,8)
+→ Camión TD01 avanza a (5,8)
+→ Camión TD02 avanza a (13,33)
+→ Camión TA01 avanza a (4,8)
+→ Camión TD01 avanza a (4,8)
+→ Camión TD02 avanza a (12,33)
+→ Camión TA01 avanza a (3,8)
+→ Camión TD01 avanza a (3,8)
+→ Camión TD02 avanza a (12,32)
+→ Camión TA01 avanza a (3,7)
+→ Camión TD01 avanza a (3,7)
+→ Camión TD02 avanza a (12,31)
+→ Camión TD02 avanza a (12,30)
+▶▶▶ disparando eventoEntrega para Pedido 22
+✅ t+1998: Pedido #22 completado por Camión TA01 en (3,7); capacidad: 25,0→22,0 m³
+⏱️ t+1998: Camión TA01 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 22
+✅ t+1998: Pedido #22 completado por Camión TD01 en (3,7); capacidad: 5,0→2,0 m³
+⏱️ t+1998: Camión TD01 inicia retorno a planta principal
+→ Camión TA01 avanza a (4,7)
+→ Camión TD01 avanza a (4,7)
+→ Camión TD02 avanza a (12,29)
+→ Camión TA01 avanza a (5,7)
+→ Camión TD01 avanza a (5,7)
+→ Camión TD02 avanza a (12,28)
+→ Camión TA01 avanza a (6,7)
+→ Camión TD01 avanza a (6,7)
+→ Camión TD02 avanza a (12,27)
+→ Camión TA01 avanza a (7,7)
+→ Camión TD01 avanza a (7,7)
+→ Camión TD02 avanza a (12,26)
+▶▶▶ disparando eventoEntrega para Pedido 20
+✅ t+2002: Pedido #20 completado por Camión TC03 en (62,34); capacidad: 10,0→8,0 m³
+⏱️ t+2002: Camión TC03 inicia retorno a planta principal
+→ Camión TA01 avanza a (8,7)
+→ Camión TC03 avanza a (61,34)
+→ Camión TD01 avanza a (8,7)
+→ Camión TD02 avanza a (12,25)
+▶▶▶ disparando eventoEntrega para Pedido 19
+✅ t+2003: Pedido #19 completado por Camión TC03 en (60,33); capacidad: 8,0→5,0 m³
+⏱️ t+2003: Camión TC03 inicia retorno a planta principal
+→ Camión TA01 avanza a (9,7)
+→ Camión TC03 avanza a (59,33)
+→ Camión TD01 avanza a (9,7)
+→ Camión TD02 avanza a (12,24)
+→ Camión TA01 avanza a (10,7)
+→ Camión TC03 avanza a (58,33)
+→ Camión TD01 avanza a (10,7)
+→ Camión TD02 avanza a (12,23)
+→ Camión TA01 avanza a (11,7)
+→ Camión TC03 avanza a (57,33)
+→ Camión TD01 avanza a (11,7)
+→ Camión TD02 avanza a (12,22)
+→ Camión TA01 avanza a (12,7)
+→ Camión TC03 avanza a (56,33)
+→ Camión TD01 avanza a (12,7)
+→ Camión TD02 avanza a (12,21)
+→ Camión TA01 avanza a (12,8)
+→ Camión TC03 avanza a (55,33)
+→ Camión TD01 avanza a (12,8)
+→ Camión TD02 avanza a (12,20)
+🔄 t+2008: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TC03 avanza a (54,33)
+🔄 t+2008: Camión TD01 llegó a planta (12,8) y recargado a 5,0 m³
+→ Camión TD02 avanza a (12,19)
+→ Camión TC03 avanza a (53,33)
+→ Camión TD02 avanza a (12,18)
+→ Camión TC03 avanza a (52,33)
+→ Camión TD02 avanza a (12,17)
+🆕 t+2010: Pedido #23 recibido (destino=(56,48), vol=1,0m³, límite t+3330)
+⏲️ t+2010: Replanificando, candidatos = [10, 11, 15, 21, 23, 10, 11, 15, 21, 23]
+    → Rutas devueltas para [15, 23, 23]
+⏱️ t+2010: Asignando Pedido #15 al Camión TA02
+Manhattan path desde (12,8) hasta (23,31): 
+🕒 eventoEntrega programado para t+2051 en (23,31)
+Ruta TA02 → start=(13,8) end=(23,31) size=34
+⏱️ t+2010: Asignando Pedido #23 al Camión TC03
+Manhattan path desde (52,33) hasta (56,48): 
+🕒 eventoEntrega programado para t+2033 en (56,48)
+Ruta TC03 → start=(53,33) end=(56,48) size=19
+⏱️ t+2010: Asignando Pedido #23 al Camión TD06
+Manhattan path desde (12,8) hasta (56,48): 
+🕒 eventoEntrega programado para t+2111 en (56,48)
+Ruta TD06 → start=(13,8) end=(56,48) size=84
+→ Camión TA02 avanza a (13,8)
+→ Camión TC03 avanza a (53,33)
+→ Camión TD02 avanza a (12,16)
+→ Camión TD06 avanza a (13,8)
+→ Camión TA02 avanza a (14,8)
+→ Camión TC03 avanza a (54,33)
+→ Camión TD02 avanza a (12,15)
+→ Camión TD06 avanza a (14,8)
+→ Camión TA02 avanza a (15,8)
+→ Camión TC03 avanza a (55,33)
+→ Camión TD02 avanza a (12,14)
+→ Camión TD06 avanza a (15,8)
+→ Camión TA02 avanza a (16,8)
+→ Camión TC03 avanza a (56,33)
+→ Camión TD02 avanza a (12,13)
+→ Camión TD06 avanza a (16,8)
+→ Camión TA02 avanza a (17,8)
+→ Camión TC03 avanza a (56,34)
+→ Camión TD02 avanza a (12,12)
+→ Camión TD06 avanza a (17,8)
+→ Camión TA02 avanza a (18,8)
+→ Camión TC03 avanza a (56,35)
+→ Camión TD02 avanza a (12,11)
+→ Camión TD06 avanza a (18,8)
+→ Camión TA02 avanza a (19,8)
+→ Camión TC03 avanza a (56,36)
+→ Camión TD02 avanza a (12,10)
+→ Camión TD06 avanza a (19,8)
+→ Camión TA02 avanza a (20,8)
+→ Camión TC03 avanza a (56,37)
+→ Camión TD02 avanza a (12,9)
+→ Camión TD06 avanza a (20,8)
+→ Camión TA02 avanza a (21,8)
+→ Camión TC03 avanza a (56,38)
+→ Camión TD02 avanza a (12,8)
+→ Camión TD06 avanza a (21,8)
+→ Camión TA02 avanza a (22,8)
+→ Camión TC03 avanza a (56,39)
+🔄 t+2020: Camión TD02 llegó a planta (12,8) y recargado a 5,0 m³
+→ Camión TD06 avanza a (22,8)
+→ Camión TA02 avanza a (23,8)
+→ Camión TC03 avanza a (56,40)
+→ Camión TD06 avanza a (23,8)
+→ Camión TA02 avanza a (23,9)
+→ Camión TC03 avanza a (56,41)
+→ Camión TD06 avanza a (24,8)
+→ Camión TA02 avanza a (23,10)
+→ Camión TC03 avanza a (56,42)
+→ Camión TD06 avanza a (25,8)
+→ Camión TA02 avanza a (23,11)
+→ Camión TC03 avanza a (56,43)
+→ Camión TD06 avanza a (26,8)
+→ Camión TA02 avanza a (23,12)
+→ Camión TC03 avanza a (56,44)
+→ Camión TD06 avanza a (27,8)
+→ Camión TA02 avanza a (23,13)
+→ Camión TC03 avanza a (56,45)
+→ Camión TD06 avanza a (28,8)
+→ Camión TA02 avanza a (23,14)
+→ Camión TC03 avanza a (56,46)
+→ Camión TD06 avanza a (29,8)
+→ Camión TA02 avanza a (23,15)
+→ Camión TC03 avanza a (56,47)
+→ Camión TD06 avanza a (30,8)
+→ Camión TA02 avanza a (23,16)
+→ Camión TC03 avanza a (56,48)
+→ Camión TD06 avanza a (31,8)
+→ Camión TA02 avanza a (23,17)
+🔄 t+2030: Camión TC03 llegó a planta (12,8) y recargado a 10,0 m³
+→ Camión TD06 avanza a (32,8)
+→ Camión TA02 avanza a (23,18)
+→ Camión TC03 avanza a (55,48)
+→ Camión TD06 avanza a (33,8)
+→ Camión TA02 avanza a (23,19)
+→ Camión TC03 avanza a (54,48)
+→ Camión TD06 avanza a (34,8)
+▶▶▶ disparando eventoEntrega para Pedido 23
+✅ t+2033: Pedido #23 completado por Camión TC03 en (56,48); capacidad: 10,0→9,0 m³
+⏱️ t+2033: Camión TC03 inicia retorno a planta principal
+→ Camión TA02 avanza a (23,20)
+→ Camión TC03 avanza a (55,48)
+→ Camión TD06 avanza a (35,8)
+→ Camión TA02 avanza a (23,21)
+→ Camión TC03 avanza a (54,48)
+→ Camión TD06 avanza a (36,8)
+🆕 t+2034: Pedido #24 recibido (destino=(10,26), vol=22,0m³, límite t+2634)
+⏲️ t+2034: Replanificando, candidatos = [10, 11, 21, 24, 10, 11, 21, 24]
+    → Rutas devueltas para []
+→ Camión TA02 avanza a (23,22)
+→ Camión TC03 avanza a (53,48)
+→ Camión TD06 avanza a (37,8)
+→ Camión TA02 avanza a (23,23)
+→ Camión TC03 avanza a (52,48)
+→ Camión TD06 avanza a (38,8)
+→ Camión TA02 avanza a (23,24)
+→ Camión TC03 avanza a (51,48)
+→ Camión TD06 avanza a (39,8)
+→ Camión TA02 avanza a (23,25)
+→ Camión TC03 avanza a (50,48)
+→ Camión TD06 avanza a (40,8)
+→ Camión TA02 avanza a (23,26)
+→ Camión TC03 avanza a (49,48)
+→ Camión TD06 avanza a (41,8)
+→ Camión TA02 avanza a (23,27)
+→ Camión TC03 avanza a (48,48)
+→ Camión TD06 avanza a (42,8)
+→ Camión TA02 avanza a (23,28)
+→ Camión TC03 avanza a (47,48)
+→ Camión TD06 avanza a (43,8)
+→ Camión TA02 avanza a (23,29)
+→ Camión TC03 avanza a (46,48)
+→ Camión TD06 avanza a (44,8)
+→ Camión TA02 avanza a (23,30)
+→ Camión TC03 avanza a (45,48)
+→ Camión TD06 avanza a (45,8)
+→ Camión TA02 avanza a (23,31)
+→ Camión TC03 avanza a (44,48)
+→ Camión TD06 avanza a (46,8)
+→ Camión TC03 avanza a (43,48)
+→ Camión TD06 avanza a (47,8)
+→ Camión TC03 avanza a (42,48)
+→ Camión TD06 avanza a (48,8)
+→ Camión TC03 avanza a (41,48)
+→ Camión TD06 avanza a (49,8)
+→ Camión TC03 avanza a (40,48)
+→ Camión TD06 avanza a (50,8)
+→ Camión TC03 avanza a (39,48)
+→ Camión TD06 avanza a (51,8)
+→ Camión TC03 avanza a (38,48)
+→ Camión TD06 avanza a (52,8)
+▶▶▶ disparando eventoEntrega para Pedido 15
+✅ t+2051: Pedido #15 completado por Camión TA02 en (23,31); capacidad: 25,0→12,0 m³
+⏱️ t+2051: Camión TA02 inicia retorno a planta principal
+→ Camión TA02 avanza a (22,31)
+→ Camión TC03 avanza a (37,48)
+→ Camión TD06 avanza a (53,8)
+→ Camión TA02 avanza a (21,31)
+→ Camión TC03 avanza a (36,48)
+→ Camión TD06 avanza a (54,8)
+→ Camión TA02 avanza a (20,31)
+→ Camión TC03 avanza a (35,48)
+→ Camión TD06 avanza a (55,8)
+→ Camión TA02 avanza a (19,31)
+→ Camión TC03 avanza a (34,48)
+→ Camión TD06 avanza a (56,8)
+→ Camión TA02 avanza a (18,31)
+→ Camión TC03 avanza a (33,48)
+→ Camión TD06 avanza a (56,9)
+→ Camión TA02 avanza a (17,31)
+→ Camión TC03 avanza a (32,48)
+→ Camión TD06 avanza a (56,10)
+→ Camión TA02 avanza a (16,31)
+→ Camión TC03 avanza a (31,48)
+→ Camión TD06 avanza a (56,11)
+🆕 t+2057: Pedido #25 recibido (destino=(7,41), vol=7,0m³, límite t+3137)
+⏲️ t+2057: Replanificando, candidatos = [10, 11, 21, 24, 25, 10, 11, 21, 24, 25]
+    → Rutas devueltas para []
+→ Camión TA02 avanza a (15,31)
+→ Camión TC03 avanza a (30,48)
+→ Camión TD06 avanza a (56,12)
+→ Camión TA02 avanza a (14,31)
+→ Camión TC03 avanza a (29,48)
+→ Camión TD06 avanza a (56,13)
+→ Camión TA02 avanza a (13,31)
+→ Camión TC03 avanza a (28,48)
+→ Camión TD06 avanza a (56,14)
+→ Camión TA02 avanza a (12,31)
+→ Camión TC03 avanza a (27,48)
+→ Camión TD06 avanza a (56,15)
+→ Camión TA02 avanza a (12,30)
+→ Camión TC03 avanza a (26,48)
+→ Camión TD06 avanza a (56,16)
+→ Camión TA02 avanza a (12,29)
+→ Camión TC03 avanza a (25,48)
+→ Camión TD06 avanza a (56,17)
+→ Camión TA02 avanza a (12,28)
+→ Camión TC03 avanza a (24,48)
+→ Camión TD06 avanza a (56,18)
+→ Camión TA02 avanza a (12,27)
+→ Camión TC03 avanza a (23,48)
+→ Camión TD06 avanza a (56,19)
+→ Camión TA02 avanza a (12,26)
+→ Camión TC03 avanza a (22,48)
+→ Camión TD06 avanza a (56,20)
+→ Camión TA02 avanza a (12,25)
+→ Camión TC03 avanza a (21,48)
+→ Camión TD06 avanza a (56,21)
+→ Camión TA02 avanza a (12,24)
+→ Camión TC03 avanza a (20,48)
+→ Camión TD06 avanza a (56,22)
+→ Camión TA02 avanza a (12,23)
+→ Camión TC03 avanza a (19,48)
+→ Camión TD06 avanza a (56,23)
+→ Camión TA02 avanza a (12,22)
+→ Camión TC03 avanza a (18,48)
+→ Camión TD06 avanza a (56,24)
+→ Camión TA02 avanza a (12,21)
+→ Camión TC03 avanza a (17,48)
+→ Camión TD06 avanza a (56,25)
+→ Camión TA02 avanza a (12,20)
+→ Camión TC03 avanza a (16,48)
+→ Camión TD06 avanza a (56,26)
+→ Camión TA02 avanza a (12,19)
+→ Camión TC03 avanza a (15,48)
+→ Camión TD06 avanza a (56,27)
+→ Camión TA02 avanza a (12,18)
+→ Camión TC03 avanza a (14,48)
+→ Camión TD06 avanza a (56,28)
+→ Camión TA02 avanza a (12,17)
+→ Camión TC03 avanza a (13,48)
+→ Camión TD06 avanza a (56,29)
+→ Camión TA02 avanza a (12,16)
+→ Camión TC03 avanza a (12,48)
+→ Camión TD06 avanza a (56,30)
+→ Camión TA02 avanza a (12,15)
+→ Camión TC03 avanza a (12,47)
+→ Camión TD06 avanza a (56,31)
+→ Camión TA02 avanza a (12,14)
+→ Camión TC03 avanza a (12,46)
+→ Camión TD06 avanza a (56,32)
+→ Camión TA02 avanza a (12,13)
+→ Camión TC03 avanza a (12,45)
+→ Camión TD06 avanza a (56,33)
+→ Camión TA02 avanza a (12,12)
+→ Camión TC03 avanza a (12,44)
+→ Camión TD06 avanza a (56,34)
+→ Camión TA02 avanza a (12,11)
+→ Camión TC03 avanza a (12,43)
+→ Camión TD06 avanza a (56,35)
+🆕 t+2081: Pedido #26 recibido (destino=(9,26), vol=8,0m³, límite t+3461)
+⏲️ t+2081: Replanificando, candidatos = [10, 11, 21, 24, 25, 26, 10, 11, 21, 24, 25, 26]
+    → Rutas devueltas para [26, 25, 26]
+⏱️ t+2081: Asignando Pedido #26 al Camión TA01
+Manhattan path desde (12,8) hasta (9,26): 
+🕒 eventoEntrega programado para t+2107 en (9,26)
+Ruta TA01 → start=(11,8) end=(9,26) size=21
+⏱️ t+2081: Asignando Pedido #25 al Camión TC03
+Manhattan path desde (12,43) hasta (7,41): 
+🕒 eventoEntrega programado para t+2090 en (7,41)
+Ruta TC03 → start=(11,43) end=(7,41) size=7
+⏱️ t+2081: Asignando Pedido #26 al Camión TC04
+Manhattan path desde (12,8) hasta (9,26): 
+🕒 eventoEntrega programado para t+2107 en (9,26)
+Ruta TC04 → start=(11,8) end=(9,26) size=21
+→ Camión TA01 avanza a (11,8)
+→ Camión TA02 avanza a (12,10)
+→ Camión TC03 avanza a (11,43)
+→ Camión TC04 avanza a (11,8)
+→ Camión TD06 avanza a (56,36)
+→ Camión TA01 avanza a (10,8)
+→ Camión TA02 avanza a (12,9)
+→ Camión TC03 avanza a (10,43)
+→ Camión TC04 avanza a (10,8)
+→ Camión TD06 avanza a (56,37)
+→ Camión TA01 avanza a (9,8)
+→ Camión TA02 avanza a (12,8)
+→ Camión TC03 avanza a (9,43)
+→ Camión TC04 avanza a (9,8)
+→ Camión TD06 avanza a (56,38)
+→ Camión TA01 avanza a (9,9)
+🔄 t+2085: Camión TA02 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TC03 avanza a (8,43)
+→ Camión TC04 avanza a (9,9)
+→ Camión TD06 avanza a (56,39)
+→ Camión TA01 avanza a (9,10)
+→ Camión TC03 avanza a (7,43)
+→ Camión TC04 avanza a (9,10)
+→ Camión TD06 avanza a (56,40)
+→ Camión TA01 avanza a (9,11)
+→ Camión TC03 avanza a (7,42)
+→ Camión TC04 avanza a (9,11)
+→ Camión TD06 avanza a (56,41)
+→ Camión TA01 avanza a (9,12)
+→ Camión TC03 avanza a (7,41)
+→ Camión TC04 avanza a (9,12)
+→ Camión TD06 avanza a (56,42)
+→ Camión TA01 avanza a (9,13)
+🔄 t+2089: Camión TC03 llegó a planta (12,8) y recargado a 10,0 m³
+→ Camión TC04 avanza a (9,13)
+→ Camión TD06 avanza a (56,43)
+▶▶▶ disparando eventoEntrega para Pedido 25
+✅ t+2090: Pedido #25 completado por Camión TC03 en (7,41); capacidad: 10,0→3,0 m³
+⏱️ t+2090: Camión TC03 inicia retorno a planta principal
+→ Camión TA01 avanza a (9,14)
+→ Camión TC03 avanza a (8,41)
+→ Camión TC04 avanza a (9,14)
+→ Camión TD06 avanza a (56,44)
+→ Camión TA01 avanza a (9,15)
+→ Camión TC03 avanza a (9,41)
+→ Camión TC04 avanza a (9,15)
+→ Camión TD06 avanza a (56,45)
+→ Camión TA01 avanza a (9,16)
+→ Camión TC03 avanza a (10,41)
+→ Camión TC04 avanza a (9,16)
+→ Camión TD06 avanza a (56,46)
+→ Camión TA01 avanza a (9,17)
+→ Camión TC03 avanza a (11,41)
+→ Camión TC04 avanza a (9,17)
+→ Camión TD06 avanza a (56,47)
+→ Camión TA01 avanza a (9,18)
+→ Camión TC03 avanza a (12,41)
+→ Camión TC04 avanza a (9,18)
+→ Camión TD06 avanza a (56,48)
+→ Camión TA01 avanza a (9,19)
+→ Camión TC03 avanza a (12,40)
+→ Camión TC04 avanza a (9,19)
+→ Camión TA01 avanza a (9,20)
+→ Camión TC03 avanza a (12,39)
+→ Camión TC04 avanza a (9,20)
+→ Camión TA01 avanza a (9,21)
+→ Camión TC03 avanza a (12,38)
+→ Camión TC04 avanza a (9,21)
+→ Camión TA01 avanza a (9,22)
+→ Camión TC03 avanza a (12,37)
+→ Camión TC04 avanza a (9,22)
+→ Camión TA01 avanza a (9,23)
+→ Camión TC03 avanza a (12,36)
+→ Camión TC04 avanza a (9,23)
+→ Camión TA01 avanza a (9,24)
+→ Camión TC03 avanza a (12,35)
+→ Camión TC04 avanza a (9,24)
+→ Camión TA01 avanza a (9,25)
+→ Camión TC03 avanza a (12,34)
+→ Camión TC04 avanza a (9,25)
+→ Camión TA01 avanza a (9,26)
+→ Camión TC03 avanza a (12,33)
+→ Camión TC04 avanza a (9,26)
+→ Camión TC03 avanza a (12,32)
+→ Camión TC03 avanza a (12,31)
+→ Camión TC03 avanza a (12,30)
+🆕 t+2105: Pedido #27 recibido (destino=(44,47), vol=16,0m³, límite t+3065)
+⏲️ t+2105: Replanificando, candidatos = [10, 11, 21, 24, 27, 10, 11, 21, 24, 27]
+    → Rutas devueltas para [24]
+⏱️ t+2105: Asignando Pedido #24 al Camión TA01
+Manhattan path desde (9,26) hasta (10,26): 
+🕒 eventoEntrega programado para t+2107 en (10,26)
+Ruta TA01 → start=(10,26) end=(10,26) size=1
+→ Camión TA01 avanza a (10,26)
+→ Camión TC03 avanza a (12,29)
+▶▶▶ disparando eventoEntrega para Pedido 26
+✅ t+2107: Pedido #26 completado por Camión TA01 en (9,26); capacidad: 25,0→17,0 m³
+⏱️ t+2107: Camión TA01 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 26
+✅ t+2107: Pedido #26 completado por Camión TC04 en (9,26); capacidad: 10,0→2,0 m³
+⏱️ t+2107: Camión TC04 inicia retorno a planta principal
+▶▶▶ disparando eventoEntrega para Pedido 24
+✅ t+2107: Pedido #24 completado por Camión TA01 en (10,26); capacidad: 17,0→-5,0 m³
+⏱️ t+2107: Camión TA01 inicia retorno a planta principal
+→ Camión TA01 avanza a (11,26)
+→ Camión TC03 avanza a (12,28)
+→ Camión TC04 avanza a (10,26)
+→ Camión TA01 avanza a (12,26)
+→ Camión TC03 avanza a (12,27)
+→ Camión TC04 avanza a (11,26)
+→ Camión TA01 avanza a (12,25)
+→ Camión TC03 avanza a (12,26)
+→ Camión TC04 avanza a (12,26)
+→ Camión TA01 avanza a (12,24)
+→ Camión TC03 avanza a (12,25)
+→ Camión TC04 avanza a (12,25)
+▶▶▶ disparando eventoEntrega para Pedido 23
+✅ t+2111: Pedido #23 completado por Camión TD06 en (56,48); capacidad: 5,0→4,0 m³
+⏱️ t+2111: Camión TD06 inicia retorno a planta principal
+→ Camión TA01 avanza a (12,23)
+→ Camión TC03 avanza a (12,24)
+→ Camión TC04 avanza a (12,24)
+→ Camión TD06 avanza a (55,48)
+→ Camión TA01 avanza a (12,22)
+→ Camión TC03 avanza a (12,23)
+→ Camión TC04 avanza a (12,23)
+→ Camión TD06 avanza a (54,48)
+→ Camión TA01 avanza a (12,21)
+→ Camión TC03 avanza a (12,22)
+→ Camión TC04 avanza a (12,22)
+→ Camión TD06 avanza a (53,48)
+→ Camión TA01 avanza a (12,20)
+→ Camión TC03 avanza a (12,21)
+→ Camión TC04 avanza a (12,21)
+→ Camión TD06 avanza a (52,48)
+→ Camión TA01 avanza a (12,19)
+→ Camión TC03 avanza a (12,20)
+→ Camión TC04 avanza a (12,20)
+→ Camión TD06 avanza a (51,48)
+→ Camión TA01 avanza a (12,18)
+→ Camión TC03 avanza a (12,19)
+→ Camión TC04 avanza a (12,19)
+→ Camión TD06 avanza a (50,48)
+→ Camión TA01 avanza a (12,17)
+→ Camión TC03 avanza a (12,18)
+→ Camión TC04 avanza a (12,18)
+→ Camión TD06 avanza a (49,48)
+→ Camión TA01 avanza a (12,16)
+→ Camión TC03 avanza a (12,17)
+→ Camión TC04 avanza a (12,17)
+→ Camión TD06 avanza a (48,48)
+→ Camión TA01 avanza a (12,15)
+→ Camión TC03 avanza a (12,16)
+→ Camión TC04 avanza a (12,16)
+→ Camión TD06 avanza a (47,48)
+→ Camión TA01 avanza a (12,14)
+→ Camión TC03 avanza a (12,15)
+→ Camión TC04 avanza a (12,15)
+→ Camión TD06 avanza a (46,48)
+→ Camión TA01 avanza a (12,13)
+→ Camión TC03 avanza a (12,14)
+→ Camión TC04 avanza a (12,14)
+→ Camión TD06 avanza a (45,48)
+→ Camión TA01 avanza a (12,12)
+→ Camión TC03 avanza a (12,13)
+→ Camión TC04 avanza a (12,13)
+→ Camión TD06 avanza a (44,48)
+→ Camión TA01 avanza a (12,11)
+→ Camión TC03 avanza a (12,12)
+→ Camión TC04 avanza a (12,12)
+→ Camión TD06 avanza a (43,48)
+→ Camión TA01 avanza a (12,10)
+→ Camión TC03 avanza a (12,11)
+→ Camión TC04 avanza a (12,11)
+→ Camión TD06 avanza a (42,48)
+→ Camión TA01 avanza a (12,9)
+→ Camión TC03 avanza a (12,10)
+→ Camión TC04 avanza a (12,10)
+→ Camión TD06 avanza a (41,48)
+→ Camión TA01 avanza a (12,8)
+→ Camión TC03 avanza a (12,9)
+→ Camión TC04 avanza a (12,9)
+→ Camión TD06 avanza a (40,48)
+🔄 t+2127: Camión TA01 llegó a planta (12,8) y recargado a 25,0 m³
+→ Camión TC03 avanza a (12,8)
+→ Camión TC04 avanza a (12,8)
+→ Camión TD06 avanza a (39,48)
+🔄 t+2128: Camión TC03 llegó a planta (12,8) y recargado a 10,0 m³
+🔄 t+2128: Camión TC04 llegó a planta (12,8) y recargado a 10,0 m³
+→ Camión TD06 avanza a (38,48)
+→ Camión TD06 avanza a (37,48)
+→ Camión TD06 avanza a (36,48)
+→ Camión TD06 avanza a (35,48)
+→ Camión TD06 avanza a (34,48)
+→ Camión TD06 avanza a (33,48)
+→ Camión TD06 avanza a (32,48)
+→ Camión TD06 avanza a (31,48)
+→ Camión TD06 avanza a (30,48)
+→ Camión TD06 avanza a (29,48)
+→ Camión TD06 avanza a (28,48)
+→ Camión TD06 avanza a (27,48)
+→ Camión TD06 avanza a (26,48)
+→ Camión TD06 avanza a (25,48)
+→ Camión TD06 avanza a (24,48)
+→ Camión TD06 avanza a (23,48)
+→ Camión TD06 avanza a (22,48)
+→ Camión TD06 avanza a (21,48)
+→ Camión TD06 avanza a (20,48)
+→ Camión TD06 avanza a (19,48)
+→ Camión TD06 avanza a (18,48)
+→ Camión TD06 avanza a (17,48)
+→ Camión TD06 avanza a (16,48)
+→ Camión TD06 avanza a (15,48)
+→ Camión TD06 avanza a (14,48)
+→ Camión TD06 avanza a (13,48)
+→ Camión TD06 avanza a (12,48)
+→ Camión TD06 avanza a (12,47)
+→ Camión TD06 avanza a (12,46)
+→ Camión TD06 avanza a (12,45)
+→ Camión TD06 avanza a (12,44)
+→ Camión TD06 avanza a (12,43)
+→ Camión TD06 avanza a (12,42)
+→ Camión TD06 avanza a (12,41)
+→ Camión TD06 avanza a (12,40)
+→ Camión TD06 avanza a (12,39)
+→ Camión TD06 avanza a (12,38)
+→ Camión TD06 avanza a (12,37)
+→ Camión TD06 avanza a (12,36)
+→ Camión TD06 avanza a (12,35)
+→ Camión TD06 avanza a (12,34)
+→ Camión TD06 avanza a (12,33)
+→ Camión TD06 avanza a (12,32)
+→ Camión TD06 avanza a (12,31)
+→ Camión TD06 avanza a (12,30)
+→ Camión TD06 avanza a (12,29)
+→ Camión TD06 avanza a (12,28)
+→ Camión TD06 avanza a (12,27)
+→ Camión TD06 avanza a (12,26)
+→ Camión TD06 avanza a (12,25)
+→ Camión TD06 avanza a (12,24)
+→ Camión TD06 avanza a (12,23)
+→ Camión TD06 avanza a (12,22)
+→ Camión TD06 avanza a (12,21)
+→ Camión TD06 avanza a (12,20)
+→ Camión TD06 avanza a (12,19)
+→ Camión TD06 avanza a (12,18)
+→ Camión TD06 avanza a (12,17)
+→ Camión TD06 avanza a (12,16)
+→ Camión TD06 avanza a (12,15)
+→ Camión TD06 avanza a (12,14)
+→ Camión TD06 avanza a (12,13)
+→ Camión TD06 avanza a (12,12)
+→ Camión TD06 avanza a (12,11)
+→ Camión TD06 avanza a (12,10)
+→ Camión TD06 avanza a (12,9)
+→ Camión TD06 avanza a (12,8)
+🔄 t+2195: Camión TD06 llegó a planta (12,8) y recargado a 5,0 m³
+💥 Colapso en t+2204, pedido 21 incumplido
