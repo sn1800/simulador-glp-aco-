@@ -59,13 +59,6 @@ public class ACOPlanner {
         tanquesIntermedios.add(new Tanque(30, 15, 0));
         tanquesIntermedios.add(new Tanque(50, 40, 0));
     }
-    public ACOPlanner() {
-        this(
-                cargarPedidos("pedidos.txt"),
-                cargarBloqueos("bloqueos.txt"),
-                cargarAverias("averias.txt")
-        );
-    }
     public void reset() {
         // recarga datos
         this.pedidos = cargarPedidos("pedidos.txt");
@@ -192,29 +185,29 @@ public class ACOPlanner {
                 if (ev.time == tiempoActual) {
                     System.out.println("▶▶▶ disparando eventoEntrega para Pedido "+ ev.pedido.id);
                     // 1) Guardar capacidad previa
-                    double antes = ev.camion.disponible;
+                    double antes = ev.camion.getDisponible();
                     // 2) Actualizar posición y liberar al camión
-                    ev.camion.x = ev.pedido.x;
-                    ev.camion.y = ev.pedido.y;
-                    ev.camion.libreEn = tiempoActual;
+                    ev.camion.setX(ev.pedido.x);
+                    ev.camion.setY(ev.pedido.y);
+                    ev.camion.setLibreEn(tiempoActual + 15);// 15 minutos de servicio tras descarga
                     // 3) Descontar volumen
-                    ev.camion.disponible -= ev.pedido.volumen;
+                    ev.camion.setDisponible(ev.camion.getDisponible() - ev.pedido.volumen);
                     // 4) Marcar pedido entregado
-                    ev.pedido.atendido = true;
+                    ev.pedido.setAtendido(true);
                     double holguraSeg = ev.pedido.tiempoLimite - tiempoActual;
                     holguras.add(holguraSeg);
                     // 5) Log de entrega
                     System.out.printf(
                             "✅ t+%d: Pedido #%d completado por Camión %s en (%d,%d); capacidad: %.1f→%.1f m³%n",
-                            tiempoActual, ev.pedido.id, ev.camion.id,
+                            tiempoActual, ev.pedido.id, ev.camion.getId(),
                             ev.pedido.x, ev.pedido.y,
-                            antes, ev.camion.disponible
+                            antes, ev.camion.getDisponible()
                     );
                     itEv.remove();
 
                     // 6) Iniciar retorno
                     // — calcula cuánto le falta recargar al camión:
-                    double falta = ev.camion.capacidad - ev.camion.disponible;
+                    double falta = ev.camion.getCapacidad() - ev.camion.getDisponible();
 
                     Tanque mejor = null;
                     double distMin = Double.MAX_VALUE;
@@ -222,7 +215,7 @@ public class ACOPlanner {
                         // ❌ antes era: tq.disponible >= ev.camion.capacidad
                         // ✅ ahora: comparamos con lo que falta, no con la capacidad total
                         if (tq.disponible >= falta) {
-                            int d = Math.abs(ev.camion.x - tq.x) + Math.abs(ev.camion.y - tq.y);
+                            int d = Math.abs(ev.camion.getX() - tq.x) + Math.abs(ev.camion.getY() - tq.y);
                             if (d < distMin) {
                                 distMin = d;
                                 mejor = tq;
@@ -231,10 +224,10 @@ public class ACOPlanner {
                     }
 
                     // Si no hay suficiente en ningún tanque intermedio, va a planta:
-                    ev.camion.enRetorno    = true;
+                    ev.camion.setEnRetorno(true);
                     ev.camion.retHora      = tiempoActual;
-                    ev.camion.retStartX    = ev.camion.x;
-                    ev.camion.retStartY    = ev.camion.y;
+                    ev.camion.retStartX    = ev.camion.getX();
+                    ev.camion.retStartY    = ev.camion.getY();
                     ev.camion.retDestX     = (mejor != null ? mejor.x : depositoX);
                     ev.camion.retDestY     = (mejor != null ? mejor.y : depositoY);
                     ev.camion.reabastecerEnTanque = mejor;  // null = planta
@@ -242,11 +235,11 @@ public class ACOPlanner {
                     // 7) Construir ruta Manhattan de retorno y asignarla
                     int dx = (mejor != null ? mejor.x : depositoX);
                     int dy = (mejor != null ? mejor.y : depositoY);
-                    List<Point> returnPath = buildManhattanPath(ev.camion.x, ev.camion.y, dx, dy);
+                    List<Point> returnPath = buildManhattanPath(ev.camion.getX(), ev.camion.getY(), dx, dy);
                     ev.camion.setRuta(returnPath);
                     ev.camion.appendToHistory(returnPath);
                     System.out.printf("⏱️ t+%d: Camión %s inicia retorno a %s%n",
-                            tiempoActual, ev.camion.id,
+                            tiempoActual, ev.camion.getId(),
                             (mejor != null ? "tanque intermedio" : "planta principal"));
 
                 }
@@ -256,29 +249,32 @@ public class ACOPlanner {
                 // Si aún tiene pasos (ida o retorno), avanza un paso Manhattan
                 if (c.tienePasosPendientes()) {
                     c.avanzarUnPaso();
-                    System.out.printf("→ Camión %s avanza a (%d,%d)%n", c.id, c.x, c.y);
+                    System.out.printf("→ Camión %s avanza a (%d,%d)%n", c.getId(), c.getX(), c.getY());
                 }
                 // Si acaba de completar todos los pasos y estaba en retorno, recarga
-                else if (c.enRetorno) {
+                else if (c.isEnRetorno()) {
                     // → Lógica de recarga en tanque o planta (idéntica a la tuya)
-                    double falta = c.capacidad - c.disponible;
+                    double falta = c.getCapacidad() - c.getDisponible();
                     Tanque tq = c.reabastecerEnTanque;
                     if (tq != null) {
                         tq.disponible -= falta;
-                        System.out.printf("🔄 t+%d: Camión %s llegó a tanque (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.id, tq.x, tq.y, c.capacidad);
+                        System.out.printf("🔄 t+%d: Camión %s llegó a tanque (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.getId(), tq.x, tq.y, c.getCapacidad());
                         System.out.printf("🔁      Tanque (%d,%d) quedó con %.1f m³%n", tq.x, tq.y, tq.disponible);
                     } else {
-                        System.out.printf("🔄 t+%d: Camión %s llegó a planta (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.id, depositoX, depositoY, c.capacidad);
+                        System.out.printf("🔄 t+%d: Camión %s llegó a planta (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.getId(), depositoX, depositoY, c.getCapacidad());
                     }
-                    c.disponible = c.capacidad;
-                    c.enRetorno = false;
+                    c.setDisponible(c.getCapacidad());
+                    c.setCombustibleDisponible( c.getCapacidadCombustible() );
+                    c.setEnRetorno(false);
                     c.reabastecerEnTanque = null;
+                    c.setStatus(Camion.TruckStatus.AVAILABLE);  // ← AÑADE ESTA LÍNEA
+                    c.setLibreEn(tiempoActual + 15);
                     // determina destino de retorno
                     int dx = tq != null ? tq.x : depositoX;
                     int dy = tq != null ? tq.y : depositoY;
 
                     // genera el camino de regreso
-                    List<Point> returnPath = buildManhattanPath(c.x, c.y, dx, dy);
+                    List<Point> returnPath = buildManhattanPath(c.getX(), c.getY(), dx, dy);
                     c.setRuta(returnPath);
                     c.appendToHistory(returnPath);
                 }
@@ -311,18 +307,18 @@ public class ACOPlanner {
                 String key = turnoActual + "_" + entry.getKey();
                 if (averiasAplicadas.contains(key)) continue;
                 Camion c = findCamion(entry.getKey());
-                if (c != null && c.libreEn <= tiempoActual) {
+                if (c != null && c.getLibreEn() <= tiempoActual) {
                     int penal = entry.getValue().equals("T1") ? 30 : entry.getValue().equals("T2") ? 60 : 90;
-                    c.libreEn = tiempoActual + penal;
+                    c.setLibreEn(tiempoActual + penal);
                     averiasAplicadas.add(key);
-                    camionesInhabilitados.add(c.id);
+                    camionesInhabilitados.add(c.getId());
                     replanificar = true;
                 }
             }
             Iterator<String> it = camionesInhabilitados.iterator();
             while (it.hasNext()) {
                 Camion c = findCamion(it.next());
-                if (c != null && c.libreEn <= tiempoActual) { it.remove(); replanificar = true; }
+                if (c != null && c.getLibreEn() <= tiempoActual) { it.remove(); replanificar = true; }
             }
 
             // 4. Actualizar estado real de la flota, incluyendo DELIVERING para probar desvíos
@@ -331,11 +327,12 @@ public class ACOPlanner {
                             || c.getStatus() == Camion.TruckStatus.DELIVERING)
                     .map(c -> {
                         CamionEstado est = new CamionEstado();
-                        est.id = c.id;
+                        est.id = c.getId();
                         est.posX = c.getX();
                         est.posY = c.getY();
                         est.capacidadDisponible = c.getDisponible();
                         est.tiempoLibre = c.getLibreEn();
+                        est.tara = c.getTara();
                         return est;
                     })
                     .collect(Collectors.toList());
@@ -440,7 +437,9 @@ public class ACOPlanner {
         String id;
         int posX, posY;
         double capacidadDisponible;
+        public double combustibleDisponible;
         int tiempoLibre;
+        double tara;
     }
 
     static class Ruta {
@@ -475,8 +474,15 @@ public class ACOPlanner {
                     double[][] prob = calcularProbabilidades(rutas, pedidosActivos, noAsignados, tau , tiempoActual);
                     // Seleccionar par con exploración/expLOT
                     Seleccion sel = muestrearPar(prob, noAsignados);
-                    asignarPedidoARuta(sel.camionIdx, sel.pedidoIdx, rutas, pedidosActivos,tiempoActual);
-                    noAsignados.remove(Integer.valueOf(sel.pedidoIdx));
+                    boolean ok = asignarPedidoARuta(sel.camionIdx, sel.pedidoIdx, rutas, pedidosActivos, tiempoActual);
+                    if (ok) {
+                        noAsignados.remove(Integer.valueOf(sel.pedidoIdx));
+                    } else {
+                        // si no se asignó, puedes:
+                        // – poner prob[sel.camionIdx][sel.pedidoIdx]=0 para no volver a muestrear ese par
+                        // – o directamente quitar el pedido si realmente no hay ningún camión viable
+                        noAsignados.remove(Integer.valueOf(sel.pedidoIdx));
+                    }
                 }
                 soluciones.add(rutas);
             }
@@ -520,6 +526,8 @@ public class ACOPlanner {
             cl.posY = est.posY;
             cl.capacidadDisponible = est.capacidadDisponible;
             cl.tiempoLibre = est.tiempoLibre;
+            cl.tara = est.tara;
+            cl.combustibleDisponible = est.combustibleDisponible;   // ← ¡MUY IMPORTANTE!
             copia.add(cl);
         }
         return copia;
@@ -550,55 +558,41 @@ public class ACOPlanner {
 
         int V = rutas.size();
         double[][] prob = new double[V][pedidosActivos.size()];
+        double minPorKm = 60.0 / 50.0;
 
         for (int v = 0; v < V; v++) {
-            Ruta r = rutas.get(v);
-            CamionEstado c = r.estadoCamion;
+            CamionEstado c = rutas.get(v).estadoCamion;
 
             for (int idx : noAsignados) {
                 Pedido p = pedidosActivos.get(idx);
 
-                // 1) Si el camión aún no está libre, lo descartamos
-                if (c.tiempoLibre > tiempoActual) {
-                    prob[v][idx] = 0;
-                    continue;
-                }
+                // 1) filtro capacidad
+                if (c.capacidadDisponible < p.volumen) continue;
 
-                // 2) Si no cabe por volumen, lo descartamos
-                if (c.capacidadDisponible < p.volumen) {
-                    prob[v][idx] = 0;
-                    continue;
-                }
-
-                // 3) Calculamos Manhattan y tiempo de viaje a 50 km/h
+                // 2) filtro ventana de tiempo
                 int dx = Math.abs(c.posX - p.x);
                 int dy = Math.abs(c.posY - p.y);
                 int distKm = dx + dy;
-                double minutosPorKm = 60.0 / 50.0;
-                int tiempoViaje = (int) Math.ceil(distKm * minutosPorKm);
+                int tiempoViaje = (int)Math.ceil(distKm * minPorKm);
+                if (tiempoActual + tiempoViaje > p.tiempoLimite) continue;
 
-                // ★ NUEVO: descartamos si llega después del límite del pedido
-                if (c.tiempoLibre + tiempoViaje > p.tiempoLimite) {
-                    prob[v][idx] = 0;
-                    continue;
-                }
+                // 3) filtro combustible (enunciado: consumo = distKm * pesoTotalTon / 180)
+                double pesoCargaTon = p.volumen * 0.5;
+                double pesoTaraTon  = c.tara / 1000.0;
+                double pesoTotalTon = pesoCargaTon + pesoTaraTon;
+                double galNecesarios = distKm * pesoTotalTon / 180.0;
+                if (c.combustibleDisponible < galNecesarios) continue;
 
-                // 4) Penalización por retraso
-                int delay = Math.max(0, c.tiempoLibre - tiempoActual);
-                double penalTiempo = 1.0 / (1 + delay);
-
-                // 5) Heurística inversa de distancia
-                double eta = 1.0 / (distKm + 1);
-                eta *= penalTiempo;
-
-                // 6) Combinamos feromona + heurística
-                prob[v][idx] = Math.pow(tau[v][idx], ALPHA)
-                        * Math.pow(eta,       BETA);
+                // ✔️ si llegamos aquí, es factible: calculamos heurística + feromona
+                double penalTiempo = 1.0 / (1 + Math.max(0, c.tiempoLibre - tiempoActual));
+                double eta = 1.0 / (distKm + 1) * penalTiempo;
+                prob[v][idx] = Math.pow(tau[v][idx], ALPHA) * Math.pow(eta, BETA);
             }
         }
 
         return prob;
     }
+
 
 
     /**
@@ -633,46 +627,63 @@ public class ACOPlanner {
     }
 
     /**
-     * Asigna un pedido a la ruta seleccionada y actualiza estado del camión.
+     * Asigna un pedido a la ruta seleccionada y actualiza estado del camión,
+     * filtrando por capacidad, ventana de tiempo y combustible.
      */
-    private void asignarPedidoARuta(
+    private boolean asignarPedidoARuta(
             int camionIdx,
             int pedidoIdx,
             List<Ruta> rutas,
-            List<Pedido> pedidosActivos,int tiempoActual) {
+            List<Pedido> pedidosActivos,
+            int tiempoActual) {
 
         Ruta ruta = rutas.get(camionIdx);
         CamionEstado c = ruta.estadoCamion;
         Pedido p   = pedidosActivos.get(pedidoIdx);
 
         // 1) Evitar duplicados
-        if (ruta.pedidos.contains(pedidoIdx)) return;
+        if (ruta.pedidos.contains(pedidoIdx)) return false;
 
-        // 2) Comprobar capacidad
-        if (c.capacidadDisponible < p.volumen) return;
+        // 2) Comprobar capacidad de carga
+        if (c.capacidadDisponible < p.volumen) return false;
 
-        // 3) Distancia Manhattan (y tiempo = distancia)
+        // 3) Calcular distancia Manhattan y tiempo de viaje (a 50 km/h)
         int dx = Math.abs(c.posX - p.x);
         int dy = Math.abs(c.posY - p.y);
-        int dist  = dx + dy;
-        // si has metido ya esa lógica de 50 km/h:
-        double minutosPorKm = 60.0 / 50.0;
-        int tiempoViaje = (int)Math.ceil(dist * minutosPorKm);
-        c.tiempoLibre = tiempoActual + tiempoViaje;
+        int distKm  = dx + dy;
+        double minPorKm = 60.0 / 50.0;
+        int tiempoViaje = (int) Math.ceil(distKm * minPorKm);
 
-        // 4) Consumo real usando tu función
-        //ruta.consumo += calcularConsumo(dist, p.volumen, c.capacidadDisponible);
-        //ruta.consumo += dist * (1 + p.volumen / c.capacidadDisponible);
-        // 5) Actualizar posición y capacidad
-        ruta.distancia += dist;
-        ruta.consumo += dist * (1 + p.volumen / c.capacidadDisponible);
+        // 4) Ventana de tiempo: verificar que llega antes del límite
+        if (tiempoActual + tiempoViaje > p.tiempoLimite) return false;
+
+        // 5) COMPROBAR combustible disponible según enunciado:
+        //    consumo = distKm * peso_totalTon / 180
+        double pesoCargaTon = p.volumen * 0.5;               // 0.5 ton/m³
+        double pesoTaraTon  = c.tara / 1000.0;              // convertir kg → ton
+        double pesoTotalTon = pesoTaraTon + pesoCargaTon;
+        double galNecesarios = distKm * pesoTotalTon / 180.0;
+        // if (c.combustibleDisponible < galNecesarios) return false;
+
+        // --- Si pasa todos los filtros, actualizamos el estado ---
+
+        // 6) Fijar nuevo tiempo libre y posición
+        c.tiempoLibre = tiempoActual + tiempoViaje;
         c.posX = p.x;
         c.posY = p.y;
-        // c.capacidadDisponible -= p.volumen;
 
-        // 6) Registrar la entrega en la ruta
+        // 7) Actualizar capacidad, consumo y combustible restante
+        c.capacidadDisponible -= p.volumen;
+        ruta.distancia      += distKm;
+        ruta.consumo        += galNecesarios;
+        c.combustibleDisponible -= galNecesarios;
+
+        // 8) Registrar la entrega en la ruta
         ruta.pedidos.add(pedidoIdx);
+
+        return true;
     }
+
 
 
 
@@ -687,7 +698,7 @@ public class ACOPlanner {
 
     public Camion findCamion(String id) {
         for (Camion c : flota) {
-            if (c.id.equals(id)) return c;
+            if (c.getId().equals(id)) return c;
         }
         return null;
     }
@@ -799,7 +810,7 @@ public class ACOPlanner {
                 int idx = posicionOptimaDeInsercion(camion, nuevo, tiempoActual);
                 camion.getRutaPendiente().add(idx, nuevo);
                 camion.setDisponible(camion.getDisponible() - nuevo.volumen);
-                System.out.printf("🔀 t+%d: Desvío – insertado Pedido #%d en %s en posición %d%n", tiempoActual, nuevo.id, camion.id, idx);
+                System.out.printf("🔀 t+%d: Desvío – insertado Pedido #%d en %s en posición %d%n", tiempoActual, nuevo.id, camion.getId(), idx);
                 // — tras insertar el desvío debemos programar su entrega:
                 // posición actual del camión
                 int cx = camion.getX(), cy = camion.getY();
@@ -826,7 +837,7 @@ public class ACOPlanner {
                 for (int pedidoIdx : ruta.pedidos) {
                     Pedido p = activos.get(pedidoIdx);
                     System.out.printf("⏱️ t+%d: Asignando Pedido #%d al Camión %s%n",
-                            tiempoActual, p.id, camion.id);
+                            tiempoActual, p.id, camion.getId());
 
                     List<Point> path = buildManhattanPath(cx, cy, p.x, p.y);
                     int dist = Math.abs(cx-p.x) + Math.abs(cy-p.y);
@@ -843,7 +854,7 @@ public class ACOPlanner {
                     System.out.printf("🕒 eventoEntrega programado para t+%d en (%d,%d)%n",
                             tiempoActual + tViaje, p.x, p.y);
 
-                    camion.x = p.x; camion.y = p.y;
+                    camion.setX(p.x) ; camion.setY(p.y);
                     cx = p.x; cy = p.y;
                 }
             }
@@ -853,32 +864,34 @@ public class ACOPlanner {
 
     }
 
+    /**
+     * Inicializa la flota con capacidad de carga, tara y capacidad de combustible.
+     */
     private List<Camion> inicializarFlota() {
         List<Camion> flota = new ArrayList<>();
 
-        // TA: 2 camiones de 25 m³ - tara 7500 kg
-        flota.add(new Camion("TA01", 25.0, 7500));
-        flota.add(new Camion("TA02", 25.0, 7500));
+        // TA: 2 camiones de 25 m³ - tara 7500 kg - combustible 100 galones
+        flota.add(new Camion("TA01", 25.0, 7500, 25.0));
+        flota.add(new Camion("TA02", 25.0, 7500, 25.0));
 
-        // TB: 4 camiones de 15 m³ - tara 5000 kg
-        flota.add(new Camion("TB01", 15.0, 5000));
-        flota.add(new Camion("TB02", 15.0, 5000));
-        flota.add(new Camion("TB03", 15.0, 5000));
-        flota.add(new Camion("TB04", 15.0, 5000));
+        // TB: 4 camiones de 15 m³ - tara 5000 kg - combustible 80 galones
+        flota.add(new Camion("TB01", 15.0, 5000, 25.0));
+        flota.add(new Camion("TB02", 15.0, 5000, 25.0));
+        flota.add(new Camion("TB03", 15.0, 5000, 25.0));
+        flota.add(new Camion("TB04", 15.0, 5000, 25.0));
 
-        // TC: 4 camiones de 10 m³ - tara 4000 kg
-        flota.add(new Camion("TC01", 10.0, 4000));
-        flota.add(new Camion("TC02", 10.0, 4000));
-        flota.add(new Camion("TC03", 10.0, 4000));
-        flota.add(new Camion("TC04", 10.0, 4000));
+        // TC: 4 camiones de 10 m³ - tara 4000 kg - combustible 60 galones
+        flota.add(new Camion("TC01", 10.0, 4000, 25.0));
+        flota.add(new Camion("TC02", 10.0, 4000, 25.0));
+        flota.add(new Camion("TC03", 10.0, 4000, 25.0));
+        flota.add(new Camion("TC04", 10.0, 4000, 25.0));
 
-        // TD: 10 camiones de 5 m³ - tara 3000 kg
-        for (int i = 1; i <= 10; i++) {
-            flota.add(new Camion(String.format("TD%02d", i), 5.0, 3000));
-        }
-
+        // TD: 10 camiones de 5 m³ - tara 3000 kg - combustible 40 galones
+        for (int i = 1; i <= 10; i++)
+            flota.add(new Camion(String.format("TD%02d", i), 5.0, 3000, 25.0));
         return flota;
     }
+
 
     private String turnoDeMinuto(int t) {
         int minutoDia = t % 1440;
@@ -1014,8 +1027,8 @@ public class ACOPlanner {
                 if (p.x >= 0 && p.x < ancho && p.y >= 0 && p.y < alto)
                     grid[p.y][p.x] = p.atendido ? 'E' : 'P';
             for (Camion c : camiones)
-                if (c.x >= 0 && c.x < ancho && c.y >= 0 && c.y < alto)
-                    grid[c.y][c.x] = 'C';
+                if (c.getX() >= 0 && c.getX() < ancho && c.getY() >= 0 && c.getY() < alto)
+                    grid[c.getY()][c.getX()] = 'C';
             for (Bloqueo b : bloqueos)
                 if (t >= b.inicio && t <= b.fin)
                     for (String arista : b.aristasBloqueadas) {

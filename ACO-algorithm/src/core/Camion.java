@@ -2,122 +2,160 @@ package core;
 
 import java.awt.Point;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 
+/**
+ * Representa un camión con capacidad de carga, combustible y lógica de movimiento.
+ */
 public class Camion {
-    String id;
-    double capacidad;
-    double disponible;
-    int x = 12, y = 8;
-    int libreEn = 0; // minuto en que estará libre
-    double combustibleGastado;  // galones consumidos en total
-    double tara;
-    boolean enRetorno = false;
-    private List<Point> rutaActual = new ArrayList<>();
-    private int pasoActual = 0;
-    private double consumoAcumulado = 0.0;
-    private final double pesoTara = 2.5;           // valor referencial
-    private final double pesoCargoPorM3 = 0.5;     // valor referencial
+    /** Estados del camión durante la simulación */
+    public enum TruckStatus {
+        AVAILABLE,   // Puede recibir nuevos pedidos
+        DELIVERING,  // En ruta de entrega
+        RETURNING    // Regresando a depósito
+    }
 
-    // Nuevo campo de estado
+    // --- Identificación y capacidades ---
+    private final String id;
+    private final double capacidadCarga;       // m³ de carga útil
+    private double disponible;                 // m³ de carga restante
+    private final double tara;                 // peso en vacío (valor referencial)
+    private static final double pesoTara = 2.5;
+    private static final double pesoCargoPorM3 = 0.5;
+
+    // --- Combustible ---
+    private final double capacidadCombustible; // galones totales
+    private double combustibleDisponible;      // galones restantes
+
+    // --- Posición y timing ---
+    private int x = 12, y = 8;    // coordenadas actuales (depósito por defecto)
+    private int libreEn = 0;      // minuto en que estará libre
+    private boolean enRetorno = false;
     private TruckStatus status = TruckStatus.AVAILABLE;
-    // Lista de pedidos pendientes de entrega (para inserción de desvíos)
-    private List<Pedido> rutaPendiente = new ArrayList<>();
-    int retHora=0;
-    // en Camion
-    int retStartX, retStartY;
-    int retDestX,  retDestY;
-    private List<Point> ruta = Collections.emptyList();
-    Tanque reabastecerEnTanque = null;
-    private List<Point> history = new ArrayList<>();
 
-    public Camion(String id, double capacidad, double tara) {
+    // --- Rutas y trayectoria ---
+    private final List<Pedido> rutaPendiente = new ArrayList<>();      // pedidos aún no servidos
+    private List<Point> rutaActual = Collections.emptyList();          // camino Manhattan paso a paso
+    private int pasoActual = 0;                                        // índice en rutaActual
+    private final List<Point> history = new ArrayList<>();            // recorrido histórico
+
+    // --- Estadísticas de consumo ---
+    private double consumoAcumulado = 0.0; // combustible utilizado solo por avance
+    private double combustibleGastado = 0.0; // galones totales consumidos
+
+    // --- Para mecánica de recarga en tanque ---
+    public Tanque reabastecerEnTanque = null;
+    int retHora = 0, retStartX = 0, retStartY = 0, retDestX = 0, retDestY = 0;
+
+    /**
+     * Constructor principal.
+     * @param id                 Identificador único
+     * @param capacidadCarga     Capacidad de carga en m³
+     * @param tara               Peso en vacío
+     * @param capacidadCombustible Capacidad de combustible en galones
+     */
+    public Camion(String id, double capacidadCarga, double tara, double capacidadCombustible) {
         this.id = id;
-        this.capacidad = capacidad;
-        this.combustibleGastado = 0.0;
+        this.capacidadCarga = capacidadCarga;
         this.tara = tara;
+        this.capacidadCombustible = capacidadCombustible;
+        this.combustibleDisponible  = capacidadCombustible;
         reset();
     }
 
-    void reset() {
-        history.clear();
-        this.disponible = capacidad;
-        this.x = 12;
-        this.y = 8;
+    /**
+     * Vuelve el camión a su estado inicial (lleno y en depósito).
+     */
+    public void reset() {
+        this.disponible = capacidadCarga;
+        this.combustibleDisponible = capacidadCombustible;
+        this.consumoAcumulado = 0;
+        this.combustibleGastado = 0;
+        this.x = 12; this.y = 8;
         this.libreEn = 0;
         this.enRetorno = false;
-        rutaPendiente.clear();           // <— borra la lista de pedidos
-        this.status = TruckStatus.AVAILABLE;  // <— vuelve a estar libre
+        this.status = TruckStatus.AVAILABLE;
+        this.rutaPendiente.clear();
+        this.rutaActual = Collections.emptyList();
+        this.pasoActual = 0;
+        this.history.clear();
+        this.reabastecerEnTanque = null;
     }
-    public void appendToHistory(List<Point> path) {
-        if (path != null) history.addAll(path);
-        // Si es la primera vez que se llama, agregar la posición actual
-        if (history.isEmpty()) {
-            history.add(new Point(x, y)); // posición actual del camión
-        }
-        history.addAll(path);
+
+    /**
+     * Recarga el combustible al máximo.
+     */
+    public void recargarCombustible() {
+        this.combustibleDisponible = capacidadCombustible;
     }
-    // → getters que necesitas en la UI:
-    public String getId() { return id; }
-    public double getCapacidad() { return capacidad; }
-    public double getDisponible() { return disponible; }
-    public int getX() { return x; }
-    public int getY() { return y; }
-    public int getLibreEn() { return libreEn; }
-    public boolean isEnRetorno() { return enRetorno; }
-    public List<Point> getRuta() {
-        return ruta;
+
+    /**
+     * Avanza un solo paso en la ruta actual, consumiendo combustible.
+     */
+    public void avanzarUnPaso() {
+        if (!tienePasosPendientes()) return;
+        // Consumo proporcional al peso total (tara + carga) / eficiencia
+        double pesoTotal = pesoTara + (disponible * pesoCargoPorM3);
+        double gasto = pesoTotal / 180.0;  // galones por paso
+        consumoAcumulado += gasto;
+        combustibleDisponible -= gasto;
+        combustibleGastado += gasto;
+        Point next = rutaActual.get(pasoActual++);
+        moverA(next);
     }
-    public List<Point> getHistory() {
-        return history;
+
+    /**
+     * Mueve al camión a la posición p y registra en historial.
+     */
+    public void moverA(Point p) {
+        this.x = p.x; this.y = p.y;
+        history.add(new Point(x, y));
     }
-    public double getConsumoAcumulado() {
-        return consumoAcumulado;
-    }
-    // --- getters y setters para estado y rutaPendiente ---
-    public TruckStatus getStatus() {
-        return status;
-    }
-    public void setStatus(TruckStatus status) {
-        this.status = status;
-    }
-    public List<Pedido> getRutaPendiente() {
-        return rutaPendiente;
-    }
-    // → setters o métodos de estado, si los usas en la planificación:
-    public void setX(int x) { this.x = x; }
-    public void setY(int y) { this.y = y; }
-    public void setDisponible(double d) { this.disponible = d; }
-    public void setLibreEn(int t) { this.libreEn = t; }
-    public void setEnRetorno(boolean r) { this.enRetorno = r; }
-    /** Define la ruta Manhattan paso a paso */
+
+    /**
+     * Define la ruta Manhattan de pasos a seguir.
+     */
     public void setRuta(List<Point> ruta) {
         this.rutaActual = new ArrayList<>(ruta);
         this.pasoActual = 0;
     }
-    /** ¿Le quedan pasos por recorrer? */
+
+    /**
+     * Añade un camino al historial (sin resetear). Ideal al comienzo.
+     */
+    public void appendToHistory(List<Point> path) {
+        if (history.isEmpty()) history.add(new Point(x, y));
+        if (path != null) history.addAll(path);
+    }
+
+    // --- Checkers de ruta ---
     public boolean tienePasosPendientes() {
         return pasoActual < rutaActual.size();
     }
 
-    /** Avanza un solo paso en la ruta */
-    public void avanzarUnPaso() {
-        double pesoTotal = pesoTara + (this.disponible * pesoCargoPorM3);
-        consumoAcumulado += pesoTotal / 180.0;
-        if (!tienePasosPendientes()) return;
-        Point p = rutaActual.get(pasoActual++);
-        moverA(p);
-    }
-    public void moverA(Point p) {
-        this.x = p.x;
-        this.y = p.y;
-        history.add(new Point(x, y));
-    }
-    // Añade este enum **antes** de los campos de la clase
-    public enum TruckStatus {
-        AVAILABLE,    // puede recibir nuevos pedidos
-        DELIVERING,   // está en ruta de entrega
-        RETURNING     // regresa a depósito
-    }
+    // --- Getters y Setters ---
+    public String getId() { return id; }
+    public double getCapacidad() { return capacidadCarga; }
+    public double getDisponible() { return disponible; }
+    public void setDisponible(double d) { this.disponible = d; }
+    public double getTara() { return tara; }
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public void setX(int x_aux) {this.x = x_aux;}
+    public void setY(int y_aux) {this.y = y_aux;}
+    public int getLibreEn() { return libreEn; }
+    public void setLibreEn(int t) { this.libreEn = t; }
+    public boolean isEnRetorno() { return enRetorno; }
+    public void setEnRetorno(boolean enRet) { this.enRetorno = enRet; }
+    public TruckStatus getStatus() { return status; }
+    public void setStatus(TruckStatus s) { this.status = s; }
+    public List<Pedido> getRutaPendiente() { return rutaPendiente; }
+    public List<Point> getRuta() { return rutaActual; }
+    public List<Point> getHistory() { return history; }
+    public double getConsumoAcumulado() { return consumoAcumulado; }
+    public double getCombustibleGastado() { return combustibleGastado; }
+    public double getCapacidadCombustible() { return capacidadCombustible; }
+    public double getCombustibleDisponible() { return combustibleDisponible; }
+    public void setCombustibleDisponible(double c) { this.combustibleDisponible = c; }
 }
