@@ -20,7 +20,10 @@ public class Camion {
     private final double pesoTara = 2.5;           // valor referencial
     private final double pesoCargoPorM3 = 0.5;     // valor referencial
 
-
+    // Nuevo campo de estado
+    private TruckStatus status = TruckStatus.AVAILABLE;
+    // Lista de pedidos pendientes de entrega (para inserción de desvíos)
+    private List<Pedido> rutaPendiente = new ArrayList<>();
     int retHora=0;
     // en Camion
     int retStartX, retStartY;
@@ -44,6 +47,8 @@ public class Camion {
         this.y = 8;
         this.libreEn = 0;
         this.enRetorno = false;
+        rutaPendiente.clear();           // <— borra la lista de pedidos
+        this.status = TruckStatus.AVAILABLE;  // <— vuelve a estar libre
     }
     public void appendToHistory(List<Point> path) {
         if (path != null) history.addAll(path);
@@ -69,6 +74,16 @@ public class Camion {
     }
     public double getConsumoAcumulado() {
         return consumoAcumulado;
+    }
+    // --- getters y setters para estado y rutaPendiente ---
+    public TruckStatus getStatus() {
+        return status;
+    }
+    public void setStatus(TruckStatus status) {
+        this.status = status;
+    }
+    public List<Pedido> getRutaPendiente() {
+        return rutaPendiente;
     }
     // → setters o métodos de estado, si los usas en la planificación:
     public void setX(int x) { this.x = x; }
@@ -98,5 +113,11 @@ public class Camion {
         this.x = p.x;
         this.y = p.y;
         history.add(new Point(x, y));
+    }
+    // Añade este enum **antes** de los campos de la clase
+    public enum TruckStatus {
+        AVAILABLE,    // puede recibir nuevos pedidos
+        DELIVERING,   // está en ruta de entrega
+        RETURNING     // regresa a depósito
     }
 }
