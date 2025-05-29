@@ -46,6 +46,11 @@ public class ACOPlanner {
     Set<String> averiasAplicadas = new HashSet<>();
     GridVisualizerGUI visualizador;
     private List<EntregaEvent> eventosEntrega = new ArrayList<>();
+    private int currentTime;
+    private int maxTime;
+    private String turnoAnterior = "";
+    private Map<Integer,List<Pedido>> pedidosPorTiempo; // inicialízalo en el constructor o en reset()
+
     public ACOPlanner(List<Pedido> pedidos, List<Bloqueo> bloqueos, Map<String, Map<String, String>> averiasPorTurno) {
         this.pedidos = pedidos;
         this.bloqueos = bloqueos;
@@ -60,6 +65,12 @@ public class ACOPlanner {
         tanquesIntermedios.add(new Tanque(50, 40, 160));
     }
     public void reset() {
+        // 0) Reinicia el tiempo
+        this.currentTime = 0;
+        this.turnoAnterior = "";
+        this.pedidosPorTiempo = null;
+        this.maxTime     = 1440 * 2;       // o el valor que quieras simular
+
         // recarga datos
         this.pedidos = cargarPedidos("pedidos.txt");
         this.bloqueos = cargarBloqueos("bloqueos.txt");
@@ -108,6 +119,9 @@ public class ACOPlanner {
         return Collections.unmodifiableList(pedidos);
     }
 
+    public List<Bloqueo> getBloqueos() {
+        return Collections.unmodifiableList(bloqueos);
+    }
     /** Para dibujar los tanques intermedios en MapPanel */
     public List<Tanque> getTanquesIntermedios() {
         return Collections.unmodifiableList(tanquesIntermedios);
@@ -215,15 +229,18 @@ public class ACOPlanner {
                     itEv.remove();
 
                     // 6) Iniciar retorno
-                    // — calcula cuánto le falta recargar al camión:
                     double falta = ev.camion.getCapacidad() - ev.camion.getDisponible();
+                    int sx = ev.camion.getX(), sy = ev.camion.getY();
 
+                    // 6.a) Distancia al depósito principal
+                    int dxPlant = depositoX, dyPlant = depositoY;
+                    int distMin = Math.abs(sx - dxPlant) + Math.abs(sy - dyPlant);
                     Tanque mejor = null;
-                    double distMin = Double.MAX_VALUE;
+
+                    // 6.b) Comprueba cada tanque intermedio con suficiente volumen
                     for (Tanque tq : tanquesIntermedios) {
-                        // ✅ CORREGIDO: ahora se compara con el volumen faltante, no la capacidad total
                         if (tq.disponible >= falta) {
-                            int dist = Math.abs(ev.camion.getX() - tq.x) + Math.abs(ev.camion.getY() - tq.y);  // Manhattan directa
+                            int dist = Math.abs(sx - tq.x) + Math.abs(sy - tq.y);
                             if (dist < distMin) {
                                 distMin = dist;
                                 mejor = tq;
@@ -231,25 +248,29 @@ public class ACOPlanner {
                         }
                     }
 
-                    // Si no hay suficiente en ningún tanque intermedio, va a planta:
+                    // 6.c) Fija destino de retorno (tanque seleccionado o planta si mejor==null)
+                    int destX = (mejor != null ? mejor.x : dxPlant);
+                    int destY = (mejor != null ? mejor.y : dyPlant);
+                    ev.camion.reabastecerEnTanque = mejor;
+
+                    // 6.d) Marca el camión en modo retorno
                     ev.camion.setEnRetorno(true);
                     ev.camion.setStatus(Camion.TruckStatus.RETURNING);
-                    ev.camion.retHora      = tiempoActual;
-                    ev.camion.retStartX    = ev.camion.getX();
-                    ev.camion.retStartY    = ev.camion.getY();
-                    ev.camion.retDestX     = (mejor != null ? mejor.x : depositoX);
-                    ev.camion.retDestY     = (mejor != null ? mejor.y : depositoY);
-                    ev.camion.reabastecerEnTanque = mejor;  // null = planta
+                    ev.camion.retHora   = tiempoActual;
+                    ev.camion.retStartX = sx;
+                    ev.camion.retStartY = sy;
+                    ev.camion.retDestX  = destX;
+                    ev.camion.retDestY  = destY;
 
-                    // 7) Construir ruta Manhattan de retorno y asignarla
-                    int dx = (mejor != null ? mejor.x : depositoX);
-                    int dy = (mejor != null ? mejor.y : depositoY);
-                    List<Point> returnPath = buildManhattanPath(ev.camion.getX(), ev.camion.getY(), dx, dy);
+                    // 7) Construir y asignar ruta Manhattan de retorno
+                    List<Point> returnPath = buildManhattanPath(sx, sy, destX, destY, tiempoActual);
                     ev.camion.setRuta(returnPath);
                     ev.camion.appendToHistory(returnPath);
-                    System.out.printf("⏱️ t+%d: Camión %s inicia retorno a %s%n",
+
+                    System.out.printf("⏱️ t+%d: Camión %s inicia retorno a %s (dist=%d)%n",
                             tiempoActual, ev.camion.getId(),
-                            (mejor != null ? "tanque intermedio" : "planta principal"));
+                            (mejor != null ? "tanque intermedio" : "planta principal"),
+                            distMin);
 
                 }
             }
@@ -786,21 +807,49 @@ public class ACOPlanner {
      * Aplica las rutas calculadas al estado real de los camiones y pedidos.
      */
     /** Construye ruta Manhattan unitaria de (sx,sy) a (ex,ey). */
-    private List<Point> buildManhattanPath(int sx, int sy, int ex, int ey) {
+    public List<Point> buildManhattanPath(int x1, int y1,
+                                          int x2, int y2,
+                                          int tiempoInicial) {
         List<Point> path = new ArrayList<>();
-        int cx = sx, cy = sy;
-        // X
-        while (cx != ex) {
-            cx += Integer.signum(ex - cx);
-            path.add(new Point(cx, cy));
+        Point current = new Point(x1, y1);
+        int t = tiempoInicial;
+
+        while (current.x != x2 || current.y != y2) {
+            // 1) guarda la posición de partida
+            Point prev = new Point(current.x, current.y);
+
+            // 2) avanza X **o** Y
+            if      (current.x < x2) current.x++;
+            else if (current.x > x2) current.x--;
+            else if (current.y < y2) current.y++;
+            else                      current.y--;
+
+            Point next = new Point(current.x, current.y);
+            // System.out.printf("• Consumo total: %.2f galones%n", consumoTotal);
+            // 3) chequea bloqueo en el tramo prev→next al tiempo t
+            int tiempoLlegada = t + 1;
+            if (isBlockedMove(prev, next, tiempoLlegada)) {
+                // **Caímos en bloqueo**: invocar A*
+                List<Point> alt = findPathAStar(prev.x, prev.y, x2, y2, tiempoLlegada,bloqueos);
+                if (alt == null) {
+                    throw new RuntimeException(
+                            "No hay ruta hacia ("+x2+","+y2+") desde ("+x1+","+y1+") en t+"+tiempoInicial
+                    );
+                }
+                //  ¡concateno lo que ya tenía + la ruta alternativa!
+                path.addAll(alt);
+                return path;
+            }
+
+            // 4) agrega el paso **y** avanza tiempo
+            path.add(next);
+            t = tiempoLlegada;
         }
-        // Y
-        while (cy != ey) {
-            cy += Integer.signum(ey - cy);
-            path.add(new Point(cx, cy));
-        }
+
         return path;
     }
+
+
 
     private void aplicarRutas(int tiempoActual, List<Ruta> rutas, List<Pedido> activos) {
         rutas.removeIf(r -> r.pedidos == null || r.pedidos.isEmpty());
@@ -841,7 +890,7 @@ public class ACOPlanner {
                 // posición actual del camión
                 int cx = camion.getX(), cy = camion.getY();
                 // construimos ruta Manhattan paso a paso
-                List<Point> path = buildManhattanPath(cx, cy, nuevo.x, nuevo.y);
+                List<Point> path = buildManhattanPath(cx, cy, nuevo.x, nuevo.y,tiempoActual);
                 // calculamos distancia y tiempo de viaje
                 int dist = Math.abs(cx - nuevo.x) + Math.abs(cy - nuevo.y);
                 int tViaje = (int) Math.ceil(dist * (60.0/50.0));
@@ -873,7 +922,7 @@ public class ACOPlanner {
                     System.out.printf("⏱️ t+%d: Asignando Pedido #%d al Camión %s%n",
                             tiempoActual, p.id, camion.getId());
 
-                    List<Point> path = buildManhattanPath(cx, cy, p.x, p.y);
+                    List<Point> path = buildManhattanPath(cx, cy, p.x, p.y,tiempoActual);
                     int dist = Math.abs(cx-p.x) + Math.abs(cy-p.y);
                     int tViaje = (int)Math.ceil(dist*(60.0/50.0));
 
@@ -896,7 +945,343 @@ public class ACOPlanner {
         // --- Fin del reemplazo ---
 
     }
+    /** Nodo auxiliar para A*. */
+    private static class Node implements Comparable<Node> {
+        Point pt;
+        int g, f;
+        Node parent;
+        Node(Point pt, int g, int f, Node p) { this.pt = pt; this.g = g; this.f = f; this.parent = p; }
+        public int compareTo(Node o) { return Integer.compare(this.f, o.f); }
+    }
 
+    public List<Point> findPathAStar(int x1, int y1, int x2, int y2, int tiempo, List<Bloqueo> bloqueos) {
+        boolean[][] closed = new boolean[70][50];
+        PriorityQueue<Node> open = new PriorityQueue<>();
+        open.add(new Node(new Point(x1,y1), 0, manhattan(x1,y1,x2,y2), null));
+
+        while (!open.isEmpty()) {
+            Node curr = open.poll();
+            int cx = curr.pt.x, cy = curr.pt.y;
+            if (cx==x2 && cy==y2) {
+                // reconstruye ruta
+                List<Point> ruta = new ArrayList<>();
+                for (Node n=curr; n!=null; n=n.parent) ruta.add(n.pt);
+                Collections.reverse(ruta);
+                ruta.remove(0); // no incluir punto inicial
+                return ruta;
+            }
+            if (closed[cx][cy]) continue;
+            closed[cx][cy] = true;
+
+            for (int[] d : new int[][]{{1,0},{-1,0},{0,1},{0,-1}}) {
+                int nx = cx + d[0], ny = cy + d[1];
+                if (nx<0||nx>=70||ny<0||ny>=50) continue;
+                Point next = new Point(nx,ny);
+
+                // **permitir “atacar” el destino aunque esté bloqueado**,
+                // pero seguir bloqueando el resto del grid
+                boolean bad = false;
+                int tLleg = tiempo + curr.g + 1;
+                for (Bloqueo b : bloqueos) {
+                    if (b.estaBloqueado(tLleg, next)) {
+                        bad = true;
+                        break;
+                    }
+                }
+                // si ES destino, ignorar el bloqueo; si NO, seguimos bloqueando
+                if (bad && !(nx == x2 && ny == y2)) continue;
+                if (closed[nx][ny]) continue;
+
+                int g2 = curr.g + 1;
+                int f2 = g2 + manhattan(nx,ny,x2,y2);
+                open.add(new Node(next, g2, f2, curr));
+            }
+        }
+        throw new RuntimeException("No hay ruta A* hacia ("+x2+","+y2+") desde ("+x1+","+y1+") en t+"+tiempo);
+    }
+
+    private int manhattan(int x1, int y1, int x2, int y2) {
+        return Math.abs(x1-x2) + Math.abs(y1-y2);
+    }
+
+    /**
+     * Verifica si el punto p está bloqueado en el tiempo timeMin
+     * consultando todos los Bloqueo cargados.
+     */
+    private boolean puntoBloqueado(int timeMin, Point p) {
+        for (Bloqueo b : bloqueos) {
+            if (b.estaBloqueado(timeMin, p)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Avanza la simulación exactamente 1 minuto y devuelve el tiempo actual.
+     * Debe ejecutar TODO lo que haces en cada iteración de tu while(tiempoActual<max).
+     */
+    public int stepOneMinute(Map<Integer, List<Pedido>> pedidosPorTiempo) {
+        if (currentTime >= maxTime) return currentTime;
+        // --- Aquí copia el cuerpo de un minuto de simularDiaADia, usando currentTime ---
+        // p.ej.
+        int tiempoActual = currentTime;
+        boolean replanificar = (currentTime == 0);
+        // recarga de tanques intermedios
+        // al inicio de cada día (t%1440==0)
+        if (currentTime > 0 && currentTime % 1440 == 0) {
+            for (Tanque tq : tanquesIntermedios) {
+                tq.disponible = tq.capacidadTotal;
+            }
+            System.out.printf("🔁 t+%d: Tanques intermedios recargados a %.1f m³ cada uno%n",
+                    tiempoActual,
+                    tanquesIntermedios.get(0).capacidadTotal);
+        }
+
+        // 0) Procesar eventos de entrega programados para este minuto
+        Iterator<EntregaEvent> itEv = eventosEntrega.iterator();
+        while (itEv.hasNext()) {
+            EntregaEvent ev = itEv.next();
+            if (ev.time == tiempoActual) {
+                System.out.println("▶▶▶ disparando eventoEntrega para Pedido "+ ev.pedido.id);
+                // 1) Guardar capacidad previa
+                double antes = ev.camion.getDisponible();
+                // 2) Actualizar posición y liberar al camión
+                ev.camion.setX(ev.pedido.x);
+                ev.camion.setY(ev.pedido.y);
+                ev.camion.setLibreEn(tiempoActual + 15);// 15 minutos de servicio tras descarga
+                // 3) Descontar volumen
+                double disponibleAntes = ev.camion.getDisponible();
+                if (disponibleAntes >= ev.pedido.volumen) {
+                    ev.camion.setDisponible(disponibleAntes - ev.pedido.volumen);
+                } else {
+                    System.out.printf("⚠️ Pedido #%d *no* entregado con %s en t+%d: capacidad insuficiente (%.1f < %.1f)%n",
+                            ev.pedido.id, ev.camion.getId(), ev.time,
+                            disponibleAntes, ev.pedido.volumen);
+                    // opcional: reenqueue el pedido o lanzar excepción según tu lógica
+                }
+
+                // 4) Marcar pedido entregado
+                ev.pedido.setAtendido(true);
+                // 5) Log de entrega
+                System.out.printf(
+                        "✅ t+%d: Pedido #%d completado por Camión %s en (%d,%d); capacidad: %.1f→%.1f m³%n",
+                        tiempoActual, ev.pedido.id, ev.camion.getId(),
+                        ev.pedido.x, ev.pedido.y,
+                        antes, ev.camion.getDisponible()
+                );
+                itEv.remove();
+
+                // 6) Iniciar retorno
+                double falta = ev.camion.getCapacidad() - ev.camion.getDisponible();
+                int sx = ev.camion.getX(), sy = ev.camion.getY();
+
+                // 6.a) Distancia al depósito principal
+                int dxPlant = depositoX, dyPlant = depositoY;
+                int distMin = Math.abs(sx - dxPlant) + Math.abs(sy - dyPlant);
+                Tanque mejor = null;
+
+                // 6.b) Comprueba cada tanque intermedio con suficiente volumen
+                for (Tanque tq : tanquesIntermedios) {
+                    if (tq.disponible >= falta) {
+                        int dist = Math.abs(sx - tq.x) + Math.abs(sy - tq.y);
+                        if (dist < distMin) {
+                            distMin = dist;
+                            mejor = tq;
+                        }
+                    }
+                }
+
+                // 6.c) Fija destino de retorno (tanque seleccionado o planta si mejor==null)
+                int destX = (mejor != null ? mejor.x : dxPlant);
+                int destY = (mejor != null ? mejor.y : dyPlant);
+                ev.camion.reabastecerEnTanque = mejor;
+
+                // 6.d) Marca el camión en modo retorno
+                ev.camion.setEnRetorno(true);
+                ev.camion.setStatus(Camion.TruckStatus.RETURNING);
+                ev.camion.retHora   = tiempoActual;
+                ev.camion.retStartX = sx;
+                ev.camion.retStartY = sy;
+                ev.camion.retDestX  = destX;
+                ev.camion.retDestY  = destY;
+
+                // 7) Construir y asignar ruta Manhattan de retorno
+                List<Point> returnPath = buildManhattanPath(sx, sy, destX, destY, tiempoActual);
+                ev.camion.setRuta(returnPath);
+                ev.camion.appendToHistory(returnPath);
+
+                System.out.printf("⏱️ t+%d: Camión %s inicia retorno a %s (dist=%d)%n",
+                        tiempoActual, ev.camion.getId(),
+                        (mejor != null ? "tanque intermedio" : "planta principal"),
+                        distMin);
+
+            }
+        }
+        // <<< aquí: reabastecimiento automático al llegar a planta >>>
+        for (Camion c : flota) {
+            // Si aún tiene pasos (ida o retorno), avanza un paso Manhattan
+            if (c.tienePasosPendientes()) {
+                c.avanzarUnPaso();
+                System.out.printf("→ Camión %s avanza a (%d,%d)%n", c.getId(), c.getX(), c.getY());
+            }
+            // Si acaba de completar todos los pasos y estaba en retorno, recarga
+            else if (c.getStatus() == Camion.TruckStatus.RETURNING) {
+                // → Lógica de recarga en tanque o planta (idéntica a la tuya)
+                double falta = c.getCapacidad() - c.getDisponible();
+                Tanque tq = c.reabastecerEnTanque;
+                if (tq != null) {
+                    tq.disponible -= falta;
+                    System.out.printf("🔄 t+%d: Camión %s llegó a tanque (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.getId(), tq.x, tq.y, c.getCapacidad());
+                    System.out.printf("🔁      Tanque (%d,%d) quedó con %.1f m³%n", tq.x, tq.y, tq.disponible);
+                } else {
+                    System.out.printf("🔄 t+%d: Camión %s llegó a planta (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.getId(), depositoX, depositoY, c.getCapacidad());
+                }
+                c.setDisponible(c.getCapacidad());
+                c.setCombustibleDisponible( c.getCapacidadCombustible() );
+                c.setEnRetorno(false);
+                c.reabastecerEnTanque = null;
+                c.setStatus(Camion.TruckStatus.AVAILABLE);
+                c.setLibreEn(tiempoActual + 15);
+            }
+        }
+
+        // 1. Nuevo pedido
+        List<Pedido> nuevos = pedidosPorTiempo.getOrDefault(tiempoActual, Collections.emptyList());
+        for (Pedido p : nuevos) {
+            System.out.printf("🆕 t+%d: Pedido #%d recibido (destino=(%d,%d), vol=%.1fm³, límite t+%d)%n",
+                    tiempoActual, p.id, p.x, p.y, p.volumen, p.tiempoLimite);
+        }
+        if (!nuevos.isEmpty()) replanificar = true;
+
+        // 2. Vencimientos → colapso
+        for (Pedido p : pedidos) {
+            if (!p.atendido && !p.descartado && tiempoActual > p.tiempoLimite) {
+                System.out.printf("💥 Colapso en t+%d, pedido %d incumplido%n", tiempoActual, p.id);
+                return currentTime;
+            }
+        }
+
+        // 3. Averías
+        String turnoActual = turnoDeMinuto(tiempoActual);
+        if (!turnoActual.equals(turnoAnterior)) {
+            turnoAnterior = turnoActual;
+            averiasAplicadas.clear(); camionesInhabilitados.clear();
+        }
+        Map<String, String> averiasTurno = averiasPorTurno.getOrDefault(turnoActual, Collections.emptyMap());
+        for (Map.Entry<String, String> entry : averiasTurno.entrySet()) {
+            String key = turnoActual + "_" + entry.getKey();
+            if (averiasAplicadas.contains(key)) continue;
+            Camion c = findCamion(entry.getKey());
+            if (c != null && c.getLibreEn() <= tiempoActual) {
+                int penal = entry.getValue().equals("T1") ? 30 : entry.getValue().equals("T2") ? 60 : 90;
+                c.setLibreEn(tiempoActual + penal);
+                // c.setStatus(Camion.TruckStatus.WAITING);
+                averiasAplicadas.add(key);
+                camionesInhabilitados.add(c.getId());
+                replanificar = true;
+                System.out.printf("🚨 t+%d: Camión %s sufre avería tipo %s, inhabilitado por %d min%n",
+                        tiempoActual, c.getId(), entry.getValue(), penal);
+            }
+        }
+        // liberar camiones que se recuperaron de averias
+        Iterator<String> it = camionesInhabilitados.iterator();
+        while (it.hasNext()) {
+            Camion c = findCamion(it.next());
+            if (c != null && c.getLibreEn() <= tiempoActual) { it.remove(); replanificar = true; }
+        }
+
+        // 4. Actualizar estado real de la flota, incluyendo DELIVERING para probar desvíos
+        List<CamionEstado> flotaEstado = flota.stream()
+                .filter(c -> c.getStatus() == Camion.TruckStatus.AVAILABLE)
+                .map(c -> {
+                    CamionEstado est = new CamionEstado();
+                    est.id = c.getId();
+                    est.posX = c.getX();
+                    est.posY = c.getY();
+                    est.capacidadDisponible = c.getDisponible();
+                    est.tiempoLibre = c.getLibreEn();
+                    est.tara = c.getTara();
+                    est.combustibleDisponible = c.getCombustibleDisponible();
+                    return est;
+                })
+                .collect(Collectors.toList());
+        // 5. Replanificación VRP con ACO
+        // ——————————————————————————————
+        // 5.1) Mapa de entrega actual
+        Map<Pedido,Integer> entregaActual = new HashMap<>();
+        for (EntregaEvent ev : eventosEntrega) {
+            entregaActual.put(ev.pedido, ev.time);
+        }
+        // 5.2) Pedidos pendientes de atender (solo los NO programados aún)
+        List<Pedido> pendientes = pedidos.stream()
+                .filter(p -> !p.atendido
+                        && !p.descartado
+                        && !p.programado   // ← filtramos los que ya fueron asignados
+                        && p.tiempoCreacion <= tiempoActual)
+                .collect(Collectors.toList());
+
+
+        // 5.3) Identificar candidatos a reasignar
+        // DESPUÉS: forzamos que TODOS los pendientes sean candidatos
+        List<Pedido> candidatos = new ArrayList<>();
+
+        for (Pedido p : pendientes) {
+            // 🔴 Nuevo: forzar inclusión si faltan menos de 60 minutos
+            if (tiempoActual + 60 >= p.tiempoLimite) {
+                candidatos.add(p);
+                continue;
+            }
+            Integer tPrev = entregaActual.get(p);
+            if (tPrev == null) {
+                // nunca asignado → candidato
+                candidatos.add(p);
+            } else {
+                // ya asignado: ¿algún otro camión podría hacerlo antes?
+                int mejorAlt = tPrev;
+                for (CamionEstado est : flotaEstado) {
+                    if (est.capacidadDisponible < p.volumen) continue;
+                    int dt = Math.abs(est.posX - p.x) + Math.abs(est.posY - p.y);
+                    int llegada = tiempoActual + dt;
+                    if (llegada < mejorAlt) mejorAlt = llegada;
+                }
+                if (mejorAlt < tPrev) {
+                    candidatos.add(p);
+                }
+            }
+        }
+        // ←――――――――――――――――――――――――――――――――
+        // NUEVO: excluir pedidos con entrega próxima (<=1 min)
+        candidatos.removeIf(p -> {
+            Integer entregaMin = entregaActual.get(p);
+            return entregaMin != null && entregaMin - tiempoActual <= 1;
+        });
+        // ―――――――――――――――――――――――――――――――――→
+
+        // 5.4) Si hay candidatos y toca replanificar, solo ellos
+        if (replanificar && !candidatos.isEmpty()) {
+            System.out.printf("⏲️ t+%d: Replanificando, candidatos = %s%n",
+                    tiempoActual, candidatos.stream().map(p->p.id).collect(Collectors.toList()));
+            // ——— A ———  cancelar cualquier eventoEntrega pendiente de esos candidatos
+            // eventosEntrega.removeIf(ev -> candidatos.contains(ev.pedido));
+            Set<Integer> idsCandidatos = candidatos.stream().map(p->p.id).collect(toSet());
+            eventosEntrega.removeIf(ev -> idsCandidatos.contains(ev.pedido.id));
+            // ——— B ———  desprogramar los pedidos para que puedan reasignarse
+            for (Pedido p : candidatos) p.programado = false;
+            List<Ruta> rutas = ejecutarACO(candidatos, flotaEstado, tiempoActual);
+            System.out.printf("    → Rutas devueltas para %s%n",
+                    rutas.stream()
+                            .flatMap(r->r.pedidos.stream())
+                            .map(idx->candidatos.get(idx).id)
+                            .collect(Collectors.toList()));
+            aplicarRutas(tiempoActual, rutas, candidatos);
+        }
+        // ---------------------------------------------------------------
+        return ++currentTime;
+    }
+    public boolean isFinished() {
+        return currentTime >= maxTime;
+    }
     /**
      * Inicializa la flota con capacidad de carga, tara y capacidad de combustible.
      */
@@ -956,7 +1341,9 @@ public class ACOPlanner {
         }
         return lista;
     }
-
+    public void setPedidos(List<Pedido> nuevasListas) {
+        this.pedidos = new ArrayList<>(nuevasListas);
+    }
     public static List<Bloqueo> cargarBloqueos(String archivo) {
         List<Bloqueo> lista = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
@@ -968,9 +1355,11 @@ public class ACOPlanner {
                     int ini = convertirATiempoMinutos(tiempo[0].trim());
                     int fin = convertirATiempoMinutos(tiempo[1].trim());
                     String[] coords = partes[1].split(",");
-                    List<int[]> puntos = new ArrayList<>();
+                    List<Point> puntos = new ArrayList<>();
                     for (int i = 0; i < coords.length; i += 2) {
-                        puntos.add(new int[]{Integer.parseInt(coords[i].trim()), Integer.parseInt(coords[i + 1].trim())});
+                        int x = Integer.parseInt(coords[i].trim());
+                        int y = Integer.parseInt(coords[i + 1].trim());
+                        puntos.add(new Point(x, y));
                     }
                     lista.add(new Bloqueo(ini, fin, puntos));
                 } catch (Exception e) {
@@ -982,6 +1371,22 @@ public class ACOPlanner {
         }
         return lista;
     }
+    /**
+     * Devuelve true si el tramo current→next está bloqueado al llegar a next.
+     */
+    private boolean isBlockedMove(Point current, Point next, int currentTime) {
+        // cálculo inline de distancia Manhattan
+        int step = Math.abs(current.x - next.x) + Math.abs(current.y - next.y);
+        int arrival = currentTime + step;
+        // revisa todos los bloqueos cargados
+        for (Bloqueo b : bloqueos) {
+            if (b.estaBloqueado(arrival, next)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static Map<String, Map<String, String>> cargarAverias(String archivo) {
         Map<String, Map<String, String>> averias = new HashMap<>();
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
@@ -1063,11 +1468,11 @@ public class ACOPlanner {
                 if (c.getX() >= 0 && c.getX() < ancho && c.getY() >= 0 && c.getY() < alto)
                     grid[c.getY()][c.getX()] = 'C';
             for (Bloqueo b : bloqueos)
-                if (t >= b.inicio && t <= b.fin)
-                    for (String arista : b.aristasBloqueadas) {
-                        String[] puntos = arista.split("[-,]");
-                        int x = Integer.parseInt(puntos[0]);
-                        int y = Integer.parseInt(puntos[1]);
+                if (t >= b.getStartMin() && t <= b.getEndMin())
+                    for (Point arista : b.getNodes()) {
+                        // String[] puntos = arista.split("[-,]");
+                        int x = arista.x;
+                        int y = arista.y;
                         if (x >= 0 && x < ancho && y >= 0 && y < alto) grid[y][x] = 'B';
                     }
             panel.repaint();

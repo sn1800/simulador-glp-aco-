@@ -22,7 +22,8 @@ public class Pedido {
     public boolean isDescartado() {
         return descartado;
     }
-
+    public int getTiempoCreacion() { return tiempoCreacion; }
+    public void setTiempoCreacion(int tc) {this.tiempoCreacion = tc; }
     public void setDescartado(boolean descartado) {
         this.descartado = descartado;
     }

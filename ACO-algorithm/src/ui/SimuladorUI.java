@@ -24,28 +24,19 @@ public class SimuladorUI extends JFrame {
     private final JButton btnEjecutar;
     private final JButton btnLimpiar;
     private final JButton btnAgregarAveria;
+    private final List<Pedido> pedidos;      // ← field
+    private final List<Bloqueo> bloqueos;    // ← field
+    private final Map<String,Map<String,String>> averias; // ← field
 
+
+    private Timer timer;
     public SimuladorUI() {
         super("Simulador GLP");
 
         // 0) Carga los datos iniciales desde archivos
-        List<Pedido> pedidos = new ArrayList<>();
-        List<Bloqueo> bloqueos = new ArrayList<>();
-        Map<String, Map<String, String>> averias = new HashMap<>();
-        try {
-            pedidos   = ACOPlanner.cargarPedidos("pedidos.txt");
-            bloqueos  = ACOPlanner.cargarBloqueos("bloqueos.txt");
-            averias   = ACOPlanner.cargarAverias("averias.txt");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(
-                    this,
-                    "Error cargando datos:\n" + e.getMessage(),
-                    "Error",
-                    JOptionPane.ERROR_MESSAGE
-            );
-        }
-
-        // 1) Crea el planner con los datos cargados
+        this.pedidos  = ACOPlanner.cargarPedidos("pedidos.txt");
+        this.bloqueos = ACOPlanner.cargarBloqueos("bloqueos.txt");
+        this.averias  = ACOPlanner.cargarAverias("averias.txt");
         this.planner  = new ACOPlanner(pedidos, bloqueos, averias);
         this.mapPanel = new MapPanel(planner);
 
@@ -97,30 +88,77 @@ public class SimuladorUI extends JFrame {
 
     /** Arranca la simulación en segundo plano */
     private void onEjecutar() {
+        planner.reset();
+
+        // ——————————————  0.a) Fraccionar pedidos demasiado grandes ——————————————
+           // calculamos la capacidad máxima de un solo camión
+                   double maxCapacidad = planner.getFlota().stream()
+                   .mapToDouble(c -> c.getCapacidad())
+                   .max()
+                   .orElse(0);
+
+           // construimos una lista nueva partiendo cada pedido > maxCapacidad
+                   List<Pedido> originales = planner.getPedidos();
+        List<Pedido> particionados = new ArrayList<>();
+        for (Pedido p : originales) {
+           if (p.getVolumen() > maxCapacidad) {
+                  int nPartes = (int) Math.ceil(p.getVolumen() / maxCapacidad);
+                   double restante = p.getVolumen();
+                   for (int i = 1; i <= nPartes; i++) {
+                           double parte = Math.min(maxCapacidad, restante);
+                           Pedido sub = new Pedido(
+                                       p.getId() * 100 + i,
+                                       p.getTiempoCreacion(),
+                                       p.getX(),
+                                       p.getY(),
+                                       parte,
+                                       p.getTiempoLimite()
+                                           );
+                           particionados.add(sub);
+                           restante -= parte;
+                       }
+               } else {
+                   particionados.add(p);
+               }
+        }
+        // reemplazamos la lista interna del planner
+           planner.setPedidos(particionados);
+
+           // ahora sí construimos el mapa tiempo→pedidos
+                   Map<Integer,List<Pedido>> pedidosPorTiempo = new HashMap<>();
+        for (Pedido p : planner.getPedidos()) {
+           pedidosPorTiempo
+                       .computeIfAbsent(p.getTiempoCreacion(), k->new ArrayList<>())
+                       .add(p);
+        }
+        // —————————————————————————————————————————————————————————————
+
+
+        planner.reset();
+        // **PRE-SELECCIÓN** del camión 0 para que MapPanel ya lo pinte
+        if (!planner.getFlota().isEmpty()) {
+            mapPanel.setSelectedCamion(planner.getFlota().get(0));
+        }
+        // pinta el estado inicial (t=0) antes de empezar el timer
+        onTick(0);
         btnEjecutar.setEnabled(false);
-        new Thread(() -> {
-            // 1) Ejecuta la simulación completa de 2 días (usa ACO internamente)
-            planner.simularDiaADia(1440 * 2);
-
-            // 2) Regresamos al hilo principal para actualizar la vista
-            SwingUtilities.invokeLater(() -> {
-                refreshTables();
-
-                // 3) Mostramos la ruta del primer camión como ejemplo
-                Camion c = planner.getFlota().get(0);
-                mapPanel.setSelectedCamion(c);
-                mapPanel.repaint();
-
+        Timer t = new Timer(100, null);
+        t.addActionListener(ev -> {
+            int now = planner.stepOneMinute(pedidosPorTiempo);
+            onTick(now);
+            if (planner.isFinished()) {
+                ((Timer)ev.getSource()).stop();
                 btnEjecutar.setEnabled(true);
-            });
-        }).start();
+            }
+        });
+        t.start();
     }
 
     /** Reinicia el estado de la simulación */
     private void onLimpiar() {
         planner.reset();    // debes implementar reset() en ACOPlanner
-        refreshTables();
         mapPanel.repaint();
+        refreshTables();
     }
 
     /** Pide datos de avería y los registra en el planner */
@@ -158,7 +196,12 @@ public class SimuladorUI extends JFrame {
             });
         }
     }
-
+    private void onTick(int tiempoActual) {
+        mapPanel.setCurrentTime(tiempoActual);
+        mapPanel.setBloqueos(planner.getBloqueos());
+        mapPanel.repaint();
+        refreshTables();  // si quieres actualizar posición/estado de tablas en cada minuto
+    }
     /** Punto de entrada de la aplicación */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {

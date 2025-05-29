@@ -1,12 +1,10 @@
 package ui;
 
-import core.ACOPlanner;
-import core.Camion;
-import core.Pedido;
-import core.Tanque;
+import core.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,11 +19,21 @@ public class MapPanel extends JPanel {
     private final ACOPlanner planner;
     private static final int GRID_COLS = 70;
     private static final int GRID_ROWS = 50;
+    private static final int CELL_SIZE = 12;   // píxeles por celda (ajusta a tu gusto)
     final int depositoX = 12, depositoY = 8;
+    private List<Bloqueo> bloqueos = Collections.emptyList();
+    private int currentTime = 0;
+
     /** Permite al controlador cambiar qué camión destacar */
     public void setSelectedCamion(Camion c) {
         this.selectedCamion = c;
         repaint();
+    }
+    public void setBloqueos(List<Bloqueo> b) {
+        this.bloqueos = b;
+    }
+    public void setCurrentTime(int t) {
+        this.currentTime = t;
     }
     public MapPanel(ACOPlanner planner) {
         this.planner = planner;
@@ -45,7 +53,26 @@ public class MapPanel extends JPanel {
         int cellW = getWidth()  / GRID_COLS;
         int cellH = getHeight() / GRID_ROWS;
 
-        // 3) Dibujar malla ligera
+        // 3) Dibujar bloqueos
+        Graphics2D g2 = (Graphics2D)g.create();
+        g2.setColor(new Color(255,0,0,128));
+        g2.setStroke(new BasicStroke(Math.min(cellW,cellH)/4f));
+        for (Bloqueo b : bloqueos) {
+            if (currentTime >= b.getStartMin() && currentTime < b.getEndMin()) {
+                List<Point> pts = b.getNodes();
+                for (int i = 0; i < pts.size()-1; i++) {
+                    Point a = pts.get(i), c = pts.get(i+1);
+                    int x1 = a.x*cellW + cellW/2,
+                            y1 = (GRID_ROWS-1 - a.y)*cellH + cellH/2;
+                    int x2 = c.x*cellW + cellW/2,
+                            y2 = (GRID_ROWS-1 - c.y)*cellH + cellH/2;
+                    g2.drawLine(x1, y1, x2, y2);
+                }
+            }
+        }
+        g2.dispose();
+
+        // 4) Dibujar malla ligera
         g.setColor(Color.LIGHT_GRAY);
         for (int i = 0; i <= GRID_COLS; i++) {
             int x = i * cellW;
@@ -56,10 +83,9 @@ public class MapPanel extends JPanel {
             g.drawLine(0, y, getWidth(), y);
         }
 
-        // 4) Dibujar pedidos pendientes en rojo
-        List<Pedido> pedidos = planner.getPedidos();
+        // 5) Dibujar pedidos pendientes en rojo
         g.setColor(Color.RED);
-        for (Pedido p : pedidos) {
+        for (Pedido p : planner.getPedidos()) {
             if (!p.isAtendido() && !p.isDescartado()) {
                 int x = p.getX() * cellW;
                 int y = getHeight() - (p.getY() * cellH + cellH);
@@ -67,34 +93,33 @@ public class MapPanel extends JPanel {
             }
         }
 
-        // 5) Dibujar tanques intermedios en naranja (sólo su ubicación)
-        List<Tanque> tanques = planner.getTanquesIntermedios();
+        // 6) Dibujar tanques intermedios en naranja
         g.setColor(Color.ORANGE);
-        for (Tanque t : tanques) {
+        for (Tanque t : planner.getTanquesIntermedios()) {
             int x = t.getX() * cellW;
             int y = getHeight() - (t.getY() * cellH + cellH);
             g.drawRect(x, y, cellW, cellH);
         }
 
-        // 6) Dibujar camiones en azul
-        List<Camion> flota = planner.getFlota();
+        // 7) Dibujar camiones en azul
         g.setColor(Color.BLUE);
-        for (Camion c : flota) {
+        for (Camion c : planner.getFlota()) {
             int x = c.getX() * cellW;
             int y = getHeight() - (c.getY() * cellH + cellH);
             g.fillRect(x, y, cellW, cellH);
         }
-        // ***🔹 7b) Dibuja aquí la ruta segmentada (Manhattan) ***
+
+        // 8) Ruta Manhattan segmentada (si está seleccionada)
         if (selectedCamion != null && selectedCamion.getRuta() != null) {
             drawRuta(g, selectedCamion.getRuta(), cellW, cellH);
         }
-        // 7) Dibujar trayectoria HISTÓRICA del camión seleccionado (gris fina)
-        // 7) Dibujar toda la trayectoria histórica del camión seleccionado en magenta
+
+        // 9) Trayectoria histórica en magenta del seleccionado
         if (selectedCamion != null) {
             drawFullTrajectory(g, selectedCamion.getHistory(), cellW, cellH);
         }
-
     }
+
     /**
      * Dibuja el recorrido Manhattan en magenta,
      * marcando el origen (primer nodo) en verde
