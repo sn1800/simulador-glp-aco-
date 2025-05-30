@@ -88,64 +88,61 @@ public class SimuladorUI extends JFrame {
 
     /** Arranca la simulación en segundo plano */
     private void onEjecutar() {
+        // 1) Arranca desde cero
         planner.reset();
 
-        // ——————————————  0.a) Fraccionar pedidos demasiado grandes ——————————————
-           // calculamos la capacidad máxima de un solo camión
-                   double maxCapacidad = planner.getFlota().stream()
-                   .mapToDouble(c -> c.getCapacidad())
-                   .max()
-                   .orElse(0);
+        // 2) Fracciona los pedidos grandes
+        double maxCapacidad = planner.getFlota().stream()
+                .mapToDouble(Camion::getCapacidad)
+                .max().orElse(0);
 
-           // construimos una lista nueva partiendo cada pedido > maxCapacidad
-                   List<Pedido> originales = planner.getPedidos();
+        List<Pedido> originales   = planner.getPedidos();
         List<Pedido> particionados = new ArrayList<>();
         for (Pedido p : originales) {
-           if (p.getVolumen() > maxCapacidad) {
-                  int nPartes = (int) Math.ceil(p.getVolumen() / maxCapacidad);
-                   double restante = p.getVolumen();
-                   for (int i = 1; i <= nPartes; i++) {
-                           double parte = Math.min(maxCapacidad, restante);
-                           Pedido sub = new Pedido(
-                                       p.getId() * 100 + i,
-                                       p.getTiempoCreacion(),
-                                       p.getX(),
-                                       p.getY(),
-                                       parte,
-                                       p.getTiempoLimite()
-                                           );
-                           particionados.add(sub);
-                           restante -= parte;
-                       }
-               } else {
-                   particionados.add(p);
-               }
+            if (p.getVolumen() > maxCapacidad) {
+                int nPartes = (int)Math.ceil(p.getVolumen() / maxCapacidad);
+                double restante = p.getVolumen();
+                for (int i = 1; i <= nPartes; i++) {
+                    double parte = Math.min(maxCapacidad, restante);
+                    Pedido sub = new Pedido(
+                            p.getId()*100 + i,
+                            p.getTiempoCreacion(),
+                            p.getX(), p.getY(),
+                            parte,
+                            p.getTiempoLimite()
+                    );
+                    particionados.add(sub);
+                    restante -= parte;
+                }
+            } else {
+                particionados.add(p);
+            }
         }
-        // reemplazamos la lista interna del planner
-           planner.setPedidos(particionados);
+        // Reemplazo la lista interna de pedidos **una sola vez**
+        planner.setPedidos(particionados);
 
-           // ahora sí construimos el mapa tiempo→pedidos
-                   Map<Integer,List<Pedido>> pedidosPorTiempo = new HashMap<>();
+        // 3) Ahora construyo el mapa tiempo→pedidos
+        Map<Integer,List<Pedido>> pedidosPorTiempo = new HashMap<>();
         for (Pedido p : planner.getPedidos()) {
-           pedidosPorTiempo
-                       .computeIfAbsent(p.getTiempoCreacion(), k->new ArrayList<>())
-                       .add(p);
+            pedidosPorTiempo
+                    .computeIfAbsent(p.getTiempoCreacion(), k -> new ArrayList<>())
+                    .add(p);
         }
-        // —————————————————————————————————————————————————————————————
 
+        // 4) ¡OJO! Ya NO vuelvas a llamar planner.reset() aquí
 
-        planner.reset();
-        // **PRE-SELECCIÓN** del camión 0 para que MapPanel ya lo pinte
+        // 5) Pre-selecciono un camión para que pinte la ruta inicial (t=0)
         if (!planner.getFlota().isEmpty()) {
             mapPanel.setSelectedCamion(planner.getFlota().get(0));
         }
-        // pinta el estado inicial (t=0) antes de empezar el timer
         onTick(0);
+
+        // 6) Arranco el Timer
         btnEjecutar.setEnabled(false);
         Timer t = new Timer(100, null);
         t.addActionListener(ev -> {
-            int now = planner.stepOneMinute(pedidosPorTiempo);
-            onTick(now);
+            int ahora = planner.stepOneMinute(pedidosPorTiempo);
+            onTick(ahora);
             if (planner.isFinished()) {
                 ((Timer)ev.getSource()).stop();
                 btnEjecutar.setEnabled(true);
@@ -153,6 +150,7 @@ public class SimuladorUI extends JFrame {
         });
         t.start();
     }
+
 
     /** Reinicia el estado de la simulación */
     private void onLimpiar() {

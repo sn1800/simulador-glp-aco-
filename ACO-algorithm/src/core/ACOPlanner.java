@@ -66,10 +66,10 @@ public class ACOPlanner {
     }
     public void reset() {
         // 0) Reinicia el tiempo
-        this.currentTime = 0;
+        this.currentTime = 1440;
         this.turnoAnterior = "";
         this.pedidosPorTiempo = null;
-        this.maxTime     = 1440 * 2;       // o el valor que quieras simular
+        this.maxTime     = 1440 * 7;       // o el valor que quieras simular
 
         // recarga datos
         this.pedidos = cargarPedidos("pedidos.txt");
@@ -1097,6 +1097,13 @@ public class ACOPlanner {
                 int destY = (mejor != null ? mejor.y : dyPlant);
                 ev.camion.reabastecerEnTanque = mejor;
 
+                // 📌 RESERVA AQUÍ EL COMBUSTIBLE
+                if (mejor != null) {
+                    mejor.disponible -= falta;
+                    System.out.printf("🔁 t+%d: Tanque (%d,%d) reservado %.1fm³ → ahora %.1f m³%n",
+                            tiempoActual, mejor.x, mejor.y, falta, mejor.disponible);
+                }
+
                 // 6.d) Marca el camión en modo retorno
                 ev.camion.setEnRetorno(true);
                 ev.camion.setStatus(Camion.TruckStatus.RETURNING);
@@ -1131,7 +1138,8 @@ public class ACOPlanner {
                 double falta = c.getCapacidad() - c.getDisponible();
                 Tanque tq = c.reabastecerEnTanque;
                 if (tq != null) {
-                    tq.disponible -= falta;
+                    // la reserva ya se hizo antes, solo reportamos
+                    // tq.disponible -= falta;
                     System.out.printf("🔄 t+%d: Camión %s llegó a tanque (%d,%d) y recargado a %.1f m³%n", tiempoActual, c.getId(), tq.x, tq.y, c.getCapacidad());
                     System.out.printf("🔁      Tanque (%d,%d) quedó con %.1f m³%n", tq.x, tq.y, tq.disponible);
                 } else {
